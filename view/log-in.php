@@ -33,18 +33,22 @@ require_once 'header.php';
 			<div class="full-width">
 				
 				<div class="one-half col-539">
+<<<<<<< HEAD
+					<form action="../controller/LoginController.php" method="post" id="returning-user" class="grey-corner-box">
+=======
 					<form id="returning-user" class="grey-corner-box" >
+>>>>>>> ad3cd45d891f03f792c265c083c24bd4e931cec7
 						<fieldset>
 							<legend><span class="bold">Returning</span> user</legend>
 							<ul>
 								<li class="select-two">
 									<div>
-										<label for="login-email">Email:</label>
-										<input type="text" name="login_email" id="login-email" />
+										<label for="username">Username:</label>
+										<input type="text" name="username" id="username" />
 									</div>
 									<div>
-										<label for="login-password">Password:</label>
-										<input type="password" name="login_email" id="login-password" />								
+										<label for="password">Password:</label>
+										<input type="password" name="password" id="password" />								
 									</div>
 								</li>
 								<li>
