@@ -8,23 +8,23 @@
 	<title>Automarket - Log In</title>
 	<meta name="description" content="Automarket">
 
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/uniform.default.css">
-	<link rel="stylesheet" href="css/prettyPhoto.css">
-	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	<script src="js/vendor/jquery-1.8.2.min.js"></script>
-	<script src="js/vendor/selectivizr.js"></script>
-	<script src="js/vendor/PIE.js"></script>
-	<script src="js/plugins/jquery.placeholder.min.js"></script>
-	<script src="js/plugins/jquery.uniform.min.js"></script>
-	<script src="js/plugins/jquery.flexslider-min.js"></script>
-	<script src="js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/uniform.default.css">
+	<link rel="stylesheet" href="../css/prettyPhoto.css">
+	<script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="../js/vendor/jquery-1.8.2.min.js"></script>
+	<script src="../js/vendor/selectivizr.js"></script>
+	<script src="../js/vendor/PIE.js"></script>
+	<script src="../js/plugins/jquery.placeholder.min.js"></script>
+	<script src="../js/plugins/jquery.uniform.min.js"></script>
+	<script src="../js/plugins/jquery.flexslider-min.js"></script>
+	<script src="../js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script src="js/plugins/jquery.prettyPhoto.js"></script>
-	<script src="js/plugins/jquery.countdown.js"></script>
+	<script src="../js/plugins/jquery.prettyPhoto.js"></script>
+	<script src="../js/plugins/jquery.countdown.js"></script>
 	
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+	<script src="../js/plugins.js"></script>
+	<script src="../js/main.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -34,49 +34,49 @@
 	<div class="content-holder">
 		<div class="layer-one">
 			<div class="page-titles">
-				<h1><a href="index.html">Automarket</a></h1>
+				<h1><a href="./index.php">Automarket</a></h1>
 				<p class="sub-title">This is a title</p>
 			</div>
 				
 			<div class="dealer-login">
-				<a href="dealer-details.html" class="dealer-name">Dealer Name</a>
+				<a href="./dealer-details.php" class="dealer-name">Dealer Name</a>
 				<a href="#" class="sign-out">Sign Out</a>
 			</div>
 				
 			<div class="header-buttons">
-				<a href="add-vehicle.html" class="add-an-offer rounded-link-box"><span class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add An Offer</span></a>
+				<a href="./add-vehicle.php" class="add-an-offer rounded-link-box"><span class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add An Offer</span></a>
 				<div class="pages-top rounded-link-box">
 					<a href="#" class="box-content">Pages</a>
 					<ul>
 						
-                        <li><a href="index.html">Home page</a></li>
+                        <li><a href="./index.php">Home page</a></li>
                         
-                        <li><a href="add-vehicle.html">Add an offer</a></li>
+                        <li><a href="./add-vehicle.php">Add an offer</a></li>
                         
-                        <li><a href="log-in.html">Log in page</a></li>
+                        <li><a href="./log-in.php">Log in page</a></li>
                         
-                        <li><a href="car-list.html">Car list</a>
+                        <li><a href="./car-list.php">Car list</a>
 							<ul>
-								<li><a href="car-details.html">Car details</a><li>														
+								<li><a href="./car-details.php">Car details</a><li>														
 							</ul>
 						</li>
 						
-                        <li><a href="blog-overview.html">Blog</a>
+                        <li><a href="./blog-overview.php">Blog</a>
 							<ul>
-								<li><a href="blog-post.html">Blog post</a><li>														
+								<li><a href="./blog-post.php">Blog post</a><li>														
 							</ul>
 						</li>
-						<li><a href="dealer-list.html">Dealer list</a>
+						<li><a href="./dealer-list.php">Dealer list</a>
                         <ul>
-								<li><a href="dealer-details.html">Dealer details</a><li>														
+								<li><a href="./dealer-details.php">Dealer details</a><li>														
 							</ul>
 						</li>
                         
-						<li><a href="insurance.html">Insurance</a></li>
+						<li><a href="./insurance.php">Insurance</a></li>
 						
-                        <li><a href="under-construction.html">Under construction</a></li>
+                        <li><a href="./under-construction.php">Under construction</a></li>
                         
-                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="./contact-us.php">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -85,14 +85,14 @@
 		<div class="layer-two">
 			<nav>
 				<ul>
-					<li class="nav-cars current-item"><a href="car-list.html">Cars</a></li>
+					<li class="nav-cars current-item"><a href="./car-list.php">Cars</a></li>
 					<li class="nav-bike"><a href="#">Bikes</a></li>
 					<li class="nav-truck"><a href="#">Trucks</a></li>
 					<li class="nav-parts"><a href="#">Parts</a></li>
 				</ul>
 			</nav>
 				
-			<form id="header-search" action="car-list.html" method="post">
+			<form id="header-search" action="./car-list.php" method="post">
 				<input type="text" name="quick_search" onfocus="if(this.value == 'Quick Search, Ex: Mercedes-Benz E220') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Quick Search, Ex: Mercedes-Benz E220'; }" value="Quick Search, Ex: Mercedes-Benz E220" class="quick-search" >
 				<select name="type-option">
 					<option value="cars" selected="selected">Cars</option>

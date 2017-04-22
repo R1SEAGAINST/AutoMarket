@@ -8,23 +8,23 @@
 	<title>Automarket - Home</title>
 	<meta name="description" content="Automarket">
 
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/uniform.default.css">
-	<link rel="stylesheet" href="css/prettyPhoto.css">
-	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	<script src="js/vendor/jquery-1.8.2.min.js"></script>
-	<script src="js/vendor/selectivizr.js"></script>
-	<script src="js/vendor/PIE.js"></script>
-	<script src="js/plugins/jquery.placeholder.min.js"></script>
-	<script src="js/plugins/jquery.uniform.min.js"></script>
-	<script src="js/plugins/jquery.flexslider-min.js"></script>
-	<script src="js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/uniform.default.css">
+	<link rel="stylesheet" href="../css/prettyPhoto.css">
+	<script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="../js/vendor/jquery-1.8.2.min.js"></script>
+	<script src="../js/vendor/selectivizr.js"></script>
+	<script src="../js/vendor/PIE.js"></script>
+	<script src="../js/plugins/jquery.placeholder.min.js"></script>
+	<script src="../js/plugins/jquery.uniform.min.js"></script>
+	<script src="../js/plugins/jquery.flexslider-min.js"></script>
+	<script src="../js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script src="js/plugins/jquery.prettyPhoto.js"></script>
-	<script src="js/plugins/jquery.countdown.js"></script>
+	<script src="../js/plugins/jquery.prettyPhoto.js"></script>
+	<script src="../js/plugins/jquery.countdown.js"></script>
 	
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+	<script src="../js/plugins.js"></script>
+	<script src="../js/main.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -34,30 +34,30 @@
 	<div class="content-holder">
 		<div class="layer-one">
 			<div class="page-titles">
-				<h1><a href="index.html">Automarket</a></h1>
+				<h1><a href="index.php">Automarket</a></h1>
 				<p class="sub-title">This is a title</p>
 			</div>
 				
 			<div class="dealer-login">
-				<a href="dealer-details.html" class="dealer-name">Dealer Name</a>
+				<a href="./dealer-details.php" class="dealer-name">Dealer Name</a>
 				<a href="#" class="sign-out">Sign Out</a>
 			</div>
 				
 			<div class="header-buttons">
-				<a href="add-vehicle.html" class="add-an-offer rounded-link-box"><span class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add An Offer</span></a>
+				<a href="./add-vehicle.php" class="add-an-offer rounded-link-box"><span class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add An Offer</span></a>
 				<div class="pages-top rounded-link-box">
 					<a href="#" class="box-content">Pages</a>
 					<ul>
 						
-                        <li><a href="index.html">Home page</a></li>
+                        <li><a href="./index.php">Home page</a></li>
                         
-                        <li><a href="add-vehicle.html">Add an offer</a></li>
+                        <li><a href="./add-vehicle.php">Add an offer</a></li>
                         
-                        <li><a href="log-in.html">Log in page</a></li>
+                        <li><a href="./log-in.php">Log in page</a></li>
                         
-                        <li><a href="car-list.html">Car list</a>
+                        <li><a href="./car-list.php">Car list</a>
 							<ul>
-								<li><a href="car-details.html">Car details</a><li>														
+								<li><a href="./car-details.php">Car details</a><li>														
 							</ul>
 						</li>
 						
@@ -66,17 +66,17 @@
 								<li><a href="blog-post.html">Blog post</a><li>														
 							</ul>
 						</li>
-						<li><a href="dealer-list.html">Dealer list</a>
+						<li><a href="./dealer-list.php">Dealer list</a>
                         <ul>
-								<li><a href="dealer-details.html">Dealer details</a><li>														
+								<li><a href="./dealer-details.php">Dealer details</a><li>														
 							</ul>
 						</li>
                         
-						<li><a href="insurance.html">Insurance</a></li>
+						<li><a href="./insurance.php">Insurance</a></li>
 						
-                        <li><a href="under-construction.html">Under construction</a></li>
+                        <li><a href="./under-construction.php">Under construction</a></li>
                         
-                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="./contact-us.php">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -85,14 +85,14 @@
 		<div class="layer-two">
 			<nav>
 				<ul>
-					<li class="nav-cars current-item"><a href="car-list.html">Cars</a></li>
+					<li class="nav-cars current-item"><a href="./car-list.php">Cars</a></li>
 					<li class="nav-bike"><a href="#">Bikes</a></li>
 					<li class="nav-truck"><a href="#">Trucks</a></li>
 					<li class="nav-parts"><a href="#">Parts</a></li>
 				</ul>
 			</nav>
 				
-			<form id="header-search" action="car-list.html" method="post">
+			<form id="header-search" action="./car-list.php" method="post">
             	<input type="text" name="quick_search" onfocus="if(this.value == 'Quick Search, Ex: Mercedes-Benz E220') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Quick Search, Ex: Mercedes-Benz E220'; }" value="Quick Search, Ex: Mercedes-Benz E220" class="quick-search" >
 				<select name="type-option">
 					<option value="cars" selected="selected">Cars</option>
@@ -117,7 +117,7 @@
 					<div id="slides">
 						<ul class="slides">
 							<li>
-								<a href="car-details.html">
+								<a href="./car-details.php">
 									<img src="images/mercedes_picture.jpg" alt="Slide" />
 									<div class="slide-info">
 										<h3>Mercedes-Benz CLS 320</h3>
@@ -126,8 +126,8 @@
 								</a>
 							</li>
 							<li>
-								<a href="car-details.html">
-									<img src="images/mercedes_picture.jpg" alt="Slide" />
+								<a href="./car-details.php">
+									<img src="./images/mercedes_picture.jpg" alt="Slide" />
 									<div class="slide-info">
 										<h3>Mercedes-Benz CLS 630</h3>
 										<span class="price-tag">54980 Euro</span>								
@@ -148,8 +148,8 @@
 				
 				<ul class="offer-list offer-small list-content">
 					<li>
-						<a href="car-details.html">
-							<img src="images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="./car-details.php">
+							<img src="./images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 1</h4>
 								<span class="price-tag">54980 Euro</span>
@@ -170,8 +170,8 @@
 					</li><!--/end of item 1-->
 						
 					<li>
-						<a href="car-details.html">
-							<img src="images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="./car-details.php">
+							<img src="../images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 2</h4>
 								<span class="price-tag">54980 Euro</span>
@@ -190,8 +190,8 @@
 					</li><!--/end of item 2-->
 					
 					<li>
-						<a href="car-details.html">
-							<img src="images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="./car-details.php">
+							<img src="../images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 3</h4>
 								<span class="price-tag">54980 Euro</span>
@@ -210,8 +210,8 @@
 					</li><!--/end of item 3-->
 					
 					<li>
-						<a href="car-details.html">
-							<img src="images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="./car-details.php">
+							<img src="../images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 4</h4>
 								<span class="price-tag">54980 Euro</span>
@@ -230,8 +230,8 @@
 					</li><!--/end of item 4-->
 					
 					<li>
-						<a href="car-details.html">
-							<img src="images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="./car-details.php">
+							<img src="../images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 5</h4>
 								<span class="price-tag">54980 Euro</span>
@@ -262,21 +262,21 @@
 		
 			<div class="full-width banners-full-width">
 				<div class="search-banner banner-medium one-half">
-					<a href="car-list.html" class="icon-magnify icon-banner">Magnify</a>
+					<a href="./car-list.php" class="icon-magnify icon-banner">Magnify</a>
 					<div class="banner-title">
 						<h3><span class="bold">Looking</span> for a car?</h3>
 						<p class="description">1.000 new offers every day. 35.000 offers on site</p>
 					</div>
-					<a href="car-list.html" class="banner-link"><span>Search</span></a>
+					<a href="./car-list.php" class="banner-link"><span>Search</span></a>
 				</div>
 					
 				<div class="sell-banner banner-medium one-half">
-					<a href="add-vehicle.html" class="icon-dollar icon-banner">Dollar</a>
+					<a href="./add-vehicle.php" class="icon-dollar icon-banner">Dollar</a>
 					<div class="banner-title">
 						<h3><span class="bold">Want</span> to sell a car?</h3>
 						<p class="description">200.000 visitors every day. Add your offer now!</p>
 					</div>
-					<a href="add-vehicle.html" class="banner-link"><span>Sell+</span></a>
+					<a href="./add-vehicle.php" class="banner-link"><span>Sell+</span></a>
 				</div>
 			</div>
 				
@@ -287,12 +287,12 @@
 						<li>
 							<img src="images/article_icon.gif" alt="Article Icon" />
 							<p class="preview">Here are many variations of passages of Lorem Ipsum..</p>
-							<a href="blog-post.html" class="more-link">Read more</a>
+							<a href="./blog-post.php" class="more-link">Read more</a>
 						</li>
 						<li>
 							<img src="images/article_icon.gif" alt="Article Icon" />
 							<p class="preview">Here are many variations of passages of Lorem Ipsum..</p>
-							<a href="blog-post.html" class="more-link">Read more</a>
+							<a href="./blog-post.php" class="more-link">Read more</a>
 						</li>
 					</ul>
 				</div><!--.popular-articles-->
@@ -300,24 +300,24 @@
 				<div class="car-dealers one-third">
 					<div class="headline">
 						<h3><span class="bold">Car</span> dealers</h3>
-						<a href="dealer-list.html" class="see-more">See all dealers</a>
+						<a href="./dealer-list.php" class="see-more">See all dealers</a>
 					</div>
 					
 					<ul class="dealer-list">
 						<li>
-							<a href="dealer-details.html" class="dealer-name">Dealer name</a>
+							<a href="./dealer-details.php" class="dealer-name">Dealer name</a>
 							<span class="amount-offers">162 Offers</span>
 						</li>
 						<li>
-							<a href="dealer-details.html" class="dealer-name">Dealer name</a>
+							<a href="./dealer-details.php" class="dealer-name">Dealer name</a>
 							<span class="amount-offers">162 Offers</span>
 						</li>
 						<li>
-							<a href="dealer-details.html" class="dealer-name">Dealer name</a>
+							<a href="./dealer-details.php" class="dealer-name">Dealer name</a>
 							<span class="amount-offers">162 Offers</span>
 						</li>
 						<li>
-							<a href="dealer-details.html" class="dealer-name">Dealer name</a>
+							<a href="./dealer-details.php" class="dealer-name">Dealer name</a>
 							<span class="amount-offers">162 Offers</span>
 						</li>
 					</ul>
@@ -343,7 +343,7 @@
 			<div class="content-holder">
 				<nav>
 					<ul>
-						<li><a href="dealer-details.html"><span class="bold">About</span> us</a>
+						<li><a href="./dealer-details.php"><span class="bold">About</span> us</a>
 							<ul>
 								<li><a href="#">Contact</a></li>
 								<li><a href="#">Our Partners</a></li>
