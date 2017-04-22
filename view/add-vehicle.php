@@ -65,14 +65,20 @@ require_once 'header.php';
 									</select>
 								</div>
 								<div>
-									<label for="select-fabrication">Fabrication: <span class="mandatory">*</span></label>
-									<select id="select-fabrication">
+									<label for="select-euro-type">Euro type:</label>
+									<select id="select-euro-type">
 										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option1">Option 2</option>
-										<option value="option1">Option 3</option>
+										<option value="Euro1">Euro1</option>
+										<option value="Euro2">Euro2</option>
+										<option value="Euro3">Euro3</option>
+										<option value="Euro4">Euro4</option>
+										<option value="Euro5">Euro5</option>
+										<option value="Euro6">Euro6</option>
+										
+										
 									</select>
 								</div>
+								
 								<div>
 									<label for="select-body-type">Body Type: <span class="mandatory">*</span></label>
 									<select id="select-body-type">
@@ -159,20 +165,13 @@ require_once 'header.php';
 									</div>
 									
 									<div>
-									<label for="select-euro-type">Euro type:</label>
-									<select id="select-euro-type">
-										<option selected="selected">Select</option>
-										<option value="Euro1">Euro1</option>
-										<option value="Euro2">Euro2</option>
-										<option value="Euro3">Euro3</option>
-										<option value="Euro4">Euro4</option>
-										<option value="Euro5">Euro5</option>
-										<option value="Euro6">Euro6</option>
-										
-										
-									</select>
+									<label for="select-fabrication">Fabrication: <span class="mandatory">*</span></label>
+									
+									<input type="text" name="chassis_number" id="input-fabrication" class="default-input" />
+									
 								</div>
-								
+									
+									
 								
 							</li><!-- line #3 -->
 						</ul>
