@@ -1,56 +1,6 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
-<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<title>Automarket - Under Construction</title>
-	<meta name="description" content="Automarket">
-
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/uniform.default.css">
-	<link rel="stylesheet" href="css/prettyPhoto.css">
-	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	<script src="js/vendor/jquery-1.8.2.min.js"></script>
-	<script src="js/vendor/selectivizr.js"></script>
-	<script src="js/vendor/PIE.js"></script>
-	<script src="js/plugins/jquery.placeholder.min.js"></script>
-	<script src="js/plugins/jquery.uniform.min.js"></script>
-	<script src="js/plugins/jquery.flexslider-min.js"></script>
-	<script src="js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
-	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script src="js/plugins/jquery.prettyPhoto.js"></script>
-	<script src="js/plugins/jquery.countdown.js"></script>
-	
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
-</head>
-<body>
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-<![endif]-->
-<header class="under-construction">
-	<div class="content-holder">
-		<div class="layer-one">
-			<div class="page-titles">
-				<h1><a href="index.html">Automarket</a></h1>
-			</div>
-		</div><!-- .layer-one -->
-			
-		<div class="layer-two">
-			<nav>
-				<ul>
-					<li class="nav-cars"><a href="#">Cars</a></li>
-					<li class="nav-bike"><a href="#">Bikes</a></li>
-					<li class="nav-truck"><a href="#">Trucks</a></li>
-					<li class="nav-parts"><a href="#">Parts</a></li>
-				</ul>
-			</nav>				
-		</div><!--.layer-two-->
-	</div>
-		
-</header>
+<?php 
+require_once 'header.php';
+?>
 	
 <div id="page-content">
 
@@ -104,35 +54,8 @@
 	
 </div><!--#page-content-->
 	
-<footer class="under-construction">
-	<div class="layer-one">
-		<div class="content-holder">
-			<div class="find-us-here col-amount">
-				<ul class="social-list">
-					<li class="social-facebook"><a href="#">Facebook</a></li>
-					<li class="social-twitter"><a href="#">Twitter</a></li>
-					<li class="social-google"><a href="#">Google</a></li>
-				</ul>
-				<h3><span class="bold">Follow</span> us</h3>
-			</div>
-				
-			<div class="contact-button">
-				<h3><span class="bold">Contact</span> us</h3>
-				<a href="contact-us.html" class="email-button"><span>Email</span></a>
-			</div>
-		</div><!--.layer-one-->
-	</div>
-			
-	<div class="layer-two">
-		<div class="content-holder">
-			<div class="content-holder">
-				<p class="copyright">&copy; 2012 Automarket. All Rights Reserved</p>
-				<p class="webdesign-author">Webdesign by <a href="#">ClaPat Studio</a>
-			</div>
-		</div>
-	</div><!--.layer-two-->
-	
-</footer>
+<?php 
 
-</body>
-</html>
+require_once 'footer.php';
+?>
+	
