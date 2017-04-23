@@ -43,8 +43,8 @@ require_once 'header.php';
 							<ul>
 								<li class="select-two">
 									<div>
-										<label for="username">Username:</label>
-										<input type="text" name="username" id="username" />
+										<label for="username">Email:</label>
+										<input type="text" name="email" id="username" />
 									</div>
 									<div>
 										<label for="password">Password:</label>

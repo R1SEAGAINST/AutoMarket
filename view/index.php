@@ -1,5 +1,11 @@
 <?php 
+session_start();
+require_once 'header.php';
+//echo "<h3>".$errorMessage."</h3>";
+$username = $_SESSION['username'];
+$userId = $_SESSION['userid'];
 
+echo "<h2>".$username." ".$userId."</h2>";
 	?>
 <div id="page-content">
 	<section id="car-advertisement">

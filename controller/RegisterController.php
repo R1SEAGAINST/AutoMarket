@@ -7,9 +7,10 @@ if (isset($_POST['btn-save'])) {
 	
 	
 	try {
-		$user = new User(htmlentities(trim($_POST['user_name'])),
+		$user = new User(
 				htmlentities(trim($_POST['user_email'])),
 				htmlentities(trim($_POST['password'])));
+		$user->setUsername($_POST['user_name']);
 		
 		$userData = new UserDAO();
 		
