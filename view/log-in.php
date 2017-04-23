@@ -33,11 +33,11 @@ require_once 'header.php';
 			<div class="full-width">
 				
 				<div class="one-half col-539">
-<<<<<<< HEAD
+
 					<form action="../controller/LoginController.php" method="post" id="returning-user" class="grey-corner-box">
-=======
+
 					<form id="returning-user" class="grey-corner-box" >
->>>>>>> ad3cd45d891f03f792c265c083c24bd4e931cec7
+
 						<fieldset>
 							<legend><span class="bold">Returning</span> user</legend>
 							<ul>
@@ -53,7 +53,7 @@ require_once 'header.php';
 								</li>
 								<li>
 									<div class="checkbox-custom submit-field">
-										<span class="submit"><input type="submit" value="Log in" /></span>
+										<span class="submit"><input type="submit" value="Log in" name="submit"/></span>
 										<input type="checkbox" value="remember_me" id="remember-me" checked="checked" />
 										<label for="remember-me">Remember me</label>
 									</div>

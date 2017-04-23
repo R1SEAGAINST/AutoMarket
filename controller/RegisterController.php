@@ -1,19 +1,26 @@
 <?php
+function __autoload($className) {
+	require_once "../model/" . $className . '.php';
+}
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['reg'])) {
+	
+	
 	try {
+		
 		$user = new User(htmlentities(trim($_POST['username'])),
+				htmlentities(trim($_POST['email'])),
 				htmlentities(trim($_POST['password'])));
 		
 		$userData = new UserDAO();
 		
-		$loggedUser = $userData->loginUser($user);
+		$registeredUser = $userData->registerUser($user);
 		
 		session_start();
-		$_SESSION['userid'] = $loggedUser->id;
-		$_SESSION['username'] = $loggedUser->username;
+		$_SESSION['userid'] = $registeredUser->id;
+		$_SESSION['username'] = $registeredUser->username;
 		
-		header('Location:homeController.php', true, 302);
+		header('Location:../view/index.php', true, 302);
 	}
 	catch (Exception $e) {
 		$errorMessage = $e->getMessage();
