@@ -7,7 +7,7 @@ if (isset($_POST['reg'])) {
 	
 	
 	try {
-		
+
 		$user = new User(htmlentities(trim($_POST['username'])),
 				htmlentities(trim($_POST['email'])),
 				htmlentities(trim($_POST['password'])));

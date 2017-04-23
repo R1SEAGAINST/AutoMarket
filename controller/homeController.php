@@ -2,8 +2,8 @@
 	session_start();
 	
 	if ($_SESSION['user']) {		
-		include '../view/home.php';
+		include '../view/index.php';
 	}
 	else
-		header('Location:index.php');
+	//	header('Location:index.php');
 ?>

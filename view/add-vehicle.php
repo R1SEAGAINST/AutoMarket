@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:add-vehicle.html
+
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
@@ -606,7 +605,7 @@
 
 </body>
 </html>
-=======
+
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
@@ -616,11 +615,9 @@
 	<meta charset="utf-8">
 	<title>Automarket - Add Vehicle</title>
 	<meta name="description" content="Automarket">
-=======
+
 <?php 
 require_once 'header.php';
->>>>>>> ad3cd45d891f03f792c265c083c24bd4e931cec7
-
 ?>
 	
 	
@@ -995,12 +992,3 @@ require_once 'header.php';
 	
 <?php 
 
-<<<<<<< HEAD
-</body>
-</html>
->>>>>>> c8838c82e720dd0c28210876cb4e690661d23f5a:view/add-vehicle.php
-=======
-require_once 'footer.php';
-?>
-	
->>>>>>> ad3cd45d891f03f792c265c083c24bd4e931cec7

@@ -137,58 +137,53 @@
 
 
 <body>
-<!-- 	<div class="signin-form"> -->
-<!-- 		<div class="container"> -->
-<!-- 			<form class="form-signin" method="post" id="register-form" action="../controller/RegisterController.php"> -->
-<!-- 				<h2 class="form-signin-heading">Sign Up</h2> -->
-<!-- 				<hr /> -->
-<!-- 				<div id="error"></div> -->
-<!-- 				<div class="form-group"> -->
-<!-- 					<input type="text" class="form-control" placeholder="Username" -->
-<!-- 						name="username" id="username" /> -->
-<!-- 				</div> -->
-<!-- 				<div class="form-group"> -->
-<!-- 					<input type="email" class="form-control" -->
-<!-- 						placeholder="Email address" name="email" id="email" /> <span -->
-<!-- 						id="check-e"></span> -->
-<!-- 				</div> -->
-<!-- 				<div class="form-group"> -->
-<!-- 					<input type="password" class="form-control" placeholder="Password" -->
-<!-- 						name="password" id="password" /> -->
-<!-- 				</div> -->
-<!-- 				<div class="form-group"> -->
-<!-- 					<input type="password" class="form-control" -->
-<!-- 						placeholder="Retype Password" name="cpassword" id="cpassword" /> -->
-<!-- 				</div> -->
-<!-- 				<hr /> -->
-<!-- 				<div class="form-group"> -->
-<!-- 					<button type="submit" class="btn btn-default" name="reg" -->
-<!-- 						id="btn-submit"> -->
-<!-- 						<span class="glyphicon glyphicon-log-in"></span> &nbsp; Create -->
-<!-- 						Account -->
-<!-- 					</button> -->
-<!-- 				</div> -->
-<!-- 			</form> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-<!-- 	<script src="js/bootstrap.min.js"></script> -->
+	
+	<div class="signin-form">
+    <div class="container">
+        <form class="form-signin" method="post" id="register-form" action="../controller/rigesterController.php">
+            <h2 class="form-signin-heading">Sign Up</h2><hr />
+            <div id="error">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" name="user_name" id="user_name" />
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email address" name="user_email" id="user_email" />
+                <span id="check-e"></span>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" name="password" id="password" />
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Retype Password" name="cpassword" id="cpassword" />
+            </div>
+            <hr />
+                <div class="form-group">
+                <button type="submit" class="btn btn-default" name="btn-save" id="btn-submit">
+                    <span class="glyphicon glyphicon-log-in"></span> &nbsp; Create Account
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+	<script src="js/bootstrap.min.js"></script>
 
 
 
 
-<fieldset>
-		<form action="../controller/RegisterController.php" method="post">
-			<input name="username" type="text" placeholder="Username:" required="required"/>
-			<br />
-			<input name="email" type="email" placeholder="Email:" required="required" /><br/>
-			<input name="password" type="password" placeholder="Password:" required="required" />
-			<input name="reg" type="submit" value="Izprashtane"/>
+<!-- <fieldset> -->
+<!-- 		<form action="../controller/RegisterController.php" method="post"> -->
+<!-- 			<input name="username" type="text" placeholder="Username:" required="required"/> -->
+<!-- 			<br /> -->
+<!-- 			<input name="email" type="email" placeholder="Email:" required="required" /><br/> -->
+<!-- 			<input name="password" type="password" placeholder="Password:" required="required" /> -->
+<!-- 			<input name="reg" type="submit" value="Izprashtane"/> -->
 			
-			<div class='error'>
-				<?= $errorMessage ?>
-			</div>
-		</form>
-	</fieldset>
+<!-- 			<div class='error'> -->
+			//	<?= $errorMessage ?>
+<!-- 			</div> -->
+<!-- 		</form> -->
+<!-- 	</fieldset> -->
 </body>
 
 <footer>
