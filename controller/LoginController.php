@@ -6,7 +6,6 @@
 	if (isset($_POST['submit'])) {
 		try {
 			$user = new User(htmlentities(trim($_POST['username'])), 
-							"haha",
 							htmlentities(trim($_POST['password'])));
 			
 			$userData = new UserDAO();

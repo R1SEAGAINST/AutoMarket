@@ -1,12 +1,12 @@
 <?php
 	class UserDAO implements IUserDAO {
 		
-		const GET_AND_CHECK_USER_SQL = "SELECT first_name, id FROM users WHERE user_name = ? AND user_password = sha1(?)";
+		const GET_AND_CHECK_USER_SQL = "SELECT user_name, id FROM users WHERE user_name = ? AND user_password = sha1(?)";
 		//const CHECK_USER_SQL = "SELECT * FROM users WHERE user_name = ".$db->quote($user)."";
 
 
-		const REGISTER_USER_SQL = "INSERT INTO users (user_name, user_email, user_password, user_phone, user_country, user_address) 
-													VALUES (?, ?, ?, ?, ?, ?)";
+		const REGISTER_USER_SQL = "INSERT INTO users (user_name, user_email, user_password, user_phone, user_country) 
+													VALUES (?, ?, ?, ?, ?)";
 		
 		public function loginUser(User $user) {
 			$db = DBConnection::getDb();
@@ -21,7 +21,7 @@
 			
 			$user = $res[0];
 			
-			return new User($user['user_name'], 'haha',$user['user_'], $user['user_id']);
+			return new User($user['user_name'],$user['user_email'], $user['user_id'],'haha', $user['user_phone'], $user['user_country']);
 		}
 		
 		function registerUser(User $user) {
@@ -31,7 +31,8 @@
 // 				throw new Exception("Username already exists!");
 // 			}else{
 				$sql = $db->prepare(self::REGISTER_USER_SQL);
-				$sql->execute(array($user->username, $user->email, sha1($user->password)));
+				$sql->execute(array($user->username, $user->email, sha1($user->password), $user->phone, $user->country));
+				
 				
 				$userId = $sql->rowCount() > 0 ? $db->lastInsertId() : 0;
 				
@@ -40,7 +41,7 @@
 				}else{
 				
 				
-				return new User($user, $email, 'haha', $userId);
+				return new User($username, $email, 'haha', $userId, $phone, $country);
 				}
 				
 				

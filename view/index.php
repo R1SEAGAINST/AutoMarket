@@ -1,6 +1,9 @@
 <?php 
+require_once 'header.php';
+echo $errorMessage;
 
-	?>
+?>
+	
 <div id="page-content">
 	<section id="car-advertisement">
 		<div class="content-holder">

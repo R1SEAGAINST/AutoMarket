@@ -1,140 +1,8 @@
+<?php 
+require_once 'header.php';
 
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
-<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<title>Automarket - Log In</title>
-<meta name="description" content="Automarket">
 
-<link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/uniform.default.css">
-<link rel="stylesheet" href="../css/prettyPhoto.css">
-<script src="../js/vendor/modernizr-2.6.2.min.js"></script>
-<script src="../js/vendor/jquery-1.8.2.min.js"></script>
-<script src="../js/vendor/selectivizr.js"></script>
-<script src="../js/vendor/PIE.js"></script>
-<script src="../js/plugins/jquery.placeholder.min.js"></script>
-<script src="../js/plugins/jquery.uniform.min.js"></script>
-<script src="../js/plugins/jquery.flexslider-min.js"></script>
-<script src="../js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script src="../js/plugins/jquery.prettyPhoto.js"></script>
-<script src="../js/plugins/jquery.countdown.js"></script>
-
-<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript"
-	src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js">
-</script>
-<link href="../css/style.css" rel="stylesheet" type="text/css"
-	media="screen">
-<script type="text/javascript" src="../js/script.js"></script>
-
-<script src="../js/plugins.js"></script>
-<script src="../js/main.js"></script>
-</head>
-<body>
-	<!--[if lt IE 7]>
-<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-<![endif]-->
-	<header>
-		<div class="content-holder">
-			<div class="layer-one">
-				<div class="page-titles">
-					<h1>
-						<a href="./index.php">Automarket</a>
-					</h1>
-					<p class="sub-title">This is a title</p>
-				</div>
-
-				<div class="dealer-login">
-					<a href="./dealer-details.php" class="dealer-name">Dealer Name</a>
-					<a href="#" class="sign-out">Sign Out</a>
-				</div>
-
-				<div class="header-buttons">
-					<a href="./add-vehicle.php" class="add-an-offer rounded-link-box"><span
-						class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add
-							An Offer</span></a>
-					<div class="pages-top rounded-link-box">
-						<a href="#" class="box-content">Pages</a>
-						<ul>
-
-							<li><a href="./index.php">Home page</a></li>
-
-							<li><a href="./add-vehicle.php">Add an offer</a></li>
-
-							<li><a href="./log-in.php">Log in page</a></li>
-
-							<li><a href="./car-list.php">Car list</a>
-								<ul>
-									<li><a href="./car-details.php">Car details</a>
-									
-									<li>
-								
-								</ul></li>
-
-							<li><a href="./blog-overview.php">Blog</a>
-								<ul>
-									<li><a href="./blog-post.php">Blog post</a>
-									
-									<li>
-								
-								</ul></li>
-							<li><a href="./dealer-list.php">Dealer list</a>
-								<ul>
-									<li><a href="./dealer-details.php">Dealer details</a>
-									
-									<li>
-								
-								</ul></li>
-
-							<li><a href="./insurance.php">Insurance</a></li>
-
-							<li><a href="./under-construction.php">Under construction</a></li>
-
-							<li><a href="./contact-us.php">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!--.layer-one-->
-
-			<div class="layer-two">
-				<nav>
-					<ul>
-						<li class="nav-cars current-item"><a href="./car-list.php">Cars</a></li>
-						<li class="nav-bike"><a href="#">Bikes</a></li>
-						<li class="nav-truck"><a href="#">Trucks</a></li>
-						<li class="nav-parts"><a href="#">Parts</a></li>
-					</ul>
-				</nav>
-
-				<form id="header-search" action="./car-list.php" method="post">
-					<input type="text" name="quick_search"
-						onfocus="if(this.value == 'Quick Search, Ex: Mercedes-Benz E220') { this.value = ''; }"
-						onblur="if(this.value == '') { this.value = 'Quick Search, Ex: Mercedes-Benz E220'; }"
-						value="Quick Search, Ex: Mercedes-Benz E220" class="quick-search">
-					<select name="type-option">
-						<option value="cars" selected="selected">Cars</option>
-						<option value="bikes">Bikes</option>
-						<option value="trucks">Trucks</option>
-						<option value="Parts">Parts</option>
-					</select>
-					<div class="search-submit">
-						<input type="submit" value="Search" />
-					</div>
-				</form>
-			</div>
-			<!--.layer-two-->
-		</div>
-	</header>
-
+?>
 
 <body>
 
@@ -157,7 +25,86 @@
             <div class="form-group">
                 <input type="password" class="form-control" placeholder="Retype Password" name="cpassword" id="cpassword" />
             </div>
-            <hr />
+             <div class="form-group">
+                <input type="text" class="form-control" placeholder="Phone number" name="user_phone" id="user_phone" />
+                <span id=""></span>
+            </div>
+				<div>
+					<label for="select-country-origin">Country of Registration: <span
+						class="mandatory">*</span></label> <br/> <select
+						id="select-country-origin" name="user_country">
+						
+						<option selected="selected">Select</option>
+						<option value="AL">Albania</option>
+						<option value="AD">Andorra</option>
+						<option value="AT">Austria</option>
+						<option value="BY">Belarus</option>
+						<option value="BE">Belgium</option>
+						<option value="BA">Bosnia and Herzegovina</option>
+						<option value="BR">Brazil</option>
+						<option value="BG">Bulgaria</option>
+						<option value="CA">Canada</option>
+						<option value="HR">Croatia</option>
+						<option value="CY">Cyprus</option>
+						<option value="CZ">Czech Republic</option>
+						<option value="DK">Denmark</option>
+						<option value="EG">Egypt</option>
+						<option value="EE">Estonia</option>
+						<option value="ET">Ethiopia</option>
+						<option value="FO">Faroe Islands</option>
+						<option value="FI">Finland</option>
+						<option value="FR">France</option>
+						<option value="DE">Germany</option>
+						<option value="GR">Greece</option>
+						<option value="HU">Hungary</option>
+						<option value="IS">Iceland</option>
+						<option value="IE">Ireland</option>
+						<option value="IL">Israel</option>
+						<option value="IT">Italy</option>
+						<option value="JP">Japan</option>
+						<option value="JO">Jordan</option>
+						<option value="KW">Kuwait</option>
+						<option value="LV">Latvia</option>
+						<option value="LB">Lebanon</option>
+						<option value="LI">Liechtenstein</option>
+						<option value="LT">Lithuania</option>
+						<option value="LU">Luxembourg</option>
+						<option value="MK">Macedonia</option>
+						<option value="MT">Malta</option>
+						<option value="MX">Mexico</option>
+						<option value="MD">Moldova</option>
+						<option value="MC">Monaco</option>
+						<option value="ME">Montenegro</option>
+						<option value="MA">Morocco</option>
+						<option value="NL">Netherlands</option>
+						<option value="NZ">New Zealand</option>
+						<option value="NG">Nigeria</option>
+						<option value="NO">Norway</option>
+						<option value="OM">Oman</option>
+						<option value="PL">Poland</option>
+						<option value="PT">Portugal</option>
+						<option value="RO">Romania</option>
+						<option value="RU">Russian Federation</option>
+						<option value="SM">San Marino</option>
+						<option value="SA">Saudi Arabia</option>
+						<option value="RS">Serbia</option>
+						<option value="SK">Slovakia</option>
+						<option value="SI">Slovenia</option>
+						<option value="ZA">South Africa</option>
+						<option value="KR">South Korea</option>
+						<option value="ES">Spain</option>
+						<option value="SE">Sweden</option>
+						<option value="CH">Switzerland</option>
+						<option value="TW">Taiwan</option>
+						<option value="TN">Tunisia</option>
+						<option value="TR">Turkey</option>
+						<option value="UA">Ukraine</option>
+						<option value="AE">United Arab Emirates</option>
+						<option value="GB">United Kingdom</option>
+						<option value="US">USA</option>
+					</select>
+				</div>
+				<hr />
                 <div class="form-group">
                 <button type="submit" class="btn btn-default" name="btn-save" id="btn-submit">
                     <span class="glyphicon glyphicon-log-in"></span> &nbsp; Create Account
