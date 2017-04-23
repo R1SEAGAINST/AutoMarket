@@ -2,7 +2,7 @@
 	class UserDAO implements IUserDAO {
 		
 		const GET_AND_CHECK_USER_SQL = "SELECT * FROM users WHERE user_email= ? AND user_password = sha1(?)";
-		//const CHECK_USER_SQL = "SELECT * FROM users WHERE user_name = ".$db->quote($user)."";
+		//const CHECK_USER_SQL = "SELECT * FROM users WHERE user_name = ".$db->quote($user->username)."";
 
 
 		const REGISTER_USER_SQL = "INSERT INTO users (user_name, user_email, user_password, user_phone, user_country, user_address) 
@@ -35,10 +35,10 @@
 		function registerUser(User $user) {
 			
 			$db = DBConnection::getDb();
-			//$sql = $db->query(self::CHECK_USER_SQL);
-// 			if ($sql->rowCount() > 0){
-// 				throw new Exception("Username already exists!");
-// 			}else{
+			$sql = $db->query("SELECT * FROM users WHERE user_name = ".$db->quote($user->username)."");
+			if ($sql->rowCount() > 0){
+				throw new Exception("Username already exists!");
+			}else{
 				$sql = $db->prepare(self::REGISTER_USER_SQL);
 				$sql->execute(array($user->username, $user->email, sha1($user->password), $user->phone, $user->country, $user->address));
 				
@@ -51,13 +51,10 @@
 					$user->setUserId($userId);
 					return $user;
 					
-				}
-				
-				
+				}	
 			}
 		}
 		
 		
-	//}
-	
+	}
 ?>
