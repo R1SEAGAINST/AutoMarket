@@ -1,9 +1,9 @@
 <?php
 	class UserDAO implements IUserDAO {
 		
-		const GET_AND_CHECK_USER_SQL = "SELECT first_name, id FROM users WHERE first_name = ? AND password = sha1(?)";
+		const GET_AND_CHECK_USER_SQL = "SELECT first_name, id FROM users WHERE user_name = ? AND user_password = sha1(?)";
 		//const CHECK_USER_SQL = "SELECT * FROM users WHERE user_name = ".$db->quote($user)."";
-		const REGISTER_USER_SQL = "INSERT INTO users (first_name, email, password) VALUES (?, ?, ?)";
+		const REGISTER_USER_SQL = "INSERT INTO users (user_name, user_email, user_password) VALUES (?, ?, ?)";
 		
 		public function loginUser(User $user) {
 			$db = DBConnection::getDb();

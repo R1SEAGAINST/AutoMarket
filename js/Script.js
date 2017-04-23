@@ -55,7 +55,7 @@ $('document').ready(function()
             beforeSend: function()
             {
                 $("#error").fadeOut();
-                $("#btn-submit").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; sending ...');
+            
             },
             success :  function(data)
             {

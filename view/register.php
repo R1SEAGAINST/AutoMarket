@@ -140,7 +140,7 @@
 	
 	<div class="signin-form">
     <div class="container">
-        <form class="form-signin" method="post" id="register-form" action="../controller/rigesterController.php">
+        <form class="form-signin" method="post" id="register-form" action="../controller/registerController.php">
             <h2 class="form-signin-heading">Sign Up</h2><hr />
             <div id="error">
             </div>
@@ -168,22 +168,6 @@
 </div>
 	<script src="js/bootstrap.min.js"></script>
 
-
-
-
-<!-- <fieldset> -->
-<!-- 		<form action="../controller/RegisterController.php" method="post"> -->
-<!-- 			<input name="username" type="text" placeholder="Username:" required="required"/> -->
-<!-- 			<br /> -->
-<!-- 			<input name="email" type="email" placeholder="Email:" required="required" /><br/> -->
-<!-- 			<input name="password" type="password" placeholder="Password:" required="required" /> -->
-<!-- 			<input name="reg" type="submit" value="Izprashtane"/> -->
-			
-<!-- 			<div class='error'> -->
-			//	<?= $errorMessage ?>
-<!-- 			</div> -->
-<!-- 		</form> -->
-<!-- 	</fieldset> -->
 </body>
 
 <footer>

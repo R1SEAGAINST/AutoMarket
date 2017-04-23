@@ -1,9 +1,6 @@
 <?php 
-require_once 'header.php';
 
-echo "<h3>Hello ". $registereduser->username."</h3>";
-?>
-	
+	?>
 <div id="page-content">
 	<section id="car-advertisement">
 		<div class="content-holder">
