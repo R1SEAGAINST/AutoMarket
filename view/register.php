@@ -137,11 +137,11 @@
 
 
 <body>
+
 	
 	<div class="signin-form">
     <div class="container">
         <form class="form-signin" method="post" id="register-form" action="../controller/registerController.php">
-            <h2 class="form-signin-heading">Sign Up</h2><hr />
             <div id="error">
             </div>
             <div class="form-group">
@@ -167,6 +167,7 @@
     </div>
 </div>
 	<script src="js/bootstrap.min.js"></script>
+
 
 </body>
 

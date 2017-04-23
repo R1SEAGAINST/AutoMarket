@@ -7,7 +7,6 @@ if (isset($_POST['btn-save'])) {
 	
 	
 	try {
-
 		$user = new User(htmlentities(trim($_POST['user_name'])),
 				htmlentities(trim($_POST['user_email'])),
 				htmlentities(trim($_POST['password'])));
