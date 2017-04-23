@@ -26,6 +26,15 @@
 <script src="../js/plugins/jquery.prettyPhoto.js"></script>
 <script src="../js/plugins/jquery.countdown.js"></script>
 
+<!--  register -->
+<link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../js/script.js"></script>
+
+
+
 <script src="../js/plugins.js"></script>
 <script src="../js/main.js"></script>
 </head>

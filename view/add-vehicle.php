@@ -606,15 +606,7 @@
 </body>
 </html>
 
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
-<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<title>Automarket - Add Vehicle</title>
-	<meta name="description" content="Automarket">
+
 
 <?php 
 require_once 'header.php';
