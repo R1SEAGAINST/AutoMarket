@@ -1,20 +1,13 @@
 <?php 
-<<<<<<< HEAD
-require_once 'header.php';
-echo $errorMessage;
-
-?>
-	
-=======
 session_start();
 require_once 'header.php';
-//echo "<h3>".$errorMessage."</h3>";
-$username = $_SESSION['username'];
-$userId = $_SESSION['userid'];
+// //echo "<h3>".$errorMessage."</h3>";
+// $username = $_SESSION['username'];
+// $userId = $_SESSION['userid'];
 
-echo "<h2>".$username." ".$userId."</h2>";
+// echo "<h2>".$username." ".$userId."</h2>";
 	?>
->>>>>>> 6ab21e2e5f36fd3789e6eeb85c99128e896fc43f
+
 <div id="page-content">
 	<section id="car-advertisement">
 		<div class="content-holder">

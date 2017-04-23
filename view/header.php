@@ -47,12 +47,19 @@
 			<div class="layer-one">
 				<div class="page-titles">
 					<h1>
-						<a href="./index.php">Automarket</a>
+						<a href="http://localhost/AutoMarket/view/index.php">Automarket</a>
 					</h1>
-					<p class="sub-title">This is a title</p>
+					<p class="sub-title"></p>
 				</div>
 
 				<div class="dealer-login">
+				
+				
+				
+				
+				
+				
+				
 					<a href="./dealer-details.php" class="dealer-name">Dealer Name</a>
 					<a href="#" class="sign-out">Sign Out</a>
 				</div>
@@ -110,8 +117,6 @@
 					<ul>
 						<li class="nav-cars current-item"><a href="./car-list.php">Cars</a></li>
 						<li class="nav-bike"><a href="#">Bikes</a></li>
-						<li class="nav-truck"><a href="#">Trucks</a></li>
-						<li class="nav-parts"><a href="#">Parts</a></li>
 					</ul>
 				</nav>
 
@@ -123,8 +128,6 @@
 					<select name="type-option">
 						<option value="cars" selected="selected">Cars</option>
 						<option value="bikes">Bikes</option>
-						<option value="trucks">Trucks</option>
-						<option value="Parts">Parts</option>
 					</select>
 					<div class="search-submit">
 						<input type="submit" value="Search" />

@@ -11,6 +11,8 @@ if (isset($_POST['btn-save'])) {
 				htmlentities(trim($_POST['user_email'])),
 				htmlentities(trim($_POST['password'])));
 		$user->setUsername($_POST['user_name']);
+		$user->setPhone($_POST['user_phone']);
+		$user->setUserCountry($_POST['user_country']);
 		
 		$userData = new UserDAO();
 		
