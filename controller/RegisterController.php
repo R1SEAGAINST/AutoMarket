@@ -3,13 +3,13 @@ function __autoload($className) {
 	require_once "../model/" . $className . '.php';
 }
 
-if (isset($_POST['reg'])) {
+if (isset($_POST['btn-save'])) {
 	
 	
 	try {
 		
-		$user = new User(htmlentities(trim($_POST['username'])),
-				htmlentities(trim($_POST['email'])),
+		$user = new User(htmlentities(trim($_POST['user_name'])),
+				htmlentities(trim($_POST['user_email'])),
 				htmlentities(trim($_POST['password'])));
 		
 		$userData = new UserDAO();
