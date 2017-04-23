@@ -1,6 +1,6 @@
 <?php 
-session_start();
 require_once 'header.php';
+session_start();
 // //echo "<h3>".$errorMessage."</h3>";
 // $username = $_SESSION['username'];
 // $userId = $_SESSION['userid'];

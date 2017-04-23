@@ -13,10 +13,9 @@
 			$loggedUser = $userData->loginUser($user);
 			
 			session_start();
-			$_SESSION['userid'] = $loggedUser->id;
-			$_SESSION['username'] = $loggedUser->username;
+			$_SESSION['user'] = json_encode($loggedUser);
 			
-			header('Location:../view/index.php', true, 302);
+			header('Location:homeController.php', true, 302);
 		}
 		catch (Exception $e) {
 			$errorMessage = $e->getMessage();

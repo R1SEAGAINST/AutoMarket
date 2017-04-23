@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
@@ -49,17 +48,19 @@
 					<h1>
 						<a href="http://localhost/AutoMarket/view/index.php">Automarket</a>
 					</h1>
-					<p class="sub-title"></p>
+					<?php 
+					if (!isset($user->username)) { 	
+						?>
+					<p class="sub-title">Worlds best vehicle website</p>
+					<?php 
+					}
+					?>
 				</div>
 
 				<div class="dealer-login">
-				
-				
-				
-				
-				
-				
-				
+				<?php 
+				if (isset($user->username)) { 	
+						?>
 					<a href="./dealer-details.php" class="dealer-name">Dealer Name</a>
 					<a href="#" class="sign-out">Sign Out</a>
 				</div>
@@ -69,7 +70,7 @@
 						class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add
 							An Offer</span></a>
 					<div class="pages-top rounded-link-box">
-						<a href="#" class="box-content">Pages</a>
+						<a href="#" class="box-content">NAV</a>
 						<ul>
 
 							<li><a href="./index.php">Home page</a></li>
@@ -110,6 +111,30 @@
 					</div>
 				</div>
 			</div>
+			
+			<?php 
+					}else{
+			?>		
+						<a class="dealer-name"></a>
+					<a  class="sign-out"></a>
+				</div>
+				
+				<div class="header-buttons">
+					<a href="./register.php" class="add-an-offer rounded-link-box"><span
+						class="box-content"><strong class="plus-sign"></strong>&nbsp;Register
+							</span></a>
+					<div class="pages-top rounded-link-box">
+						<a href="./log-in.php" class="box-content">Login</a>	
+					</div>
+				</div>
+			</div>
+			<?php 
+					}
+			?>
+			
+			
+			
+			
 			<!--.layer-one-->
 
 			<div class="layer-two">
