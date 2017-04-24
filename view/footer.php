@@ -35,9 +35,9 @@
 					<span class="bold">Find</span> us here
 				</h3>
 				<ul class="social-list">
-					<li class="social-facebook"><a href="#">Facebook</a></li>
-					<li class="social-twitter"><a href="#">Twitter</a></li>
-					<li class="social-google"><a href="#">Google</a></li>
+					<li class="social-facebook"><a href="https://www.facebook.com/automarket.ae/?fref=ts">Facebook</a></li>
+					<li class="social-twitter"><a href="https://twitter.com/AutomarketUAE">Twitter</a></li>
+					<li class="social-google"><a href="https://plus.google.com/112164632464634094505">Google</a></li>
 				</ul>
 				<p class="note">Become our fan, and we will love you forever</p>
 			</div>

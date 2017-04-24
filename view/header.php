@@ -7,7 +7,7 @@
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Automarket - Car List</title>
+<title>Automarket</title>
 <meta name="description" content="Automarket">
 
 <link rel="stylesheet" href="../css/main.css">

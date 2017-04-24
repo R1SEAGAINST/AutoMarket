@@ -30,7 +30,7 @@ require_once 'header.php';
                 <span id=""></span>
             </div>
 				<div>
-					<label for="select-country-origin">Country of Registration: <span
+					<label for="select-country-origin">Country: <span
 						class="mandatory">*</span></label> <br/> <select
 						id="select-country-origin" name="user_country">
 						
