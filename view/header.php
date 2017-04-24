@@ -1,3 +1,9 @@
+<?php 
+if(!(isset($errorMessage))){
+	$errorMessage="";
+	session_start();
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
@@ -49,9 +55,11 @@
 						<a href="http://localhost/AutoMarket/view/index.php">Automarket</a>
 					</h1>
 					<?php 
-					if (!isset($user->username)) { 	
+					
+					if (!isset($_SESSION['user']) ) { 	
 						?>
 					<p class="sub-title">Worlds best vehicle website</p>
+					
 					<?php 
 					}
 					?>
@@ -59,10 +67,15 @@
 
 				<div class="dealer-login">
 				<?php 
-				if (isset($user->username)) { 	
+				
+				
+				if(isset($_SESSION['user'])) {
+					$user = json_decode($_SESSION['user']);
+					
+				
 						?>
-					<a href="./dealer-details.php" class="dealer-name">Dealer Name</a>
-					<a href="#" class="sign-out">Sign Out</a>
+					<a href="./dealer-details.php" class="dealer-name"><?=$user->username?></a>
+					<a href="../model/logout.php" class="sign-out">Sign Out</a>
 				</div>
 
 				<div class="header-buttons">
