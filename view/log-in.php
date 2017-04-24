@@ -1,5 +1,7 @@
 <?php 
+
 require_once 'header.php';
+
 
 ?>
 	
@@ -93,7 +95,7 @@ require_once 'header.php';
 							
 							
 						</fieldset>
-						
+						<div class="error"><?=$errorMessage?></div>
 					
 					</form>
 				</div>

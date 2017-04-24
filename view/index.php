@@ -1,9 +1,9 @@
 <?php 
 require_once 'header.php';
-session_start();
-// //echo "<h3>".$errorMessage."</h3>";
-// $username = $_SESSION['username'];
-// $userId = $_SESSION['userid'];
+//session_start();
+echo "<h3>".$errorMessage."</h3>";
+
+ 
 
 // echo "<h2>".$username." ".$userId."</h2>";
 	?>

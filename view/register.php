@@ -2,6 +2,7 @@
 require_once 'header.php';
 
 
+
 ?>
 
 <body>
@@ -110,6 +111,7 @@ require_once 'header.php';
                     <span class="glyphicon glyphicon-log-in"></span> &nbsp; Create Account
                 </button>
             </div>
+            <div class="error" ><?=$errorMessage?></div>
         </form>
     </div>
 </div>

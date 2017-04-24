@@ -21,11 +21,11 @@ if (isset($_POST['btn-save'])) {
 		session_start();
 		$_SESSION['user'] = json_encode($registeredUser);
 		
-		header('Location:homeController.php', true, 302);
+		header('Location:../view/index.php', true, 302);
 	}
 	catch (Exception $e) {
 		$errorMessage = $e->getMessage();
-		include '../view/index.php';
+		include '../view/register.php';
 	}
 }
 ?>

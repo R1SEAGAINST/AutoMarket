@@ -21,7 +21,7 @@
 			
 			$user = $res[0];
 			
-			$newUser = new User($user['user_email'], 'haha', $user['user_address'],  $user['user_id']);
+			$newUser = new User($user['user_email'], 'hahahaha', $user['user_address'],  $user['user_id']);
 			
 			$newUser->setUsername($user['user_name']);
 			$newUser->setPhone($user['user_phone']);
@@ -35,9 +35,9 @@
 		function registerUser(User $user) {
 			
 			$db = DBConnection::getDb();
-			$sql = $db->query("SELECT * FROM users WHERE user_name = ".$db->quote($user->username)."");
+			$sql = $db->query("SELECT * FROM users WHERE user_name = ".$db->quote($user->email)."");
 			if ($sql->rowCount() > 0){
-				throw new Exception("Username already exists!");
+				throw new Exception("Email already exists!");
 			}else{
 				$sql = $db->prepare(self::REGISTER_USER_SQL);
 				$sql->execute(array($user->username, $user->email, sha1($user->password), $user->phone, $user->country, $user->address));
