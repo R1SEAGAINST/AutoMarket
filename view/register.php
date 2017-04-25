@@ -19,23 +19,23 @@ require_once 'header.php';
 				
 				
 					<div id="nameDiv" class="regfield">
-						 <input id="name" type="text" placeholder="Your Name" />
+						 <input id="name" type="text" placeholder="Your Name" name="user_name" />
 					</div>
 					
 					
 					
 					
 					<div id="emailDiv" class="regfield">
-						  <input id="email" type="email"  placeholder="Email"/>
+						  <input id="email" type="email"  placeholder="Email" name="user_email"/>
 					</div>
 					
 						
 					<div id="phoneDiv" class="regfield">
 						
-						 <input id="phone" type="text" placeholder="Your Phone" /> 
+						 <input id="phone" type="text" placeholder="Your Phone"  name="user_phone"/> 
 					</div>
 					<div id="countryDiv" class="regfield">
-					 <select id="country" name="user_country" >
+					 <select id="country" name="user_country" name="user_country">
 										
 										<option selected="selected">Select Coutry</option>
 										<option value="AL">Albania</option>
@@ -112,14 +112,14 @@ require_once 'header.php';
 						
 				<div id="addressDiv" class="regfield">
 					
-					 <input id="address" type="text"  placeholder="Your Address"/> 
+					 <input id="address" type="text"  placeholder="Your Address" name="user_address"/> 
 				</div>
 					
 					
 					
 				<div id="passDiv" class="regfield">
 					
-					 <input id="password" type="password"  placeholder="Enter Password"/> 
+					 <input id="password" type="password"  placeholder="Enter Password" name="password"/> 
 				</div>
 				<div id="repeatDiv" class="regfield">
 				
@@ -129,7 +129,7 @@ require_once 'header.php';
 				</div>
 				<div class="checkbox-custom submit-field" id="mysubmit">
 										<span class="submit">
-						<input type="submit" value="Create Account" id="reg-reg"/></span>
+						<input type="submit" value="Create Account" id="reg-reg" name="btn-save"/></span>
 				</div>
 				
 				</fieldset>

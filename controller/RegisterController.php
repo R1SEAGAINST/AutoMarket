@@ -9,10 +9,12 @@ if (isset($_POST['btn-save'])) {
 	try {
 		$user = new User(
 				htmlentities(trim($_POST['user_email'])),
-				htmlentities(trim($_POST['password'])));
-		$user->setUsername($_POST['user_name']);
-		$user->setPhone($_POST['user_phone']);
-		$user->setUserCountry($_POST['user_country']);
+				htmlentities(trim($_POST['password'])),
+				htmlentities(trim($_POST['user_address']))
+				);
+		$user->setUsername(htmlentities(trim($_POST['user_name'])));
+		$user->setPhone(htmlentities(trim($_POST['user_phone'])));
+		$user->setUserCountry(htmlentities(trim($_POST['user_country'])));
 		
 		$userData = new UserDAO();
 		

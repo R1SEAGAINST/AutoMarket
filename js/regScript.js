@@ -18,7 +18,7 @@ nameField.onblur = function(){
 			var container = document.getElementById("nameDiv");
 			var errorMessage = document.createElement('span');
 			errorMessage.className = 'errorr';
-			errorMessage.textContent = 'Name shoud be at least 3 smbols!';
+			errorMessage.textContent = 'Name shoud be at least 3 symbols!';
 			container.appendChild(errorMessage);
 			hasErrors = true;
 		} else {
