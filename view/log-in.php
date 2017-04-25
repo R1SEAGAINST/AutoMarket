@@ -38,7 +38,7 @@ require_once 'header.php';
 
 					<form action="../controller/LoginController.php" method="post" id="returning-user" class="grey-corner-box">
 
-					<form id="returning-user" class="grey-corner-box" >
+					
 
 						<fieldset>
 							<legend><span class="bold">Returning</span> user</legend>

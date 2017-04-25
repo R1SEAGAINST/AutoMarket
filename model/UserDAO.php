@@ -35,7 +35,7 @@
 		function registerUser(User $user) {
 			
 			$db = DBConnection::getDb();
-			$sql = $db->query("SELECT * FROM users WHERE user_name = ".$db->quote($user->email)."");
+			$sql = $db->query("SELECT * FROM users WHERE user_email = ".$db->quote($user->email)."");
 			if ($sql->rowCount() > 0){
 				throw new Exception("Email already exists!");
 			}else{
