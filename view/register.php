@@ -131,8 +131,11 @@ require_once 'header.php';
 										<span class="submit">
 						<input type="submit" value="Create Account" id="reg-reg" name="btn-save" /></span>
 				</div>
+				<br/>
+			<div class="errorr"><?=$errorMessage?></div>
 				
 				</fieldset>
+				
 			</form>
 </div>
 </div>

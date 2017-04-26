@@ -4,37 +4,34 @@ var phoneField = document.getElementById('phone');
 var passField = document.getElementById('password');
 var repPassField = document.getElementById('repeatPass');
 var countryField = document.getElementById('country');
+var addressField = document.getElementById('address');
 var submit = document.getElementById('reg-reg');
-var allNamesArr = document.getElementsByClassName("regfields");
+//var allNamesArr = document.getElementsByClassName("regfields");
 
 
 
+var nameError = false;
+var emailError = false;
+var phoneError = false;
+var passError = false;
+var repPassError = false;
+var countryError = false;
 var hasErrors = false;
 
-
+//var isEmpty = true;
 submit.onclick = function (){
-	var isEmpty = true;
 	
-	for(var fieldName = 0; fieldName < allNamesArr.length; fieldName++ ){
-		console.log (allNamesArr[fieldName].value);
-		
-	    if (allNamesArr[fieldName].value !== "")
-	    {
-	    	isEmpty = false;
-	    	breack;
-	       
-	    }	   
-	}
-		
-	if(isEmpty){
+	    if ((nameField.value == "") || (emailField.value == "")||(phoneField.value == "") ||
+	    	 (passField.value == "") || (repPassField.value == "") || (countryField.value == "Select Country")){
+	
 		hasErrors = true;
-		
+	    }
 		document.forms[1].onsubmit = function(event) {
 			if (hasErrors) {
 				event.preventDefault();
 			}
 		}
-	}
+	
 	
 }
 
@@ -47,9 +44,9 @@ nameField.onblur = function(){
 			errorMessage.className = 'errorr';
 			errorMessage.textContent = 'Name shoud be at least 3 letters!';
 			container.appendChild(errorMessage);
-			hasErrors = true;
+			nameError = true;
 		} else {
-			hasErrors = false;
+			nameError = false;
 			
 		}
 	
@@ -59,7 +56,7 @@ nameField.onfocus = function() {
 	var errorMessage = document.querySelector("#nameDiv > .errorr");
 	if (errorMessage) {
 		errorMessage.parentNode.removeChild(errorMessage);
-		hasErrors = false;
+		nameError = false;
 	}
 };
 
@@ -84,10 +81,10 @@ function isExistingEmail(email){
 						container.appendChild(errorMessage);
 						
 						
-						hasErrors = true;
+						emailError = true;
 					} else {
 						
-						hasErrors = false;						
+						emailError = false;						
 					}
 			
 	});
@@ -96,7 +93,7 @@ function isExistingEmail(email){
 			var errorMessage = document.querySelector("#emailDiv > .errorr");
 			if (errorMessage) {
 				errorMessage.parentNode.removeChild(errorMessage);
-				hasErrors = false;
+				emailError = false;
 			}
 		};				
 }
@@ -112,10 +109,10 @@ emailField.onblur = function(){
 					container.appendChild(errorMessage);
 					
 					
-					hasErrors = true;
+					emailError = true;
 				} else {
 					
-					hasErrors = false;
+					emailError = false;
 					
 					isExistingEmail(emailField.value);
 									
@@ -127,7 +124,7 @@ emailField.onblur = function(){
 		var errorMessage = document.querySelector("#emailDiv > .errorr");
 		if (errorMessage) {
 			errorMessage.parentNode.removeChild(errorMessage);
-			hasErrors = false;
+			emailError = false;
 		}
 	};
 	
@@ -148,9 +145,9 @@ emailField.onblur = function(){
 				errorMessage.className = 'errorr';
 				errorMessage.textContent = 'Phone is not valid!';
 				container.appendChild(errorMessage);
-				hasErrors = true;
+				phoneError = true;
 			} else {
-				hasErrors = false;
+				phoneError = false;
 				
 			}
 		
@@ -162,7 +159,7 @@ emailField.onblur = function(){
 		var errorMessage = document.querySelector("#phoneDiv > .errorr");
 		if (errorMessage) {
 			errorMessage.parentNode.removeChild(errorMessage);
-			hasErrors = false;
+			phoneError = false;
 		}
 	};
 
@@ -175,9 +172,9 @@ emailField.onblur = function(){
 				errorMessage.className = 'errorr';
 				errorMessage.textContent = 'Password shoud be at least 8 symbols!';
 				container.appendChild(errorMessage);
-				hasErrors = true;
+				passError = true;
 			} else {
-				hasErrors = false;
+				passError = false;
 				
 			}
 		
@@ -186,7 +183,7 @@ emailField.onblur = function(){
 		var errorMessage = document.querySelector("#passDiv > .errorr");
 		if (errorMessage) {
 			errorMessage.parentNode.removeChild(errorMessage);
-			hasErrors = false;
+			passError = false;
 		}
 	};
 	
@@ -199,9 +196,9 @@ emailField.onblur = function(){
 				errorMessage.className = 'errorr';
 				errorMessage.textContent = 'Choose country, pleace!';
 				container.appendChild(errorMessage);
-				hasErrors = true;
+				countryError = true;
 			} else {
-				hasErrors = false;
+				countryError = false;
 				
 			}
 		
@@ -211,7 +208,7 @@ emailField.onblur = function(){
 		var errorMessage = document.querySelector("#countryDiv > .errorr");
 		if (errorMessage) {
 			errorMessage.parentNode.removeChild(errorMessage);
-			hasErrors = false;
+			countryError = false;
 		}
 	};
 
@@ -237,9 +234,9 @@ repPassField.onblur = function(){
 				errorMessage.className = 'errorr';
 				errorMessage.textContent = 'Passwords do not match!';
 				container.appendChild(errorMessage);
-				hasErrors = true;
+				repPassError = true;
 			} else {
-				hasErrors = false;
+				repPassError = false;
 				
 			}
 		
@@ -249,12 +246,12 @@ repPassField.onblur = function(){
 		var errorMessage = document.querySelector("#repeatDiv > .errorr");
 		if (errorMessage) {
 			errorMessage.parentNode.removeChild(errorMessage);
-			hasErrors = false;
+			repPassError = false;
 		}
 	};
 	
 document.forms[1].onsubmit = function(event) {
-	if (hasErrors) {
+	if( (hasErrors) || (nameError) || (emailError) || (passError) || (repPassError) || (coutryError) || (phoneError)){
 		event.preventDefault();
 	}
 

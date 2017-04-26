@@ -11,7 +11,7 @@ var hasErrors = false;
 
 submit.onclick = function (){
 	
-	if( emailField.value =="" && passField.value ==""){
+	if( emailField.value =="" || passField.value ==""){
 
 		hasErrors = true;
 				
