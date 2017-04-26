@@ -43,15 +43,15 @@ $('document').ready(function()
     /* validation */
 
     /* form submit */
-    function submitForm()
-    {
-        var data = $("#register-form").serialize();
-
-        $.ajax({
-
-            type : 'POST',
-            url  : 'register.php',
-            data : data,
+   // function submitForm()
+   // {
+//        var data = $("#register-form").serialize();
+//
+//        $.ajax({
+//
+//            type : 'POST',
+//            url  : 'register.php',
+//            data : data,
 //           
 //            success :  function(data)
 //            
@@ -78,7 +78,7 @@ $('document').ready(function()
 //            }
 //        });
 //        return false;
-    })
+    //})
     /* form submit */
 
-});
+//});

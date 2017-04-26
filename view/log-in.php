@@ -14,7 +14,7 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Vehicle</span> Insurance</h2>
 					<p class="page-location">
-						<a href="#">Home </a>
+						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="#">Vehicle Insurance</a>
 					</p>
@@ -22,11 +22,11 @@ require_once 'header.php';
 			
 			</div>
 			
-			<nav class="default-tabs split-tabs">
-				<ul>
-					<li class="current-item"><a href="#">Choose from below</a></li>
-				</ul>
-			</nav>
+<!-- 			<nav class="default-tabs split-tabs"> -->
+<!-- 				<ul> -->
+<!-- 					<li class="current-item"><a href="#">Choose from below</a></li> -->
+<!-- 				</ul> -->
+<!-- 			</nav> -->
 		</div>
 	</section><!--#car-pagination -->
 		
@@ -36,26 +36,26 @@ require_once 'header.php';
 				
 				<div class="one-half col-539">
 
-					<form action="../controller/LoginController.php" method="post" id="returning-user" class="grey-corner-box">
+					<form action="http://localhost/AutoMarket/controller/LoginController.php" method="post" id="returning-user" class="grey-corner-box">
 
 					
 
 						<fieldset>
-							<legend><span class="bold">Returning</span> user</legend>
+							<legend><span class="bold">Login</span> user</legend>
 							<ul>
 								<li class="select-two">
-									<div>
-										<label for="username">Email:</label>
-										<input type="text" name="email" id="username" />
+									<div id="user_emailDiv">
+										<label for="user_email">Email:</label>
+										<input type="text" name="email" id="user_email" />
 									</div>
-									<div>
-										<label for="password">Password:</label>
-										<input type="password" name="password" id="password" />								
+									<div id="user_passDiv">
+										<label for="user_password">Password:</label>
+										<input type="password" name="password" id="user_password" />								
 									</div>
 								</li>
 								<li>
 									<div class="checkbox-custom submit-field">
-										<span class="submit"><input type="submit" value="Log in" name="submit"/></span>
+										<span class="submit"><input type="submit" value="Log in" name="submit" id="log-submit"/></span>
 										<input type="checkbox" value="remember_me" id="remember-me" checked="checked" />
 										<label for="remember-me">Remember me</label>
 									</div>
@@ -65,39 +65,39 @@ require_once 'header.php';
 						</fieldset>
 					
 					
-					</form>
-				</div>
+					</form> 
+<!-- 				</div> -->
 				
 				
-				<div class="one-half col-539">
-					<form id="new-user" class="grey-corner-box">
-						<fieldset>
-							<legend><span class="bold">New</span> user</legend>
-							<ul>
-								<li class="select-two">
-									<div>
-										<input type="radio" name="type" value="register" id="register" />
-										<label for="register">Register<span class="description">Create an account for dealers</span></label>
-									</div>
-									<div>
-										<input type="radio" name="type" value="add-offer" id="add-offer" />
-										<label for="add-offer">Add an offer<span class="description">Submit your personal offer</span></label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox-custom submit-field">
-										<span class="submit"><input type="submit" value="Register" /></span>
-									</div>
-								</li>
+<!-- 				<div class="one-half col-539"> -->
+<!-- 					<form id="new-user" class="grey-corner-box"> -->
+<!-- 						<fieldset> -->
+<!-- 							<legend><span class="bold">New</span> user</legend> -->
+<!-- 							<ul> -->
+<!-- 								<li class="select-two"> -->
+<!-- 									<div> -->
+<!-- 										<input type="radio" name="type" value="register" id="register" /> -->
+<!-- 										<label for="register">Register<span class="description">Create an account for dealers</span></label> -->
+<!-- 									</div> -->
+<!-- 									<div> -->
+<!-- 										<input type="radio" name="type" value="add-offer" id="add-offer" /> -->
+<!-- 										<label for="add-offer">Add an offer<span class="description">Submit your personal offer</span></label> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+<!-- 								<li> -->
+<!-- 									<div class="checkbox-custom submit-field"> -->
+<!-- 										<span class="submit"><input type="submit" value="Register" /></span> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
 							
 							
-							</ul>
+<!-- 							</ul> -->
 							
 							
-						</fieldset>
-						<div class="error"><?=$errorMessage?></div>
+<!-- 						</fieldset> -->
+						<div class="errorr"><?=$errorMessage?></div>
 					
-					</form>
+<!-- 					</form> -->
 				</div>
 				
 				
@@ -110,6 +110,9 @@ require_once 'header.php';
 	</section><!--#search-list-->
 	
 </div><!--#page-content-->
+<script src="http://localhost/AutoMarket/assets/js/jquery-3.1.1.min.js"></script>
+<script src="http://localhost/AutoMarket/assets/js/logScript.js"></script>
+
 	
 <?php 
 require_once 'footer.php';

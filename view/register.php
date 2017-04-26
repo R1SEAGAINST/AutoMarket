@@ -11,7 +11,7 @@ require_once 'header.php';
 			<div class="full-width">
 		<div class="reg-in">
 			
-				<form action="../controller/RegisterController.php/" method='post' class="grey-corner-box">
+				<form action="http://localhost/AutoMarket/controller/RegisterController.php/" method='post' class="grey-corner-box">
 				
 				
 						<fieldset id="regform">
@@ -19,25 +19,25 @@ require_once 'header.php';
 				
 				
 					<div id="nameDiv" class="regfield">
-						 <input id="name" type="text" placeholder="Your Name" name="user_name" />
+						 <input id="name" type="text" placeholder="Your Name" name="user_name" class="regfields"/>
 					</div>
 					
 					
 					
 					
 					<div id="emailDiv" class="regfield">
-						  <input id="email" type="email"  placeholder="Email" name="user_email"/>
+						  <input id="email" type="email"  placeholder="Email" name="user_email" class="regfields"/>
 					</div>
 					
 						
 					<div id="phoneDiv" class="regfield">
 						
-						 <input id="phone" type="text" placeholder="Your Phone"  name="user_phone"/> 
+						 <input id="phone" type="text" placeholder="Your Phone"  name="user_phone" class="regfields"/> 
 					</div>
 					<div id="countryDiv" class="regfield">
-					 <select id="country" name="user_country" name="user_country">
+					 <select id="country" name="user_country" name="user_country" class="regfields">
 										
-										<option selected="selected">Select Coutry</option>
+										<option selected="selected">Select Country</option>
 										<option value="AL">Albania</option>
 										<option value="AD">Andorra</option>
 										<option value="AT">Austria</option>
@@ -112,20 +112,20 @@ require_once 'header.php';
 						
 				<div id="addressDiv" class="regfield">
 					
-					 <input id="address" type="text"  placeholder="Your Address" name="user_address"/> 
+					 <input id="address" type="text"  placeholder="Your Address" name="user_address" class="regfields"/> 
 				</div>
 					
 					
 					
 				<div id="passDiv" class="regfield">
 					
-					 <input id="password" type="password"  placeholder="Enter Password" name="password"/> 
+					 <input id="password" type="password"  placeholder="Enter Password" name="password" class="regfields"/> 
 				</div>
-				<div id="repeatDiv" class="regfield">
+				<div id="repeatDiv" class="regfield" >
 				
 						
 			
-						<input id="repeatPass" type="password" placeholder="Repeat Password"/> <span id="CheckPasswordMatch"></span>
+						<input id="repeatPass" type="password" placeholder="Repeat Password" class="regfields" /> <span id="CheckPasswordMatch"></span>
 				</div>
 				<div class="checkbox-custom submit-field" id="mysubmit">
 										<span class="submit">
@@ -139,8 +139,8 @@ require_once 'header.php';
 	</div>
 	</section>
 	
-	<script src="../js/jquery-3.1.1.min.js"></script>
-	<script src="../js/regScript.js"></script>
+	<script src="../assets/js/jquery-3.1.1.min.js"></script>
+	<script src="../assets/js/regScript.js"></script>
 
 </body>
 </html>

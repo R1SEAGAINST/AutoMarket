@@ -5,19 +5,20 @@ var passField = document.getElementById('password');
 var repPassField = document.getElementById('repeatPass');
 var countryField = document.getElementById('country');
 var submit = document.getElementById('reg-reg');
-var allNamesArr = document.getElementsByName("name");
+var allNamesArr = document.getElementsByClassName("regfields");
 
 
-var isEmpty = true;
+
 var hasErrors = false;
 
 
 submit.onclick = function (){
+	var isEmpty = true;
 	
-	for(var fieldName = 0; fieldName < allNamesArr.length; fieldName+=1 ){
-		console.log (allNamesArr[fieldNmae].value);
+	for(var fieldName = 0; fieldName < allNamesArr.length; fieldName++ ){
+		console.log (allNamesArr[fieldName].value);
 		
-	    if (allNamesArr[fieldNmae].value !== "")
+	    if (allNamesArr[fieldName].value !== "")
 	    {
 	    	isEmpty = false;
 	    	breack;
@@ -28,7 +29,6 @@ submit.onclick = function (){
 	if(isEmpty){
 		hasErrors = true;
 		
-		
 		document.forms[1].onsubmit = function(event) {
 			if (hasErrors) {
 				event.preventDefault();
@@ -38,10 +38,6 @@ submit.onclick = function (){
 	
 }
 
-
-
-
-
 nameField.onblur = function(){
 	
 	if ((nameField.value.trim().length < 3) || (/d+/.test(nameField.value))) {
@@ -49,7 +45,7 @@ nameField.onblur = function(){
 			var container = document.getElementById("nameDiv");
 			var errorMessage = document.createElement('span');
 			errorMessage.className = 'errorr';
-			errorMessage.textContent = 'Name shoud be at least 3 symbols!';
+			errorMessage.textContent = 'Name shoud be at least 3 letters!';
 			container.appendChild(errorMessage);
 			hasErrors = true;
 		} else {
@@ -186,7 +182,6 @@ emailField.onblur = function(){
 			}
 		
 	};
-
 	passField.onfocus = function() {
 		var errorMessage = document.querySelector("#passDiv > .errorr");
 		if (errorMessage) {
@@ -194,6 +189,33 @@ emailField.onblur = function(){
 			hasErrors = false;
 		}
 	};
+	
+	countryField.onblur = function(){
+		
+		if (countryField.value == 'Select Country') {
+		
+				var container = document.getElementById("countryDiv");
+				var errorMessage = document.createElement('span');
+				errorMessage.className = 'errorr';
+				errorMessage.textContent = 'Choose country, pleace!';
+				container.appendChild(errorMessage);
+				hasErrors = true;
+			} else {
+				hasErrors = false;
+				
+			}
+		
+	};
+
+	countryField.onfocus = function() {
+		var errorMessage = document.querySelector("#countryDiv > .errorr");
+		if (errorMessage) {
+			errorMessage.parentNode.removeChild(errorMessage);
+			hasErrors = false;
+		}
+	};
+
+	
 	
 	
 	$(function() {
