@@ -11,7 +11,7 @@ require_once 'header.php';
 			<div class="full-width">
 		<div class="reg-in">
 			
-				<form action="/AutoMarket/controller/RegisterController.php/" method='post' class="grey-corner-box">
+				<form action="../controller/RegisterController.php/" method='post' class="grey-corner-box">
 				
 				
 						<fieldset id="regform">
@@ -129,7 +129,7 @@ require_once 'header.php';
 				</div>
 				<div class="checkbox-custom submit-field" id="mysubmit">
 										<span class="submit">
-						<input type="submit" value="Create Account" id="reg-reg" name="btn-save"/></span>
+						<input type="submit" value="Create Account" id="reg-reg" name="btn-save" /></span>
 				</div>
 				
 				</fieldset>
