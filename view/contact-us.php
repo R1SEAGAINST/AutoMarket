@@ -11,7 +11,7 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Contact</span> us</h2>
 					<p class="page-location">
-						<a href="#">Home </a>
+						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="#">Contact Us</a>
 					</p>
@@ -94,7 +94,7 @@ require_once 'header.php';
 				<ul class="person-list">
 					<li>
 						<a href="#" class="item-link">
-							<img src="../images/person_thumb.gif" alt="Picture" />
+							<img src="http://localhost/AutoMarket/assets/images/person_thumb.gif" alt="Picture" />
 						</a>
 						<div class="text-content">
 							<div class="layer-one">
@@ -109,7 +109,7 @@ require_once 'header.php';
 					</li>
 					<li>
 						<a href="#" class="image-icon">
-							<img src="../images/person_thumb.gif" alt="Picture" />
+							<img src="http://localhost/AutoMarket/assets/images/person_thumb.gif" alt="Picture" />
 						</a>
 						<div class="text-content">
 							<div class="layer-one">
@@ -124,7 +124,7 @@ require_once 'header.php';
 					</li>
 					<li>
 						<a href="#" class="image-icon">
-							<img src="../images/person_thumb.gif" alt="Picture" />
+							<img src="http://localhost/AutoMarket/assets/images/person_thumb.gif" alt="Picture" />
 						</a>
 						<div class="text-content">
 							<div class="layer-one">
@@ -139,7 +139,7 @@ require_once 'header.php';
 					</li>
 					<li>
 						<a href="#" class="image-icon">
-							<img src="../images/person_thumb.gif" alt="Picture" />
+							<img src="http://localhost/AutoMarket/assets/images/person_thumb.gif" alt="Picture" />
 						</a>
 						<div class="text-content">
 							<div class="layer-one">

@@ -12,7 +12,7 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Vehicle</span> Insurance</h2>
 					<p class="page-location">
-						<a href="#">Home </a>
+						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="#">Vehicle Insurance</a>
 					</p>

@@ -11,9 +11,9 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Mercedes-Benz</span> CLS 320</h2>
 					<p class="page-location">
-						<a href="./index.php">Home </a>
+						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
-						<a href="car-list.html">Cars</a>
+						<a href="http://localhost/AutoMarket/view/car-list.php">Cars</a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="#">Mercedes-Benz</a>
 						<span class="greater-than">&gt;&gt;</span>
@@ -68,11 +68,11 @@ require_once 'header.php';
 						</a>
 					</div>
 					<ul class="images-navigation">
-						<li><a href="../images/mercedes_full.jpg"><img src="../images/mercedes_thumb_list_item.jpg" alt="Thumb Car" /></a></li>
-						<li><a href="../images/mercedes_full1.jpg"><img src="../images/mercedes_thumb_list_item1.jpg" alt="Thumb Car" /></a></li>
-						<li><a href="../images/mercedes_full2.jpg"><img src="../images/mercedes_thumb_list_item2.jpg" alt="Thumb Car" /></a></li>
-                        <li><a href="../images/mercedes_full3.jpg"><img src="../images/mercedes_thumb_list_item3.jpg" alt="Thumb Car" /></a></li>
-                        <li><a href="../images/mercedes_full4.jpg"><img src="../images/mercedes_thumb_list_item4.jpg" alt="Thumb Car" /></a></li>
+						<li><a href="http://localhost/AutoMarket/asets/images/mercedes_full.jpg"><img src="../images/mercedes_thumb_list_item.jpg" alt="Thumb Car" /></a></li>
+						<li><a href="http://localhost/AutoMarket/assets/images/mercedes_full1.jpg"><img src="../images/mercedes_thumb_list_item1.jpg" alt="Thumb Car" /></a></li>
+						<li><a href="http://localhost/AutoMarket/assets/images/mercedes_full2.jpg"><img src="../images/mercedes_thumb_list_item2.jpg" alt="Thumb Car" /></a></li>
+                        <li><a href="http://localhost/AutoMarket/assets/images/mercedes_full3.jpg"><img src="../images/mercedes_thumb_list_item3.jpg" alt="Thumb Car" /></a></li>
+                        <li><a href="http://localhost/AutoMarket/assets/images/mercedes_full4.jpg"><img src="../images/mercedes_thumb_list_item4.jpg" alt="Thumb Car" /></a></li>
 					</ul>
 					<div id="preloader"></div>
 				</div>
@@ -227,8 +227,8 @@ require_once 'header.php';
 			
 				<ul class="offer-small list-content">
 					<li>
-						<a href="./car-details.php">
-							<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="http://localhost/AutoMarket/view/car-details.php">
+							<img src=".http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz CLS</h4>
 								<span class="price-tag">54980 Euro</span>
@@ -245,28 +245,8 @@ require_once 'header.php';
 						</a>
 					</li>
 					<li>
-						<a href="./car-details.php">
-							<img src="../images/mercedes-thumb.jpg" alt="offer car" />
-							<div class="entry-label">
-								<h4>Mercedes-Benz CLS</h4>
-								<span class="price-tag">54980 Euro</span>
-							</div>
-							<div class="entry-overlay">
-								<ul class="car-list-details">
-									<li>Registration 2002</li>
-									<li>3.0 Diesel</li>
-									<li>230 HP</li>
-									<li>Body Coupe</li>
-									<li>120.000 KM</li>							
-								</ul>
-							</div>
-							<span class="v-sign">V</span>
-							<span class='dealer-data'>Vehicle Dealer</span>
-						</a>
-					</li>
-					<li>
-						<a href="./car-details.php">
-							<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="http://localhost/AutoMarket/view/car-details.php">
+							<img src=".http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz CLS</h4>
 								<span class="price-tag">54980 Euro</span>
@@ -285,8 +265,28 @@ require_once 'header.php';
 						</a>
 					</li>
 					<li>
-						<a href="./car-details.php">
-							<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="http://localhost/AutoMarket/view/car-details.php">
+							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
+							<div class="entry-label">
+								<h4>Mercedes-Benz CLS</h4>
+								<span class="price-tag">54980 Euro</span>
+							</div>
+							<div class="entry-overlay">
+								<ul class="car-list-details">
+									<li>Registration 2002</li>
+									<li>3.0 Diesel</li>
+									<li>230 HP</li>
+									<li>Body Coupe</li>
+									<li>120.000 KM</li>							
+								</ul>
+							</div>
+							<span class="v-sign">V</span>
+							<span class='dealer-data'>Vehicle Dealer</span>
+						</a>
+					</li>
+					<li>
+						<a href="http://localhost/AutoMarket/view/car-details.php">
+							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz CLS</h4>
 								<span class="price-tag">54980 Euro</span>

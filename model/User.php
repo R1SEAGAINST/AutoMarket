@@ -10,23 +10,25 @@ class User implements JsonSerializable {
 	private $address;
 	
 	
-	
-// 	public function __set($propName, $value){
-// 		$this->$propName=$value;
-// 	}
 
 	
 	public function setUserId($id){
+		$id+=0;
+		
+		if(!(is_int($id))){
+			throw new Exception ( 'Id must be only integer!');
+			
+		}else{
 	
 			$this->id = $id;
-	
-	
+		}
 	}
 	
 	
 	public function setUsername($username){
-		if (strlen($username) < 3) {
-			throw new Exception ( 'usernme must be minimum 3 symbols!' );
+		
+		if ((strlen($username) < 3 )) {
+			throw new Exception ( 'username must be minimum 3 letters!' );
 		}else{
 			$this->username = $username;
 		}
@@ -35,8 +37,12 @@ class User implements JsonSerializable {
 	
 	
 	public function setPhone($phone){
-		if (strlen($phone) < 6) {
-			throw new Exception ( 'phone must be minimum 6 symbols!' );
+		
+		//$pattern = '/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/';
+		
+		if ((strlen($phone) < 6) )  {
+			
+			throw new Exception ( 'phone must be minimum 6 symbols!');
 		}else{
 			$this->phone = $phone;
 		}
@@ -44,8 +50,11 @@ class User implements JsonSerializable {
 	}
 	
 	public function setUserCountry($country){
-		if (strlen($country) < 2) {
-			throw new Exception ( 'ountry must be minimum 4 symbols!' );
+		
+		$pattern = '/^[a-zA-Z]+$/';
+		
+		if ((strlen($country) < 2) || (preg_match($pattern, $country) !== 1 )){
+			throw new Exception ( 'Country must be minimum 3 letters(only)!' );
 		}else{
 			$this->country = $country;
 		}

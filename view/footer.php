@@ -5,7 +5,7 @@
 		<div class="content-holder">
 			<nav>
 				<ul>
-					<li><a href="./dealer-details.php"><span class="bold">About</span>
+					<li><a href="http://localhost/AutoMarket/view/dealer-details.php"><span class="bold">About</span>
 							us</a>
 						<ul>
 							<li><a href="#">Contact</a></li>

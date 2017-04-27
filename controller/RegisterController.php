@@ -9,10 +9,12 @@ if (isset($_POST['btn-save'])) {
 	try {
 		$user = new User(
 				htmlentities(trim($_POST['user_email'])),
-				htmlentities(trim($_POST['password'])));
-		$user->setUsername($_POST['user_name']);
-		$user->setPhone($_POST['user_phone']);
-		$user->setUserCountry($_POST['user_country']);
+				htmlentities(trim($_POST['password'])),
+				htmlentities(trim($_POST['user_address']))
+				);
+		$user->setUsername(htmlentities(trim($_POST['user_name'])));
+		$user->setPhone(htmlentities(trim($_POST['user_phone'])));
+		$user->setUserCountry(htmlentities(trim($_POST['user_country'])));
 		
 		$userData = new UserDAO();
 		
@@ -21,8 +23,7 @@ if (isset($_POST['btn-save'])) {
 		session_start();
 		$_SESSION['user'] = json_encode($registeredUser);
 		
-		header('Location:../controller/homeController.php', true, 302);
-	}
+		header('Location:../view/index.php', true, 302);header('Location:../controller/homeController.php', true, 302);	}
 	catch (Exception $e) {
 		$errorMessage = $e->getMessage();
 		include '../view/register.php';

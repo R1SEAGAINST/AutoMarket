@@ -1,5 +1,4 @@
 <?php
-
 	function __autoload($className) {
 		require_once "../model/" . $className . '.php';	
 	}
@@ -16,8 +15,7 @@
 			session_start();
 			$_SESSION['user'] = json_encode($loggedUser);
 			
-			header('Location:./homeController.php', true, 302);
-		}
+			header('Location:../view/index.php', true, 302);	header('Location:./homeController.php', true, 302);		}
 		catch (Exception $e) {
 			$errorMessage = $e->getMessage();
 			include '../view/log-in.php';

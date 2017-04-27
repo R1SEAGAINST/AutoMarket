@@ -14,7 +14,7 @@ require_once 'header.php';
 					<p class="page-location">
 						<a href="./index.php">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
-						<a href="./car-list.php">Cars</a>
+						<a href="http://localhost/AutoMarket/view/car-list.php">Cars</a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="#">Mercedes-Benz</a>
 						<span class="greater-than">&gt;&gt;</span>
@@ -266,8 +266,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -289,8 +289,8 @@ require_once 'header.php';
                                 
                                 <!-- Best deal car post -->
 								<li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -314,8 +314,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -337,8 +337,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -360,8 +360,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -383,8 +383,8 @@ require_once 'header.php';
                                 
                                 <!-- Best deal car post -->
 								<li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -408,8 +408,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -431,8 +431,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/view/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -454,8 +454,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/asets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -477,8 +477,8 @@ require_once 'header.php';
                                 
                                 <!-- Best deal car post -->
 								<li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.php" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.php" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -502,8 +502,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -525,8 +525,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src=".http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -548,8 +548,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -571,8 +571,8 @@ require_once 'header.php';
                                 
                                 <!-- Best deal car post -->
 								<li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/asseta/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -596,8 +596,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -619,8 +619,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -642,8 +642,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -665,8 +665,8 @@ require_once 'header.php';
                                 
                                 <!-- Best deal car post -->
 								<li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -690,8 +690,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src=".http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -713,8 +713,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>
@@ -736,8 +736,8 @@ require_once 'header.php';
                                 
                                 <!-- Car post -->
                                 <li>
-									<a href="./car-details.php" class="item-link">
-										<img src="../images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 										<div class="entry-label">
 											<h4 class="car-title">Mercedes-Benz CLS</h4>
 											<span class="price-tag">54980 Euro</span>

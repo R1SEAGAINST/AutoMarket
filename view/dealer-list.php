@@ -12,7 +12,7 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Dealers</span> ( 2.100 results )</h2>
 					<p class="page-location">
-						<a href="#">Home </a>
+						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="#">Dealers</a>
 					</p>
@@ -167,13 +167,13 @@ require_once 'header.php';
 						<div id="dealer-list" class="info-list">
 							<ul class="detail-list">
 								<li>
-									<a href="./dealer-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
-										<img src="../images/default_thumb_140_105.jpg" alt="Picture" />
+										<img src=".http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./dealer-details.php">Dealer Name Here</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
 											<span class="amount">183 Offers</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -182,18 +182,18 @@ require_once 'header.php';
 										<div class="layer-three">
 											<a href="#" class="view-on-map">View on map</a>
 											<span class="phone-number">(123) 456-78910</span>
-											<a href="./dealer-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a href="./dealer-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
-										<img src="../images/default_thumb_140_105.jpg" alt="Picture" />
+										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./dealer-details.php">Dealer Name Here</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
 											<span class="amount">183 Offers</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -202,18 +202,18 @@ require_once 'header.php';
 										<div class="layer-three">
 											<a href="#" class="view-on-map">View on map</a>
 											<span class="phone-number">(123) 456-78910</span>
-											<a href="./dealer-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a href="./dealer-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
-										<img src="../images/default_thumb_140_105.jpg" alt="Picture" />
+										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./dealer-details.php">Dealer Name Here</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
 											<span class="amount">183 Offers</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -222,18 +222,18 @@ require_once 'header.php';
 										<div class="layer-three">
 											<a href="#" class="view-on-map">View on map</a>
 											<span class="phone-number">(123) 456-78910</span>
-											<a href="./dealer-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a href="./dealer-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
-										<img src="../images/default_thumb_140_105.jpg" alt="Picture" />
+										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./dealer-details.php">Dealer Name Here</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
 											<span class="amount">183 Offers</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -242,18 +242,18 @@ require_once 'header.php';
 										<div class="layer-three">
 											<a href="#" class="view-on-map">View on map</a>
 											<span class="phone-number">(123) 456-78910</span>
-											<a href="./dealer-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a href="./dealer-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
 										<img src="images/default_thumb_140_105.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./dealer-details.php">Dealer Name Here</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
 											<span class="amount">183 Offers</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -262,18 +262,18 @@ require_once 'header.php';
 										<div class="layer-three">
 											<a href="#" class="view-on-map">View on map</a>
 											<span class="phone-number">(123) 456-78910</span>
-											<a href="./dealer-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a href="./dealer-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
-										<img src="../images/default_thumb_140_105.jpg" alt="Picture" />
+										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./dealer-details.php">Dealer Name Here</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
 											<span class="amount">183 Offers</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -282,18 +282,18 @@ require_once 'header.php';
 										<div class="layer-three">
 											<a href="#" class="view-on-map">View on map</a>
 											<span class="phone-number">(123) 456-78910</span>
-											<a href="./dealer-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a href="./dealer-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
-										<img src="../images/default_thumb_140_105.jpg" alt="Picture" />
+										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./dealer-details.php">Dealer Name Here</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
 											<span class="amount">183 Offers</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -302,7 +302,7 @@ require_once 'header.php';
 										<div class="layer-three">
 											<a href="#" class="view-on-map">View on map</a>
 											<span class="phone-number">(123) 456-78910</span>
-											<a href="dealer-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>

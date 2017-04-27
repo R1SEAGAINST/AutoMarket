@@ -12,9 +12,9 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Dealer</span> name here</h2>
 					<p class="page-location">
-						<a href="#">Home </a>
+						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
-						<a href="./dealer-list.php">Dealers</a>
+						<a href=".http://localhost/AutoMarket/view/dealer-list.php">Dealers</a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="#">Dealer name</a>
 					</p>
@@ -66,9 +66,9 @@ require_once 'header.php';
 				
 				<div class="one-half col-701 results-list">
 					<div id="best-offer">
-						<a href="./car-details.php">
+						<a href="http://localhost/AutoMarket/view/car-details.php">
 							<span class="best-offer-tag"><span class="bold">Best</span> offer</span>
-							<img src="images/best_offer.jpg" alt="Best Offer" />							
+							<img src="http://localhost/AutoMarket/assets/images/best_offer.jpg" alt="Best Offer" />							
 							<div class="slide-info">
 								<h3>Vehicle Name</h3>
 								<span class="price-tag">51 990 Euro</span>								
@@ -86,7 +86,7 @@ require_once 'header.php';
 						
 						
 						<div class="pagination">
-							<a href="./car-list.php" class="last-button">View all offers</a>
+							<a href="http://localhost/AutoMarket/view/car-list.php" class="last-button">View all offers</a>
 						</div>
 					</div>
 					
@@ -95,14 +95,14 @@ require_once 'header.php';
 						<div id="cars-list" class="info-list">
 							<ul class="detail-list">
 								<li>
-									<a href="./car-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
-										<img src="../images/mercedes-thumb.jpg" alt="Picture" />
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="Picture" />
 										<span class="v-sign">V</span>
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./car-details.php" class="car-title">Vehicle Name</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/car-details.php" class="car-title">Vehicle Name</a></h3>
 											<span class="price-tag">4980 Euro</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -114,14 +114,60 @@ require_once 'header.php';
 										</ul>
 										<div class="layer-three">
 											<span class="location-car">Location: Berlin, Germany</span>
-											<a href="./car-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/car-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a href="./car-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
-										<img src="../images/mercedes-thumb.jpg" alt="Picture" />
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="http://localhost/AutoMarket/view/car-details.php" class="car-title">Vehicle Name</a></h3>
+											<span class="price-tag">4980 Euro</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>Registration: 2002</li>
+											<li>3.0 Diesel</li>
+											<li>230 HP</li>
+											<li>Body: Coupe</li>
+											<li>120.000</li>											
+										</ul>
+										<div class="layer-three">
+											<span class="location-car">Location: Berlin, Germany</span>
+											<a href="http://localhost/AutoMarket/view/car-details.php" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="http://localhost/AutoMarket/view/car-details.php" class="car-title">Vehicle Name</a></h3>
+											<span class="price-tag">4980 Euro</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>Registration: 2002</li>
+											<li>3.0 Diesel</li>
+											<li>230 HP</li>
+											<li>Body: Coupe</li>
+											<li>120.000</li>											
+										</ul>
+										<div class="layer-three">
+											<span class="location-car">Location: Berlin, Germany</span>
+											<a href="http://localhost/AutoMarket/view/car-details.php" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
@@ -137,18 +183,19 @@ require_once 'header.php';
 										</ul>
 										<div class="layer-three">
 											<span class="location-car">Location: Berlin, Germany</span>
-											<a href="./car-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/car-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a href="./car-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
-										<img src="../images/mercedes-thumb.jpg" alt="Picture" />
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="Picture" />
+										<span class="v-sign">V</span>
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./car-details.php" class="car-title">Vehicle Name</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/car-details.php" class="car-title">Vehicle Name</a></h3>
 											<span class="price-tag">4980 Euro</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -160,18 +207,64 @@ require_once 'header.php';
 										</ul>
 										<div class="layer-three">
 											<span class="location-car">Location: Berlin, Germany</span>
-											<a href="./car-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/car-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
 								<li>
-									<a href="./car-details.php" class="item-link">
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="http://localhost/AutoMarket/view/car-details.php" class="car-title">Vehicle Name</a></h3>
+											<span class="price-tag">4980 Euro</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>Registration: 2002</li>
+											<li>3.0 Diesel</li>
+											<li>230 HP</li>
+											<li>Body: Coupe</li>
+											<li>120.000</li>											
+										</ul>
+										<div class="layer-three">
+											<span class="location-car">Location: Berlin, Germany</span>
+											<a href="http://localhost/AutoMarket/view/car-details.php" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
+										<span class="overlay">Overlay</span>
+										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="Picture" />
+									</a>
+									<div class="text-content">
+										<div class="layer-one">
+											<h3><a href="http://localhost/AutoMarket/view/car-details.php" class="car-title">Vehicle Name</a></h3>
+											<span class="price-tag">4980 Euro</span>
+										</div>
+										<ul class="item-specs layer-two">
+											<li>Registration: 2002</li>
+											<li>3.0 Diesel</li>
+											<li>230 HP</li>
+											<li>Body: Coupe</li>
+											<li>120.000</li>											
+										</ul>
+										<div class="layer-three">
+											<span class="location-car">Location: Berlin, Germany</span>
+											<a href="http://localhost/AutoMarket/view/car-details.php" class="details-link">View details</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="http://localhost/AutoMarket/view/car-details.php" class="item-link">
 										<span class="overlay">Overlay</span>
 										<img src="images/mercedes-thumb.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="./car-details.php" class="car-title">Vehicle Name</a></h3>
+											<h3><a href="http://localhost/AutoMarket/view/car-details.php" class="car-title">Vehicle Name</a></h3>
 											<span class="price-tag">4980 Euro</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -183,100 +276,7 @@ require_once 'header.php';
 										</ul>
 										<div class="layer-three">
 											<span class="location-car">Location: Berlin, Germany</span>
-											<a href="./car-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="./car-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="../images/mercedes-thumb.jpg" alt="Picture" />
-										<span class="v-sign">V</span>
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="../car-details.php" class="car-title">Vehicle Name</a></h3>
-											<span class="price-tag">4980 Euro</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>Registration: 2002</li>
-											<li>3.0 Diesel</li>
-											<li>230 HP</li>
-											<li>Body: Coupe</li>
-											<li>120.000</li>											
-										</ul>
-										<div class="layer-three">
-											<span class="location-car">Location: Berlin, Germany</span>
-											<a href="..car-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="./car-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="../images/mercedes-thumb.jpg" alt="Picture" />
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="./car-details.php" class="car-title">Vehicle Name</a></h3>
-											<span class="price-tag">4980 Euro</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>Registration: 2002</li>
-											<li>3.0 Diesel</li>
-											<li>230 HP</li>
-											<li>Body: Coupe</li>
-											<li>120.000</li>											
-										</ul>
-										<div class="layer-three">
-											<span class="location-car">Location: Berlin, Germany</span>
-											<a href="./car-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="./car-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="../images/mercedes-thumb.jpg" alt="Picture" />
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="./car-details.php" class="car-title">Vehicle Name</a></h3>
-											<span class="price-tag">4980 Euro</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>Registration: 2002</li>
-											<li>3.0 Diesel</li>
-											<li>230 HP</li>
-											<li>Body: Coupe</li>
-											<li>120.000</li>											
-										</ul>
-										<div class="layer-three">
-											<span class="location-car">Location: Berlin, Germany</span>
-											<a href="./car-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="./car-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="images/mercedes-thumb.jpg" alt="Picture" />
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="./car-details.php" class="car-title">Vehicle Name</a></h3>
-											<span class="price-tag">4980 Euro</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>Registration: 2002</li>
-											<li>3.0 Diesel</li>
-											<li>230 HP</li>
-											<li>Body: Coupe</li>
-											<li>120.000</li>											
-										</ul>
-										<div class="layer-three">
-											<span class="location-car">Location: Berlin, Germany</span>
-											<a href="./car-details.php" class="details-link">View details</a>
+											<a href="http://localhost/AutoMarket/view/car-details.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
