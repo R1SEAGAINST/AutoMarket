@@ -21,7 +21,7 @@ if (isset($_POST['btn-save'])) {
 		session_start();
 		$_SESSION['user'] = json_encode($registeredUser);
 		
-		header('Location:../view/index.php', true, 302);
+		header('Location:../controller/homeController.php', true, 302);
 	}
 	catch (Exception $e) {
 		$errorMessage = $e->getMessage();

@@ -1,7 +1,7 @@
 <?php 
 if(!(isset($errorMessage))){
 	$errorMessage="";
-	session_start();
+	
 }
 ?>
 <!DOCTYPE html>
@@ -79,7 +79,7 @@ if(!(isset($errorMessage))){
 				</div>
 
 				<div class="header-buttons">
-					<a href="./add-vehicle.php" class="add-an-offer rounded-link-box"><span
+					<a href="../controller/PostController.php" class="add-an-offer rounded-link-box"><span
 						class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add
 							An Offer</span></a>
 					<div class="pages-top rounded-link-box">

@@ -36,38 +36,33 @@ require_once 'header.php';
 			<div class="full-width light-grey-corner-box box-text-default">
 				<h3>Sell ​​your car on <strong>AutoMarket </strong>and benefit from more than 1 million potential buyers every month!</h3>
 				<p>Required fields are marked with * </p>
-				<p>Please post offers only on the car (parts are a special category).</p>
-				<p>If you are a dealer, please visit the dealers section</p>
-				<p>If you have difficulties in posting an offer on the website, please call 0742 016 570</p>
+				<p>If you have difficulties in posting an offer on the website, please call the Armenian Pope</p>
 			</div>
 			
 			<div class="full-width sell-form <!--options-form-->">
-				<form>
+				<form action="../controller/PostController.php" method="post" >
 					<fieldset id="vehicle-data">
 						<legend><span class="bold">Vehicle</span> data</legend>
 						<ul class="field-content">
 							<li class="select-four">
 								<div>
 									<label for="select-manufacturer">Manufacturer: <span class="mandatory">*</span></label>
-									<select id="select-manufacturer">
-										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option1">Option 2</option>
-										<option value="option1">Option 3</option>
+									<select name="manufacturer" id="select-manufacturer">
+										<option selected="selected" disabled="">Select</option>
+										<?php foreach ($brands as $manufacturer) { ?>
+										<option value="<?=$manufacturer['id_brand']?>"><?=$manufacturer['brand_name']?></option>
+										<?php } ?>
 									</select>
 								</div>
 								<div>
 									<label for="select-model">Model: <span class="mandatory">*</span></label>
-									<select id="select-model">
+									<select name="model" id="select-model">
 										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option1">Option 2</option>
-										<option value="option1">Option 3</option>
 									</select>
 								</div>
 								<div>
 									<label for="select-euro-type">Euro type:<span class="mandatory">*</span></label>
-									<select id="select-euro-type">
+									<select name="euroType" id="select-euro-type">
 										<option selected="selected">-</option>
 										<option value="Euro1">Euro1</option>
 										<option value="Euro2">Euro2</option>
@@ -82,12 +77,12 @@ require_once 'header.php';
 								
 								<div>
 									<label for="select-body-type">Body Type: <span class="mandatory">*</span></label>
-									<select id="select-body-type">
+									<select name="bodyType" id="select-body-type">
 										<option selected="selected">-</option>
 										<option value="Cabriolet/Roadster">Cabriolet/Roadster</option>
 										<option value="Small Car">Small Car</option>
 										<option value="Estete Car">Estete Car</option>
-										<option value="Off-road Vehicle/Pickup">Off-road vehicle/Pickup</option>
+										<option value="Pickup">Off-road vehicle/Pickup</option>
 										<option value="Saloon">Saloon</option>
 										<option value="Van/Minibus">Van/Minibus</option>
 										<option value="Sports Csar">Sports Car</option>
@@ -99,7 +94,7 @@ require_once 'header.php';
 							<li class="select-four">
 								<div>
 									<label for="select-fuel-type">Fuel Type: <span class="mandatory">*</span></label>
-									<select id="select-fuel-type">
+									<select name="fuelType" id="select-fuel-type">
 										<option selected="selected">-</option>
 										<option value="Diesel">Diesel</option>
 										<option value="Petrol">Petrol</option>
@@ -109,17 +104,17 @@ require_once 'header.php';
 								</div>
 								<div>
 									<label for="select-transmission">Transmission: <span class="mandatory">*</span></label>
-									<select id="select-transmission">
+									<select name="transmission" id="select-transmission">
 										<option selected="selected">-</option>
-										<option value="Manuel">Manuel</option>
-										<option value="Semi-automatic">Semi-automatic</option>
-										<option value="Autotic trnsmission">automatic transmission</option>
+										<option value="Manual">Manual</option>
+										<option value="Semiautomatic">Semi-automatic</option>
+										<option value="Autotic">automatic transmission</option>
 									</select>
 								</div>
 								<div>
 									<label for="select-doors">Doors: <span class="mandatory">*</span></label>
-									<select id="select-doors">
-										<option selected="selected">Select</option>
+									<select name="doors" id="select-doors">
+										<option selected="selected">-</option>
 										<option value="2/3">2/3</option>
 										<option value="4/5">4/5</option>
 										
@@ -128,13 +123,13 @@ require_once 'header.php';
 								
 								<div>
 									<label for="select-color">Color: <span class="mandatory">*</span></label>
-									<select id="select-color">
+									<select name="color" id="select-color">
 										<option selected="selected">-</option>
 										<option value="Silver">Silver</option>
 										<option value="Grey">Grey</option>
-										<option value="Metalic">Metalic</option>
-										<option selected="Blue">Blue</option>
-										<option value="Broun">Broun</option>
+										<option value="Metallic">Metallic</option>
+										<option value="Blue">Blue</option>
+										<option value="Brown">Brown</option>
 										<option value="Orange">Orange</option>
 										<option value="White">White</option>
 										<option value="Red">Red</option>
@@ -152,7 +147,7 @@ require_once 'header.php';
 									<div>
 										<label for="select-cilindrics">Cilindrics (in cm³): <span class="mandatory">*</span></label>
 										
-										<input type="text" name="chassis_number" id="input-cilidrics" class="default-input" />
+										<input type="text" name="cilindrics" id="input-cilidrics" class="default-input" />
 											
 										</select>
 									</div>
@@ -160,15 +155,15 @@ require_once 'header.php';
 								
 							
 									<div>
-										<label for="select-hp-kw">Hp / Kw: <span class="mandatory">*</span></label>
+										<label for="select-hp-kw">Hp: <span class="mandatory">*</span></label>
 										
-										<input type="text" name="chassis_number" id="input-hp" class="default-input" />
+										<input type="text" name="hp" id="input-hp" class="default-input" />
 									</div>
 									
 									<div>
 									<label for="select-fabrication">Fabrication: <span class="mandatory">*</span></label>
 									
-									<input type="text" name="chassis_number" id="input-fabrication" class="default-input" />
+									<input type="text" name="fabrication" id="input-fabrication" class="default-input" />
 									
 								</div>
 									
@@ -181,18 +176,18 @@ require_once 'header.php';
 					<fieldset id="vehicle-equipment" class="checkbox-selection">
 						<legend><span class="bold">Vehicle</span> equipment</legend>
 						<ul class="field-content">
-							<li><input type="checkbox" value="checkbox_abs" id="check-abs" /><label for="check-abs">ABS</label></li>
-							<li><input type="checkbox" value="checkbox_eds" id="check-eds" /><label for="check-eds">EDS</label></li>
-							<li><input type="checkbox" value="checkbox_esp" id="check-esp" /><label for="check-esp">ESP</label></li>
-							<li><input type="checkbox" value="checkbox_air_conditioning" id="check-air-conditioning" /><label for="check-air-conditioning">Air conditioning</label></li>
-							<li><input type="checkbox" value="checkbox_airbag" id="check-airbag" /><label for="check-airbag">Air conditioning</label></li>
-							<li><input type="checkbox" value="checkbox_alarm" id="check-alarm" /><label for="check-alarm">Air conditioning</label></li>
-							<li><input type="checkbox" value="checkbox_panoramic_roof" id="check-panoramic-roof" /><label for="check-panoramic-roof">Panoramic roof</label></li>
-							<li><input type="checkbox" value="checkbox_protection_framework" id="check-protection-framework" /><label for="check-protection-framework">Protection framework</label></li>
-							<li><input type="checkbox" value="checkbox_tow" id="checkbox-tow" /><label for="checkbox-tow">Tow</label></li>
-							<li><input type="checkbox" value="checkbox_traction_control" id="checkbox-traction-control" /><label for="checkbox-traction-control">Traction control</label></li>
-							<li><input type="checkbox" value="checkbox_board_computer" id="checkbox-board-computer" /><label for="checkbox-board-computer">Board computer</label></li>
-							<li><input type="checkbox" value="checkbox_steering_wheel" id="checkbox-steering-wheel" /><label for="checkbox-steering-wheel">Steering wheel controls</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_abs" id="check-abs" /><label for="check-abs">ABS</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_eds" id="check-eds" /><label for="check-eds">EDS</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_esp" id="check-esp" /><label for="check-esp">ESP</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_air_conditioning" id="check-air-conditioning" /><label for="check-air-conditioning">Air conditioning</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_airbag" id="check-airbag" /><label for="check-airbag">Air conditioning</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_alarm" id="check-alarm" /><label for="check-alarm">Air conditioning</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_panoramic_roof" id="check-panoramic-roof" /><label for="check-panoramic-roof">Panoramic roof</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_protection_framework" id="check-protection-framework" /><label for="check-protection-framework">Protection framework</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_tow" id="checkbox-tow" /><label for="checkbox-tow">Tow</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_traction_control" id="checkbox-traction-control" /><label for="checkbox-traction-control">Traction control</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_board_computer" id="checkbox-board-computer" /><label for="checkbox-board-computer">Board computer</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_steering_wheel" id="checkbox-steering-wheel" /><label for="checkbox-steering-wheel">Steering wheel controls</label></li>
 						</ul>
 					
 					</fieldset>
@@ -211,18 +206,83 @@ require_once 'header.php';
 							<li class="select-four">
 							
 								<div>
-									<label for="select-country-registration">Country of registration: <span class="mandatory">*</span></label>
-									<select id="select-country-registration">
-										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option1">Option 2</option>
-										<option value="option1">Option 3</option>
+									<label for="select-country-registration">Country of
+										registration: <span class="mandatory">*</span>
+									</label> <select name="country" id="select-country-registration">
+										<option selected="selected">-</option>
+										<option value="AL">Albania</option>
+										<option value="AD">Andorra</option>
+										<option value="AT">Austria</option>
+										<option value="BY">Belarus</option>
+										<option value="BE">Belgium</option>
+										<option value="BA">Bosnia and Herzegovina</option>
+										<option value="BR">Brazil</option>
+										<option value="BG">Bulgaria</option>
+										<option value="CA">Canada</option>
+										<option value="HR">Croatia</option>
+										<option value="CY">Cyprus</option>
+										<option value="CZ">Czech Republic</option>
+										<option value="DK">Denmark</option>
+										<option value="EG">Egypt</option>
+										<option value="EE">Estonia</option>
+										<option value="ET">Ethiopia</option>
+										<option value="FO">Faroe Islands</option>
+										<option value="FI">Finland</option>
+										<option value="FR">France</option>
+										<option value="DE">Germany</option>
+										<option value="GR">Greece</option>
+										<option value="HU">Hungary</option>
+										<option value="IS">Iceland</option>
+										<option value="IE">Ireland</option>
+										<option value="IL">Israel</option>
+										<option value="IT">Italy</option>
+										<option value="JP">Japan</option>
+										<option value="JO">Jordan</option>
+										<option value="KW">Kuwait</option>
+										<option value="LV">Latvia</option>
+										<option value="LB">Lebanon</option>
+										<option value="LI">Liechtenstein</option>
+										<option value="LT">Lithuania</option>
+										<option value="LU">Luxembourg</option>
+										<option value="MK">Macedonia</option>
+										<option value="MT">Malta</option>
+										<option value="MX">Mexico</option>
+										<option value="MD">Moldova</option>
+										<option value="MC">Monaco</option>
+										<option value="ME">Montenegro</option>
+										<option value="MA">Morocco</option>
+										<option value="NL">Netherlands</option>
+										<option value="NZ">New Zealand</option>
+										<option value="NG">Nigeria</option>
+										<option value="NO">Norway</option>
+										<option value="OM">Oman</option>
+										<option value="PL">Poland</option>
+										<option value="PT">Portugal</option>
+										<option value="RO">Romania</option>
+										<option value="RU">Russian Federation</option>
+										<option value="SM">San Marino</option>
+										<option value="SA">Saudi Arabia</option>
+										<option value="RS">Serbia</option>
+										<option value="SK">Slovakia</option>
+										<option value="SI">Slovenia</option>
+										<option value="ZA">South Africa</option>
+										<option value="KR">South Korea</option>
+										<option value="ES">Spain</option>
+										<option value="SE">Sweden</option>
+										<option value="CH">Switzerland</option>
+										<option value="TW">Taiwan</option>
+										<option value="TN">Tunisia</option>
+										<option value="TR">Turkey</option>
+										<option value="UA">Ukraine</option>
+										<option value="AE">United Arab Emirates</option>
+										<option value="GB">United Kingdom</option>
+										<option value="US">USA</option>
 									</select>
 								</div>
-							
+
 								<div>
 									<label for="select-registration-year">&nbsp;</label>
-									<select id="select-registration-year">
+									<select name="year" id="select-registration-year">
 										<option selected="selected">Year</option>
 										<option value="2017">2017</option>
 										<option value="2016">2016</option>
@@ -258,8 +318,6 @@ require_once 'header.php';
 										<option value="1965">1965</option>
 										<option value="1960">1960</option>
 										<option value="1900">1900</option>
-										
-									
 									</select>
 								</div>
 							</li>
@@ -272,17 +330,17 @@ require_once 'header.php';
 							<li class="select-four">
 								<div>
 									<label for="select-technical-condition">Technical condition: <span class="mandatory">*</span></label>
-									<select id="select-technical-condition">
-										<option selected="selected">Select</option>
+									<select name="condition" id="select-technical-condition">
+										<option selected="selected">-</option>
 										<option value="New">New</option>
 										<option value="Used">Used</option>
-										<option value="Damage">Damage</option>
-										<option value="Damage">Pre-Registration</option>
+										<option value="Damage">Damaged</option>
+										<option value="Pre-registration">Pre-Registration</option>
 									</select>
 								</div>
 								<div>
 									<label for="input-kilometers">Kilometers: <span class="mandatory">*</span></label>
-									<input type="text" name="chassis_number" id="input-kilometers" class="default-input" />
+									<input type="text" name="kilometers" id="input-kilometers" class="default-input" />
 								</div>
 								
 							</li>
@@ -295,20 +353,11 @@ require_once 'header.php';
 							<li class="select-four">
 								<div>
 									<label for="input-price">Price: <span class="mandatory">*</span></label>
-									<input type="text" name="chassis_number" id="input-price" class="default-input" />
+									<input type="text" name="price" id="input-price" class="default-input" />
 								</div>
 								<div>
-									<label for="select-currency">Currency: <span class="mandatory">*</span></label>
-									<select id="select-currency">
-										<option selected="selected">Euro</option>
-										<option value="option1">Option 1</option>
-										<option value="option1">Option 2</option>
-										<option value="option1">Option 3</option>
-									</select>
-								</div>
-								<div class="checkbox-custom">
-									<div><input type="checkbox" value="checkbox_abs" id="check-price-negotiable"/></div>
-									<label for="check-price-negotiable">&nbsp; Price Negotiable</label>
+									<br/>
+									<p>EUR</p>				
 								</div>
 							</li>
 						</ul>
@@ -360,7 +409,7 @@ require_once 'header.php';
 								<input type="checkbox" value="agreed" id="check-agreed" /><label for="check-agreed">I agree to the Terms and Conditions. </label>
 							</div>
 							<div class="submit-vehicle default-submit">
-								<input type="submit" value="submit" />
+								<input name="submit"  type="submit" value="submit" />
 							</div>
 						</div>
 							
@@ -373,6 +422,32 @@ require_once 'header.php';
 	</section>
 	
 </div><!--#page-content-->
+
+<script type="text/javascript">
+	$(function() {
+		$('#select-manufacturer').on('change', function() {
+			var brandid = $('#select-manufacturer').val();
+
+			$.getJSON('/AutoMarket/controller/ajaxController.php', { brandid: brandid }, function(response) {
+				var modelSelect = $('#select-model');
+
+				$(modelSelect).find('option').remove();
+				$(modelSelect).append('<option selected="selected">Select</option>');
+
+				$(modelSelect).val('Select').change();
+
+				if (response) {
+					$.each(response, function(key, value) {
+						var option = '<option value="'+value.id_model+'">'+value.model_name+'</option>';
+						$(modelSelect).append(option);
+					});
+				}
+			});
+		});
+	});
+</script>
 	
 <?php 
+require_once('footer.php');
+?>
 
