@@ -80,7 +80,7 @@ if(!(isset($errorMessage))){
 				</div>
 
 				<div class="header-buttons">
-					<a href="./add-vehicle.php" class="add-an-offer rounded-link-box"><span<a href="../controller/PostController.php" class="add-an-offer rounded-link-box"><span						class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add
+				<a href="../controller/PostController.php" class="add-an-offer rounded-link-box"><span	class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add
 							An Offer</span></a>
 					<div class="pages-top rounded-link-box">
 						<a href="#" class="box-content">NAV</a>
@@ -139,46 +139,46 @@ if(!(isset($errorMessage))){
 					<div class="pages-top rounded-link-box">
 						<a href="http://localhost/AutoMarket/view/log-in.php" class="box-content">Login</a>	
 					</div>
-					<div class="pages-top rounded-link-box">
-						<a href="#" class="box-content">NAV</a>
-						<ul>
+<!-- 					<div class="pages-top rounded-link-box"> -->
+<!-- 						<a href="#" class="box-content">NAV</a> -->
+<!-- 						<ul> -->
 
-							<li><a href="http://localhost/AutoMarket/view/index.php">Home page</a></li>
+<!-- 							<li><a href="http://localhost/AutoMarket/view/index.php">Home page</a></li> -->
 
-							<li><a href="http://localhost/AutoMarket/view/add-vehicle.php">Add an offer</a></li>
+<!-- 							<li><a href="http://localhost/AutoMarket/view/add-vehicle.php">Add an offer</a></li> -->
 
-							<li><a href="http://localhost/AutoMarket/view/log-in.php">Log in page</a></li>
+<!-- 							<li><a href="http://localhost/AutoMarket/view/log-in.php">Log in page</a></li> -->
 
-							<li><a href="http://localhost/AutoMarket/view/car-list.php">Car list</a>
-								<ul>
-									<li><a href="http://localhost/AutoMarket/view/car-details.php">Car details</a>
-									
-									<li>
-								
-								</ul></li>
-
-<!-- 							<li><a href="./blog-overview.php">Blog</a> -->
+<!-- 							<li><a href="http://localhost/AutoMarket/view/car-list.php">Car list</a> -->
 <!-- 								<ul> -->
-<!-- 									<li><a href="./blog-post.php">Blog post</a> -->
+<!-- 									<li><a href="http://localhost/AutoMarket/view/car-details.php">Car details</a> -->
 									
 <!-- 									<li> -->
 								
 <!-- 								</ul></li> -->
-							<li><a href="http://localhost/AutoMarket/view/dealer-list.php">Dealer list</a>
-								<ul>
-									<li><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer details</a>
+
+<!-- <!-- 							<li><a href="./blog-overview.php">Blog</a> --> 
+<!-- <!-- 								<ul> --> 
+<!-- <!-- 									<li><a href="./blog-post.php">Blog post</a> --> 
 									
-									<li>
+<!-- <!-- 									<li> --> 
 								
-								</ul></li>
+<!-- <!-- 								</ul></li> --> 
+<!-- 							<li><a href="http://localhost/AutoMarket/view/dealer-list.php">Dealer list</a> -->
+<!-- 								<ul> -->
+<!-- 									<li><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer details</a> -->
+									
+<!-- 									<li> -->
+								
+<!-- 								</ul></li> -->
 
-							<li><a href="http://localhost/AutoMarket/view/insurance.php">Insurance</a></li>
+<!-- 							<li><a href="http://localhost/AutoMarket/view/insurance.php">Insurance</a></li> -->
 
-							<li><a href="http://localhost/AutoMarket/view/under-construction.php">Under construction</a></li>
+<!-- 							<li><a href="http://localhost/AutoMarket/view/under-construction.php">Under construction</a></li> -->
 
-							<li><a href="http://localhost/AutoMarket/view/contact-us.php">Contact</a></li>
-						</ul>
-					</div>
+<!-- 							<li><a href="http://localhost/AutoMarket/view/contact-us.php">Contact</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
 				</div>
 			</div>
 			<?php 
