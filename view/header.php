@@ -80,7 +80,7 @@ if(!(isset($errorMessage))){
 				</div>
 
 				<div class="header-buttons">
-					<a href="./add-vehicle.php" class="add-an-offer rounded-link-box"><span<a href="../controller/PostController.php" class="add-an-offer rounded-link-box"><span						class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add
+					<a href="../controller/PostController.php" class="add-an-offer rounded-link-box"><span class="box-content" <strong class="plus-sign">+</strong>&nbsp;Add
 							An Offer</span></a>
 					<div class="pages-top rounded-link-box">
 						<a href="#" class="box-content">NAV</a>
