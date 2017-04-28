@@ -81,7 +81,7 @@ fabricField.onblur = function(){
 };
 	
 	fabricField.onfocus = function() {
-		var errorMessage = document.querySelector("fabricDiv > .errorr");
+		var errorMessage = document.querySelector("#fabricDiv > .errorr");
 		if (errorMessage) {
 			errorMessage.parentNode.removeChild(errorMessage);
 			fabricError = false;
