@@ -847,7 +847,7 @@
 	/*  Header Search --------------------------------*/
 	header #header-search{
 		background: #f3f3f3 !important;
-		width: 754px;
+		width: 624px;
 		height: 43px;
 		float: right;
 		border-radius: 3px;
@@ -870,7 +870,7 @@
 		margin: 4px 0 0 4px;
 		font-family: DroidSans, Arial, Verdana, sans-serif;
 		font-weight: bold;
-		width: 515px;
+		width: 385px;
 		padding: 0 0 0 10px;
 		font-size: 12px;
 		position:relative;

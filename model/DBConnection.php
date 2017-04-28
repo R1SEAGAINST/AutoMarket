@@ -16,7 +16,7 @@ class DBConnection {
 				self::$db->setAttribute ( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			}
 			catch (PDOException $e) {
-				throw new Exception("Error! We're working on it, try again later.", $e);
+				throw new Exception("Error! We're working on it, try again later.", $e->getMessage());
 			}
 		}
 		

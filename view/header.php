@@ -16,6 +16,7 @@ if(!(isset($errorMessage))){
 <title>Automarket</title>
 <meta name="description" content="Automarket">
 
+
 <link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/main.css">
 <link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/uniform.default.css">
 <link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/prettyPhoto.css">
@@ -32,12 +33,6 @@ if(!(isset($errorMessage))){
 <script src="http://localhost/AutoMarket/assets/js/plugins/jquery.prettyPhoto.js"></script>
 <script src="http://localhost/AutoMarket/assets/js/plugins/jquery.countdown.js"></script>
 
-<!--  register -->
-<link href="http://localhost/AutoMarket/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<script type="text/javascript" src="http://localhost/AutoMarket/assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
-<link href="http://localhost/AutoMarket/assets/css/style.css" rel="stylesheet" type="text/css" media="screen">
-<script type="text/javascript" src="http://localhost/AutoMarket/assets/js/script.js"></script>
 
 
 
@@ -53,7 +48,7 @@ if(!(isset($errorMessage))){
 			<div class="layer-one">
 				<div class="page-titles">
 					<h1>
-						<a href="http://localhost/AutoMarket/view/index.php">Automarket</a>
+						<a href="../controller/HomeController.php">Automarket</a>
 					</h1>
 					<?php 
 					
@@ -86,11 +81,11 @@ if(!(isset($errorMessage))){
 						<a href="#" class="box-content">NAV</a>
 						<ul>
 
-							<li><a href="http://localhost/AutoMarket/view/index.php">Home page</a></li>
+							<li><a href="../controller/HomeController.php">Home page</a></li>
 
-							<li><a href="http://localhost/AutoMarket/view/add-vehicle.php">Add an offer</a></li>
+							<li><a href="../controller/PostController.php">Add an offer</a></li>
 
-							<li><a href="http://localhost/AutoMarket/view/log-in.php">Log in page</a></li>
+							<li><a href="../controller/LoginController.php">Log in page</a></li>
 
 							<li><a href="http://localhost/AutoMarket/view/car-list.php">Car list</a>
 								<ul>

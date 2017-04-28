@@ -91,7 +91,7 @@ public function setDoors($doors){
 	}
 
 public function setCilindrics($cilindrics){
-	if(is_numeric($cilindrics)){
+	if(is_numeric($cilindrics) && ($cilindrics > 0) && ($cilindrics < 10000)) {
 		$this->cilindrics = $cilindrics;
 	}else{
 		throw new Exception ( 'Wrong cilindrics input!' );
@@ -99,7 +99,7 @@ public function setCilindrics($cilindrics){
 }
 
 public function setHp($hp){
-	if(is_numeric($hp)){
+	if(is_numeric($hp) && ($hp > 0) && ($hp < 1500)){
 		$this->hp = $hp;
 	}else{
 		throw new Exception ( 'Wrong horsepower input!' );
@@ -125,14 +125,14 @@ public function setDescription($description){
 
 public function setCountryOfRegistration($countryofregistration){
 	$countryofregistration= htmlentities(trim($countryofregistration));
-	if(strlen($countryofregistration) > 0 && strlen($countryofregistration<4)){
+	if(strlen($countryofregistration) > 0 && strlen($countryofregistration < 4)){
 		$this->countryofregistration= $countryofregistration;
 	}
 }
 
 	
 public function setRegYear($regyear){
-		if(is_numeric($regyear)){
+		if(is_numeric($regyear) && ($regyear > 1900) && ($regyear < 2020)) {
 			$this->regyear = $regyear;
 		}else{
 			throw new Exception ( 'Wrong year input!' );
@@ -151,7 +151,7 @@ public function setTechnicalCondition($technicalcondition){
 
 
 public function setKilometers($kilometers){
-	if(is_numeric($kilometers)){
+	if(is_numeric($kilometers) && ($kilometers > 0) && ($kilometers < 2000000)){
 		$this->kilometers = $kilometers;
 	}else{
 		throw new Exception ( 'Wrong kilometers input!' );
@@ -168,7 +168,7 @@ public function setEuroType($eurotype){
 }
 
 public function setPrice($price){
-	if(is_numeric($price)){
+	if(is_numeric($price) && ($price >= 0) && ($price < 1000000)){
 		$this->price = $price;
 	}else{
 		throw new Exception ( 'Wrong price input!' );

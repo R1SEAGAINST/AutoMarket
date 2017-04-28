@@ -142,11 +142,9 @@ require_once 'header.php';
 	</div>
 	</section>
 	
-	<script src="../assets/js/jquery-3.1.1.min.js"></script>
+<!-- 	<script src="../assets/js/jquery-3.1.1.min.js"></script> -->
 	<script src="../assets/js/regScript.js"></script>
 
-</body>
-</html>
 
 <?php
 require_once 'footer.php';
