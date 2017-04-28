@@ -132,6 +132,7 @@ if(!(isset($errorMessage))){
 
 						<a href="/LoginController.php" class="box-content">Login</a>	
 					</div>
+					</div>
 					
 <!-- 					<div class="pages-top rounded-link-box"> -->
 <!-- 						<a href="#" class="box-content">NAV</a> -->

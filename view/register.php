@@ -139,9 +139,7 @@ require_once 'header.php';
 	</div>
 	</section>
 	
-<<<<<<< HEAD
-	<script src="http://localhost/Automarket/assets/js/jquery-3.1.1.min.js"></script>
-	<script src="http://localhost/Automarket//assets/js/regScript.js"></script>
+
 
 </body>
 </html>
