@@ -1,9 +1,6 @@
 <?php 
 require_once 'header.php';
-
 ?>
-	
-
 <div id="page-content">
 
 	<section id="car-pagination">
@@ -12,9 +9,9 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Dealers</span> ( 2.100 results )</h2>
 					<p class="page-location">
-						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
+						<a href="http://automarket.com">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
-						<a href="#">Dealers</a>
+						<a href="">Dealers</a>
 					</p>
 				</div>
 			
@@ -37,16 +34,6 @@ require_once 'header.php';
 						<fieldset class="grey-corner-box">
 							<legend><span class="bold">Search</span> filters</legend>
 							<ul>
-								<li class="radio-buttons">
-									<div>
-										<input type="radio" name="type-company" id="radio-dealers" />
-										<label for="radio-dealers">Dealers</label>
-									</div>
-									<div>
-										<input type="radio" name="type-company" id="radio-companies" />
-										<label for="radio-companies">Leasing Companies</label>
-									</div>
-								</li>
 								<li>
 									<label for="dealer-name">Name:</label>
 									<input type="text" class="default-input" id="dealer-name" name="dealer_name" />
@@ -167,13 +154,13 @@ require_once 'header.php';
 						<div id="dealer-list" class="info-list">
 							<ul class="detail-list">
 								<li>
-									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
+									<a href="/DealerDetailsController.php" class="item-link">
 										<span class="overlay">Overlay</span>
 										<img src=".http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
+											<h3><a href="/DealerDetailsController.php">Dealer Name Here</a></h3>
 											<span class="amount">183 Offers</span>
 										</div>
 										<ul class="item-specs layer-two">
@@ -182,132 +169,10 @@ require_once 'header.php';
 										<div class="layer-three">
 											<a href="#" class="view-on-map">View on map</a>
 											<span class="phone-number">(123) 456-78910</span>
-											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
+											<a href="/DealerDetailsController.php" class="details-link">View details</a>
 										</div>
 									</div>
 								</li>
-								<li>
-									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
-											<span class="amount">183 Offers</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>314 Columbus Ave, San Francisco, CA 94133</li>
-										</ul>
-										<div class="layer-three">
-											<a href="#" class="view-on-map">View on map</a>
-											<span class="phone-number">(123) 456-78910</span>
-											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
-											<span class="amount">183 Offers</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>314 Columbus Ave, San Francisco, CA 94133</li>
-										</ul>
-										<div class="layer-three">
-											<a href="#" class="view-on-map">View on map</a>
-											<span class="phone-number">(123) 456-78910</span>
-											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
-											<span class="amount">183 Offers</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>314 Columbus Ave, San Francisco, CA 94133</li>
-										</ul>
-										<div class="layer-three">
-											<a href="#" class="view-on-map">View on map</a>
-											<span class="phone-number">(123) 456-78910</span>
-											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="images/default_thumb_140_105.jpg" alt="Picture" />
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
-											<span class="amount">183 Offers</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>314 Columbus Ave, San Francisco, CA 94133</li>
-										</ul>
-										<div class="layer-three">
-											<a href="#" class="view-on-map">View on map</a>
-											<span class="phone-number">(123) 456-78910</span>
-											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
-											<span class="amount">183 Offers</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>314 Columbus Ave, San Francisco, CA 94133</li>
-										</ul>
-										<div class="layer-three">
-											<a href="#" class="view-on-map">View on map</a>
-											<span class="phone-number">(123) 456-78910</span>
-											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="http://localhost/AutoMarket/view/dealer-details.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg" alt="Picture" />
-									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer Name Here</a></h3>
-											<span class="amount">183 Offers</span>
-										</div>
-										<ul class="item-specs layer-two">
-											<li>314 Columbus Ave, San Francisco, CA 94133</li>
-										</ul>
-										<div class="layer-three">
-											<a href="#" class="view-on-map">View on map</a>
-											<span class="phone-number">(123) 456-78910</span>
-											<a href="http://localhost/AutoMarket/view/dealer-details.php" class="details-link">View details</a>
-										</div>
-									</div>
-								</li>
-								
-								
 							</ul>
 							
 						</div>

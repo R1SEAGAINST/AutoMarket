@@ -53,7 +53,7 @@ if(!(isset($errorMessage))){
 			<div class="layer-one">
 				<div class="page-titles">
 					<h1>
-						<a href="http://localhost/AutoMarket/view/index.php">Automarket</a>
+						<a href="http://AutoMarket.com">Automarket</a>
 					</h1>
 					<?php 
 					
@@ -75,51 +75,43 @@ if(!(isset($errorMessage))){
 					
 				
 						?>
-					<a href="./dealer-details.php" class="dealer-name"><?=$user->username?></a>
-					<a href="../model/logout.php" class="sign-out">Sign Out</a>
+					<a href="/DealerDetailsControler.php" class="dealer-name"><?=$user->username?></a>
+					<a href="/LogoutController.php" class="sign-out">Sign Out</a>
 				</div>
 
 				<div class="header-buttons">
-					<a href="../controller/PostController.php" class="add-an-offer rounded-link-box"><span class="box-content" <strong class="plus-sign">+</strong>&nbsp;Add
+					<a href="/PostController.php" class="add-an-offer rounded-link-box"> <span class="box-content"> <strong class="plus-sign">+</strong>&nbsp;Add
 							An Offer</span></a>
 					<div class="pages-top rounded-link-box">
 						<a href="#" class="box-content">NAV</a>
 						<ul>
 
-							<li><a href="http://localhost/AutoMarket/view/index.php">Home page</a></li>
+							<li><a href="http://AutoMarket.com">Home page</a></li>
 
-							<li><a href="http://localhost/AutoMarket/view/add-vehicle.php">Add an offer</a></li>
+							<li><a href="/PostController.php">Add an offer</a></li>
 
-							<li><a href="http://localhost/AutoMarket/view/log-in.php">Log in page</a></li>
+							<li><a href="/LoginController.php">Log in page</a></li>
 
-							<li><a href="http://localhost/AutoMarket/view/car-list.php">Car list</a>
+							<li><a href="/CarListController.php">Car list</a>
 								<ul>
-									<li><a href="http://localhost/AutoMarket/view/car-details.php">Car details</a>
+									<li><a href="/CarDetailsController.php">Car details</a>
+									
+									<li>
+								
+								</ul></li>
+							<li><a href="/DealerlistController.php">Dealer list</a>
+								<ul>
+									<li><a href="/DealerDetailsController.php">Dealer details</a>
 									
 									<li>
 								
 								</ul></li>
 
-<!-- 							<li><a href="./blog-overview.php">Blog</a> -->
-<!-- 								<ul> -->
-<!-- 									<li><a href="./blog-post.php">Blog post</a> -->
-									
-<!-- 									<li> -->
-								
-<!-- 								</ul></li> -->
-							<li><a href="http://localhost/AutoMarket/view/dealer-list.php">Dealer list</a>
-								<ul>
-									<li><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer details</a>
-									
-									<li>
-								
-								</ul></li>
+							<li><a href="/InsuranceController.php">Insurance</a></li>
 
-							<li><a href="http://localhost/AutoMarket/view/insurance.php">Insurance</a></li>
+							<li><a href="/underconstructionController.php">Under construction</a></li>
 
-							<li><a href="http://localhost/AutoMarket/view/under-construction.php">Under construction</a></li>
-
-							<li><a href="http://localhost/AutoMarket/view/contact-us.php">Contact</a></li>
+							<li><a href="/ContactController.php">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -133,52 +125,13 @@ if(!(isset($errorMessage))){
 				</div>
 				
 				<div class="header-buttons">
-					<a href="http://localhost/AutoMarket/view/register.php" class="add-an-offer rounded-link-box"><span
+					<a href="/RegisterController.php" class="add-an-offer rounded-link-box"><span
 						class="box-content"><strong class="plus-sign"></strong>&nbsp;Register
 							</span></a>
 					<div class="pages-top rounded-link-box">
-						<a href="http://localhost/AutoMarket/view/log-in.php" class="box-content">Login</a>	
+						<a href="/LoginController.php" class="box-content">Login</a>	
 					</div>
-					<div class="pages-top rounded-link-box">
-						<a href="#" class="box-content">NAV</a>
-						<ul>
-
-							<li><a href="http://localhost/AutoMarket/view/index.php">Home page</a></li>
-
-							<li><a href="http://localhost/AutoMarket/view/add-vehicle.php">Add an offer</a></li>
-
-							<li><a href="http://localhost/AutoMarket/view/log-in.php">Log in page</a></li>
-
-							<li><a href="http://localhost/AutoMarket/view/car-list.php">Car list</a>
-								<ul>
-									<li><a href="http://localhost/AutoMarket/view/car-details.php">Car details</a>
-									
-									<li>
-								
-								</ul></li>
-
-<!-- 							<li><a href="./blog-overview.php">Blog</a> -->
-<!-- 								<ul> -->
-<!-- 									<li><a href="./blog-post.php">Blog post</a> -->
-									
-<!-- 									<li> -->
-								
-<!-- 								</ul></li> -->
-							<li><a href="http://localhost/AutoMarket/view/dealer-list.php">Dealer list</a>
-								<ul>
-									<li><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer details</a>
-									
-									<li>
-								
-								</ul></li>
-
-							<li><a href="http://localhost/AutoMarket/view/insurance.php">Insurance</a></li>
-
-							<li><a href="http://localhost/AutoMarket/view/under-construction.php">Under construction</a></li>
-
-							<li><a href="http://localhost/AutoMarket/view/contact-us.php">Contact</a></li>
-						</ul>
-					</div>
+					
 				</div>
 			</div>
 			<?php 
@@ -193,12 +146,12 @@ if(!(isset($errorMessage))){
 			<div class="layer-two">
 				<nav>
 					<ul>
-						<li class="nav-cars current-item"><a href="http://localhost/AutoMarket/view/car-list.php">Cars</a></li>
+						<li class="nav-cars current-item"><a href="/CarListController.php">Cars</a></li>
 						<li class="nav-bike"><a href="#">Bikes</a></li>
 					</ul>
 				</nav>
 
-				<form id="header-search" action="http://localhost/AutoMarket/view/car-list.php" method="post">
+				<form id="header-search" action="/CarListController.php" method="post">
 					<input type="text" name="quick_search"
 						onfocus="if(this.value == 'Quick Search, Ex: Mercedes-Benz E220') { this.value = ''; }"
 						onblur="if(this.value == '') { this.value = 'Quick Search, Ex: Mercedes-Benz E220'; }"

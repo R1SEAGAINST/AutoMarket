@@ -5,27 +5,27 @@
 		<div class="content-holder">
 			<nav>
 				<ul>
-					<li><a href="http://localhost/AutoMarket/view/dealer-details.php"><span class="bold">About</span>
+					<li><a href="/ContactController.php"><span class="bold">About</span>
 							us</a>
 						<ul>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">Our Partners</a></li>
-							<li><a href="#">Advertising Online</a></li>
-							<li><a href="#">Site Map</a></li>
+							<li><a href="/ContactController.php">Contact</a></li>
+							<li><a href="/underconstructionController.php">Our Partners</a></li>
+							<li><a href="/underconstructionController.php">Advertising Online</a></li>
+							<li><a href="/underconstructionController.php">Site Map</a></li>
 						</ul></li>
-					<li><a href="#"><span class="bold">Need</span> Help?</a>
+					<li><a href="/ContactController.php"><span class="bold">Need</span> Help?</a>
 						<ul>
-							<li><a href="#">How do I add an offer?</a></li>
-							<li><a href="#">How do I find a vehicle</a></li>
-							<li><a href="#">Price list</a></li>
-							<li><a href="#">Office for car dealers</a></li>
+							<li><a href="/underconstructionController.php">How do I add an offer?</a></li>
+							<li><a href="/underconstructionController.php">How do I find a vehicle</a></li>
+							<li><a href="/underconstructionController.php">Price list</a></li>
+							<li><a href="/underconstructionController.php">Office for car dealers</a></li>
 						</ul></li>
-					<li><a href="#"><span class="bold">User</span> area</a>
+					<li><a href="/homeController.php"><span class="bold">User</span> area</a>
 						<ul>
-							<li><a href="#">Add an offer</a></li>
-							<li><a href="#">Register dealder</a></li>
-							<li><a href="#">Login Dealer</a></li>
-							<li><a href="#">News</a></li>
+							<li><a href="/PostController.php">Add an offer</a></li>
+							<li><a href="/RegisterController.php">Register</a></li>
+							<li><a href="/LoginController.php">Login</a></li>
+							<li><a href="/underconstructionController.php">News</a></li>
 						</ul></li>
 				</ul>
 			</nav>
@@ -47,9 +47,9 @@
 
 	<div class="layer-two">
 		<div class="content-holder">
-			<p class="copyright">&copy; 2012 Automarket. All Rights Reserved</p>
+			<p class="copyright">&copy; 2017 Automarket. All Rights Reserved</p>
 			<p class="webdesign-author">
-				Webdesign by <a href="#">ClaPat Studio</a>
+				Webdesign by <a href="#"> IT TALENTS SEASON7 PHP</a>
 		
 		</div>
 	</div>

@@ -3,15 +3,12 @@ require_once 'header.php';
 ?>
 
 <body>
-
-
-
 <section id="reg-out">
 	<div class="content-holder">
 			<div class="full-width">
 		<div class="reg-in">
 			
-				<form action="http://localhost/AutoMarket/controller/RegisterController.php/" method='post' class="grey-corner-box">
+				<form action="/RegisterController.php" method='post' class="grey-corner-box">
 				
 				
 						<fieldset id="regform">
@@ -142,13 +139,11 @@ require_once 'header.php';
 	</div>
 	</section>
 	
-	<script src="../assets/js/jquery-3.1.1.min.js"></script>
-	<script src="../assets/js/regScript.js"></script>
+	<script src="http://localhost/Automarket/assets/js/jquery-3.1.1.min.js"></script>
+	<script src="http://localhost/Automarket//assets/js/regScript.js"></script>
 
 </body>
 </html>
-
 <?php
 require_once 'footer.php';
 ?>
-

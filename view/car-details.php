@@ -11,13 +11,11 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Mercedes-Benz</span> CLS 320</h2>
 					<p class="page-location">
-						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
+						<a href="http://automarket.com">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
-						<a href="http://localhost/AutoMarket/view/car-list.php">Cars</a>
+						<a href="/CarListController.php">Cars</a>
 						<span class="greater-than">&gt;&gt;</span>
-						<a href="#">Mercedes-Benz</a>
-						<span class="greater-than">&gt;&gt;</span>
-						<a href="#">Mercedes-Benz CLS 320</a>
+						<a>Ime na tekushta</a>
 					</p>
 				</div>
 				
@@ -33,10 +31,10 @@ require_once 'header.php';
 					<li id="vehicle-location"><a href="#"><span>Vehicle location</span></a></li>
 				</ul>
 				
-				<ul>
-					<li class="click-to-share"><a href="#"><span>Click to share</span></a></li>
-					<li class="print-this-page"><a href="#"><span>Print this page</span></a></li>
-				</ul>
+<!-- 				<ul> -->
+<!-- 					<li class="click-to-share"><a href="#"><span>Click to share</span></a></li> -->
+<!-- 					<li class="print-this-page"><a href="#"><span>Print this page</span></a></li> -->
+<!-- 				</ul> -->
 			</nav>
 			
 			
@@ -119,7 +117,7 @@ require_once 'header.php';
 					
 					<div class="sell-similar-car">
 						<span class="label">You want to sell a similar car?</span>
-						<a href="add-vehicle.html" class="value">+ Add an offer</a>
+						<a href="/PostController.php" class="value">+ Add an offer</a>
 					</div>
 				</div>
 			</div>
@@ -227,7 +225,7 @@ require_once 'header.php';
 			
 				<ul class="offer-small list-content">
 					<li>
-						<a href="http://localhost/AutoMarket/view/car-details.php">
+						<a href="/CarDetailsController.php">
 							<img src=".http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz CLS</h4>
@@ -244,67 +242,6 @@ require_once 'header.php';
 							</div>
 						</a>
 					</li>
-					<li>
-						<a href="http://localhost/AutoMarket/view/car-details.php">
-							<img src=".http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
-							<div class="entry-label">
-								<h4>Mercedes-Benz CLS</h4>
-								<span class="price-tag">54980 Euro</span>
-							</div>
-							<div class="entry-overlay">
-								<ul class="car-list-details">
-									<li>Registration 2002</li>
-									<li>3.0 Diesel</li>
-									<li>230 HP</li>
-									<li>Body Coupe</li>
-									<li>120.000 KM</li>							
-								</ul>
-							</div>
-							<span class="v-sign">V</span>
-							<span class='dealer-data'>Vehicle Dealer</span>
-						</a>
-					</li>
-					<li>
-						<a href="http://localhost/AutoMarket/view/car-details.php">
-							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
-							<div class="entry-label">
-								<h4>Mercedes-Benz CLS</h4>
-								<span class="price-tag">54980 Euro</span>
-							</div>
-							<div class="entry-overlay">
-								<ul class="car-list-details">
-									<li>Registration 2002</li>
-									<li>3.0 Diesel</li>
-									<li>230 HP</li>
-									<li>Body Coupe</li>
-									<li>120.000 KM</li>							
-								</ul>
-							</div>
-							<span class="v-sign">V</span>
-							<span class='dealer-data'>Vehicle Dealer</span>
-						</a>
-					</li>
-					<li>
-						<a href="http://localhost/AutoMarket/view/car-details.php">
-							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
-							<div class="entry-label">
-								<h4>Mercedes-Benz CLS</h4>
-								<span class="price-tag">54980 Euro</span>
-							</div>
-							<div class="entry-overlay">
-								<ul class="car-list-details">
-									<li>Registration 2002</li>
-									<li>3.0 Diesel</li>
-									<li>230 HP</li>
-									<li>Body Coupe</li>
-									<li>120.000 KM</li>							
-								</ul>
-							</div>
-							<span class="v-sign">V</span>
-							<span class='dealer-data'>Vehicle Dealer</span>
-						</a>
-					</li>
-					
 				</ul>
 			</div>
 			

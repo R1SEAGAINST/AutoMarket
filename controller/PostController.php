@@ -10,6 +10,7 @@ if (isset($_SESSION['user'])) {
 	
 	$user = json_decode($_SESSION['user']);
 	
+	
 
 	if(isset($_POST['submit'])){
 		
@@ -78,12 +79,13 @@ if (isset($_SESSION['user'])) {
 		} catch (Exception $e) {
 				$errorMessage = $e->getMessage();
 		}
+		var_dump($published);
+		header('Location:/CarDetailsController.php');
 	}
-	
 	$postDao = new PostDAO();
 	$brands = $postDao->getBrands();
 	include '../view/add-vehicle.php';
 } else{
-	header('Location:./homeController.php', true, 302);
+	header('Location:/homeController.php', true, 302);
 }
 

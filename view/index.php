@@ -1,11 +1,6 @@
 <?php 
 require_once 'header.php';
-//session_start();
 echo "<h3>".$errorMessage."</h3>";
-
- 
-
-// echo "<h2>".$username." ".$userId."</h2>";
 	?>
 
 <div id="page-content">
@@ -17,7 +12,7 @@ echo "<h3>".$errorMessage."</h3>";
 					<div id="slides">
 						<ul class="slides">
 							<li>
-								<a href="http://localhost/AutoMarket/view/car-details.php">
+								<a href="/CarDetailsController.php">
 									<img src="http://localhost/AutoMarket/assets/images/mercedes_picture.jpg" alt="Slide" />
 									<div class="slide-info">
 										<h3>Mercedes-Benz CLS 320</h3>
@@ -26,7 +21,7 @@ echo "<h3>".$errorMessage."</h3>";
 								</a>
 							</li>
 							<li>
-								<a href="http://localhost/AutoMarket/view/car-details.php">
+								<a href="/CarDetailsController.php">
 									<img src=".http://localhost/AutoMarket/assets/images/mercedes_picture.jpg" alt="Slide" />
 									<div class="slide-info">
 										<h3>Mercedes-Benz CLS 630</h3>
@@ -48,8 +43,8 @@ echo "<h3>".$errorMessage."</h3>";
 				
 				<ul class="offer-list offer-small list-content">
 					<li>
-						<a href="http://localhost/AutoMarket/view/car-details.php">
-							<img src=".http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="/CarDetailsController.php">
+							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 1</h4>
 								<span class="price-tag">54980 Euro</span>
@@ -70,7 +65,7 @@ echo "<h3>".$errorMessage."</h3>";
 					</li><!--/end of item 1-->
 						
 					<li>
-						<a href="http://localhost/AutoMarket/view/car-details.php">
+						<a href="/CarDetailsController.php">
 							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 2</h4>
@@ -90,7 +85,7 @@ echo "<h3>".$errorMessage."</h3>";
 					</li><!--/end of item 2-->
 					
 					<li>
-						<a href="http://localhost/AutoMarket/view/car-details.php">
+						<a href="/CarDetailsController.php">
 							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 3</h4>
@@ -110,7 +105,7 @@ echo "<h3>".$errorMessage."</h3>";
 					</li><!--/end of item 3-->
 					
 					<li>
-						<a href="http://localhost/AutoMarket/view/car-details.php">
+						<a href="/CarDetailsController.php">
 							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 4</h4>
@@ -130,7 +125,7 @@ echo "<h3>".$errorMessage."</h3>";
 					</li><!--/end of item 4-->
 					
 					<li>
-						<a href="http://localhost/AutoMarket/view/car-details.php">
+						<a href="/CarDetailsController.php">
 							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
 							<div class="entry-label">
 								<h4>Mercedes-Benz 5</h4>
@@ -162,21 +157,29 @@ echo "<h3>".$errorMessage."</h3>";
 		
 			<div class="full-width banners-full-width">
 				<div class="search-banner banner-medium one-half">
-					<a href="http://localhost/AutoMarket/view/car-list.php" class="icon-magnify icon-banner">Magnify</a>
+					<a href="/CarListController.php" class="icon-magnify icon-banner">Magnify</a>
 					<div class="banner-title">
 						<h3><span class="bold">Looking</span> for a car?</h3>
 						<p class="description">1.000 new offers every day. 35.000 offers on site</p>
 					</div>
-					<a href="http://localhost/AutoMarket/view/car-list.php" class="banner-link"><span>Search</span></a>
+					<a href="/CarListController.php" class="banner-link"><span>Search</span></a>
 				</div>
 					
 				<div class="sell-banner banner-medium one-half">
-					<a href="http://localhost/AutoMarket/view/add-vehicle.php" class="icon-dollar icon-banner">Dollar</a>
+					<a href="/PostController.php" class="icon-dollar icon-banner">Dollar</a>
 					<div class="banner-title">
 						<h3><span class="bold">Want</span> to sell a car?</h3>
 						<p class="description">200.000 visitors every day. Add your offer now!</p>
 					</div>
-					<a href="http://localhost/AutoMarket/view/add-vehicle.php" class="banner-link"><span>Sell+</span></a>
+					<?php if(isset($_SESSION['user'])){
+					?>
+					<a href="/PostController.php" class="banner-link"><span>Sell+</span></a>
+					<?php }else{
+					?>
+					<a href="/LoginController.php" class="banner-link"><span>Sell+</span></a>
+					<?php 
+					}
+					?>
 				</div>
 			</div>
 				
@@ -187,12 +190,12 @@ echo "<h3>".$errorMessage."</h3>";
 						<li>
 							<img src="http://localhost/AutoMarket/assets/images/article_icon.gif" alt="Article Icon" />
 							<p class="preview">Here are many variations of passages of Lorem Ipsum..</p>
-							<a href="./blog-post.php" class="more-link">Read more</a>
+							<a href="###" class="more-link">Read more</a>
 						</li>
 						<li>
 							<img src="http://localhost/AutoMarket/assets/images/article_icon.gif" alt="Article Icon" />
 							<p class="preview">Here are many variations of passages of Lorem Ipsum..</p>
-							<a href="./blog-post.php" class="more-link">Read more</a>
+							<a href="###" class="more-link">Read more</a>
 						</li>
 					</ul>
 				</div><!--.popular-articles-->
@@ -200,24 +203,24 @@ echo "<h3>".$errorMessage."</h3>";
 				<div class="car-dealers one-third">
 					<div class="headline">
 						<h3><span class="bold">Car</span> dealers</h3>
-						<a href="http://localhost/AutoMarket/view/dealer-list.php" class="see-more">See all dealers</a>
+						<a href="/DealerlistController.php" class="see-more">See all dealers</a>
 					</div>
 					
 					<ul class="dealer-list">
 						<li>
-							<a href="http://localhost/AutoMarket/view/dealer-details.php" class="dealer-name">Dealer name</a>
+							<a href="/DealerDetailsController.php" class="dealer-name">Dealer name</a>
 							<span class="amount-offers">162 Offers</span>
 						</li>
 						<li>
-							<a href="http://localhost/AutoMarket/view/dealer-details.php" class="dealer-name">Dealer name</a>
+							<a href="/DealerDetailsController.php" class="dealer-name">Dealer name</a>
 							<span class="amount-offers">162 Offers</span>
 						</li>
 						<li>
-							<a href="http://localhost/AutoMarket/view/dealer-details.php" class="dealer-name">Dealer name</a>
+							<a href="/DealerDetailsController.php" class="dealer-name">Dealer name</a>
 							<span class="amount-offers">162 Offers</span>
 						</li>
 						<li>
-							<a href="http://localhost/AutoMarket/view/dealer-details.php" class="dealer-name">Dealer name</a>
+							<a href="/DealerDetailsController.php" class="dealer-name">Dealer name</a>
 							<span class="amount-offers">162 Offers</span>
 						</li>
 					</ul>

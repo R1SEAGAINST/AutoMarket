@@ -1,5 +1,3 @@
-	
-
 <?php 
 require_once 'header.php';
 ?>
@@ -13,7 +11,7 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Sell your vehicle</span></h2>
 					<p class="page-location">
-						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
+						<a href="http://automarket.com">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="#">Add an offer</a>
 					</p>
@@ -22,9 +20,9 @@ require_once 'header.php';
 			
 			<nav class="default-tabs split-tabs">
 				<ul>
-					<li class="current-item"><a href="#"><span>1. New offer</span></a></li>
-					<li><a href="#"><span>2. Preview</span></a></li>
-					<li><a href="#"><span>3. Submit</span></a></li>
+					<li class="current-item"><a href="#"><span> New offer</span></a></li>
+<!-- 					<li><a href="#"><span>2. Preview</span></a></li> -->
+<!-- 					<li><a href="#"><span>3. Submit</span></a></li> -->
 				</ul>
 			</nav>
 			
@@ -36,11 +34,11 @@ require_once 'header.php';
 			<div class="full-width light-grey-corner-box box-text-default">
 				<h3>Sell ​​your car on <strong>AutoMarket </strong>and benefit from more than 1 million potential buyers every month!</h3>
 				<p>Required fields are marked with * </p>
-				<p>If you have difficulties in posting an offer on the website, please call the Armenian Pope</p>
+				<p>If you have difficulties in posting an offer on the website, please <a href="/ContactController.php">contact us.</a></p>
 			</div>
 			
 			<div class="full-width sell-form <!--options-form-->">
-				<form action="../controller/PostController.php" method="post" >
+				<form action="/PostController.php" method="post" >
 					<fieldset id="vehicle-data">
 						<legend><span class="bold">Vehicle</span> data</legend>
 						<ul class="field-content">
@@ -428,7 +426,7 @@ require_once 'header.php';
 		$('#select-manufacturer').on('change', function() {
 			var brandid = $('#select-manufacturer').val();
 
-			$.getJSON('/AutoMarket/controller/ajaxController.php', { brandid: brandid }, function(response) {
+			$.getJSON('/ajaxController.php', { brandid: brandid }, function(response) {
 				var modelSelect = $('#select-model');
 
 				$(modelSelect).find('option').remove();

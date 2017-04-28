@@ -11,7 +11,7 @@ require_once 'header.php';
 				<div class="heading-location">
 					<h2><span class="bold">Contact</span> us</h2>
 					<p class="page-location">
-						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
+						<a href="http://automarket.com">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="#">Contact Us</a>
 					</p>
@@ -92,8 +92,9 @@ require_once 'header.php';
 			<div class="full-width">
 				<h3><span class="bold">Sales</span> reps</h3>
 				<ul class="person-list">
+				
 					<li>
-						<a href="#" class="item-link">
+						<a href="#" class="image-icon">
 							<img src="http://localhost/AutoMarket/assets/images/person_thumb.gif" alt="Picture" />
 						</a>
 						<div class="text-content">
@@ -103,7 +104,6 @@ require_once 'header.php';
 							<p class="info-list layer-two">0040 742 016 753, 0040 742 016 753</p>
 							<div class="layer-three">
 								<span class="location">Location: Berlin, Germany</span>
-								<a href="#" class="details-link">Contact via e-mail</a>
 							</div>
 						</div>
 					</li>
@@ -118,37 +118,7 @@ require_once 'header.php';
 							<p class="info-list layer-two">0040 742 016 753, 0040 742 016 753</p>
 							<div class="layer-three">
 								<span class="location">Location: Berlin, Germany</span>
-								<a href="#" class="details-link">Contact via e-mail</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<a href="#" class="image-icon">
-							<img src="http://localhost/AutoMarket/assets/images/person_thumb.gif" alt="Picture" />
-						</a>
-						<div class="text-content">
-							<div class="layer-one">
-								<h3>Jessica Thomson</h3>
-							</div>
-							<p class="info-list layer-two">0040 742 016 753, 0040 742 016 753</p>
-							<div class="layer-three">
-								<span class="location">Location: Berlin, Germany</span>
-								<a href="#" class="details-link">Contact via e-mail</a>
-							</div>
-						</div>
-					</li>
-					<li>
-						<a href="#" class="image-icon">
-							<img src="http://localhost/AutoMarket/assets/images/person_thumb.gif" alt="Picture" />
-						</a>
-						<div class="text-content">
-							<div class="layer-one">
-								<h3>Jessica Thomson</h3>
-							</div>
-							<p class="info-list layer-two">0040 742 016 753, 0040 742 016 753</p>
-							<div class="layer-three">
-								<span class="location">Location: Berlin, Germany</span>
-								<a href="#" class="details-link">Contact via e-mail</a>
+								
 							</div>
 						</div>
 					</li>

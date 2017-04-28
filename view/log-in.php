@@ -1,32 +1,27 @@
 <?php 
-
 require_once 'header.php';
-
-
-?>
-	
-	
+?>	
 <div id="page-content">
 
 	<section id="car-pagination">
 		<div class="content-holder">
 			<div class="page-main-heading extra-space">
 				<div class="heading-location">
-					<h2><span class="bold">Vehicle</span> Insurance</h2>
-					<p class="page-location">
-						<a href="http://localhost/AutoMarket/view/index.php">Home </a>
-						<span class="greater-than">&gt;&gt;</span>
-						<a href="#">Vehicle Insurance</a>
-					</p>
+					<h2><span class="bold">LOGIN</span> user</h2>
+					<p class="page-location"> 
+						<a href="http://localhost/AutoMarket/view/index.php">Home </a> 
+						<span class="greater-than">&gt;&gt;</span> 
+						<a href="#">Login or Register</a> 
+					</p> 
 				</div>
 			
 			</div>
 			
-<!-- 			<nav class="default-tabs split-tabs"> -->
-<!-- 				<ul> -->
-<!-- 					<li class="current-item"><a href="#">Choose from below</a></li> -->
-<!-- 				</ul> -->
-<!-- 			</nav> -->
+			<nav class="default-tabs split-tabs"> 
+				<ul> 
+					<li class="current-item"><a href="#">Choose from below</a></li> 
+				</ul> 
+			</nav>
 		</div>
 	</section><!--#car-pagination -->
 		
@@ -36,7 +31,7 @@ require_once 'header.php';
 				
 				<div class="one-half col-539">
 
-					<form action="http://localhost/AutoMarket/controller/LoginController.php" method="post" id="returning-user" class="grey-corner-box">
+					<form action="/LoginController.php" method="post" id="returning-user" class="grey-corner-box">
 
 					
 
@@ -56,17 +51,18 @@ require_once 'header.php';
 								<li>
 									<div class="checkbox-custom submit-field">
 										<span class="submit"><input type="submit" value="Log in" name="submit" id="log-submit"/></span>
-										<input type="checkbox" value="remember_me" id="remember-me" checked="checked" />
-										<label for="remember-me">Remember me</label>
 									</div>
 								</li>
 							</ul>
 							
 						</fieldset>
+					</form>
+					<div class="checkbox-custom submit-field">
+						<a href="/RegisterController.php"><span class="submit"><input
+								type="submit" value="Register" name="submit" id="log-submit" /></span></a>
+					</div>
 					
-					
-					</form> 
-<!-- 				</div> -->
+					<!-- 				</div> -->
 				
 				
 <!-- 				<div class="one-half col-539"> -->
@@ -115,5 +111,6 @@ require_once 'header.php';
 
 	
 <?php 
-require_once 'footer.php';?>
+require_once 'footer.php';
+?>
 	
