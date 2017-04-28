@@ -111,7 +111,7 @@ fabricField.onblur = function(){
 	
 
 cilindricsField.onfocus = function() {
-		var errorMessage = document.querySelector("#cilinndricsDiv > .errorr");
+		var errorMessage = document.querySelector("#cilindricsDiv > .errorr");
 		if (errorMessage) {
 			errorMessage.parentNode.removeChild(errorMessage);
 			cilindricsError = false;
