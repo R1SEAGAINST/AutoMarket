@@ -142,23 +142,24 @@ require_once 'header.php';
 								</li><!-- line #2 -->
 								
 								<li class="select-four">
-									<div>
+									<div id="cilindricsDiv">
 										<label for="select-cilindrics">Cilindrics (in cm³): <span class="mandatory">*</span></label>
 										
-										<input type="text" name="cilindrics" id="input-cilidrics" class="default-input" />
+										<input type="text" name="cilindrics" id="input-cilindrics" class="default-input" />
 											
 										</select>
 									</div>
 								
 								
 							
-									<div>
+									<div id ="hpDiv">
 										<label for="select-hp-kw">Hp: <span class="mandatory">*</span></label>
 										
 										<input type="text" name="hp" id="input-hp" class="default-input" />
 									</div>
 									
-									<div>
+									<div id="fabricDiv">
+							
 									<label for="select-fabrication">Fabrication: <span class="mandatory">*</span></label>
 									
 									<input type="text" name="fabrication" id="input-fabrication" class="default-input" />
@@ -192,7 +193,7 @@ require_once 'header.php';
 					
 					<fieldset id="vehicle-description">
 						<legend><span class="bold">Vehicle</span> description</legend>
-						<div class="field-content">
+						<div class="field-content" id="descriptDiv">
 							<label for="vehicle-description-field">Some text:</label>
 							<textarea id="vehicle-description-field" name="description" class="description"></textarea>
 						</div>
@@ -336,7 +337,7 @@ require_once 'header.php';
 										<option value="Pre-registration">Pre-Registration</option>
 									</select>
 								</div>
-								<div>
+								<div id="kilometersDiv">
 									<label for="input-kilometers">Kilometers: <span class="mandatory">*</span></label>
 									<input type="text" name="kilometers" id="input-kilometers" class="default-input" />
 								</div>
@@ -349,7 +350,7 @@ require_once 'header.php';
 						<legend><span class="bold">Vehicle</span> price</legend>
 						<ul class="field-content">
 							<li class="select-four">
-								<div>
+								<div id="priceDiv">
 									<label for="input-price">Price: <span class="mandatory">*</span></label>
 									<input type="text" name="price" id="input-price" class="default-input" />
 								</div>
@@ -407,12 +408,12 @@ require_once 'header.php';
 								<input type="checkbox" value="agreed" id="check-agreed" /><label for="check-agreed">I agree to the Terms and Conditions. </label>
 							</div>
 							<div class="submit-vehicle default-submit">
-								<input name="submit"  type="submit" value="submit" />
+								<input name="submit"  type="submit" value="submit" id="add"/>
 							</div>
 						</div>
 							
 					</fieldset>
-					
+					<div class="errorr"><?=$errorMessage?></div>
 				</form>				
 			</div>
 			
@@ -420,6 +421,8 @@ require_once 'header.php';
 	</section>
 	
 </div><!--#page-content-->
+
+<script src="../assets/js/postScript.js"></script>
 
 <script type="text/javascript">
 	$(function() {
@@ -444,6 +447,7 @@ require_once 'header.php';
 		});
 	});
 </script>
+
 	
 <?php 
 require_once('footer.php');

@@ -106,7 +106,7 @@ require_once 'header.php';
 	</section><!--#search-list-->
 	
 </div><!--#page-content-->
-<script src="http://localhost/AutoMarket/assets/js/jquery-3.1.1.min.js"></script>
+<!-- <script src="http://localhost/AutoMarket/assets/js/jquery-3.1.1.min.js"></script> -->
 <script src="http://localhost/AutoMarket/assets/js/logScript.js"></script>
 
 	

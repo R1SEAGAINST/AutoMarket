@@ -16,6 +16,7 @@ if(!(isset($errorMessage))){
 <title>Automarket</title>
 <meta name="description" content="Automarket">
 
+
 <link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/main.css">
 <link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/uniform.default.css">
 <link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/prettyPhoto.css">
@@ -32,12 +33,6 @@ if(!(isset($errorMessage))){
 <script src="http://localhost/AutoMarket/assets/js/plugins/jquery.prettyPhoto.js"></script>
 <script src="http://localhost/AutoMarket/assets/js/plugins/jquery.countdown.js"></script>
 
-<!--  register -->
-<link href="http://localhost/AutoMarket/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<script type="text/javascript" src="http://localhost/AutoMarket/assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
-<link href="http://localhost/AutoMarket/assets/css/style.css" rel="stylesheet" type="text/css" media="screen">
-<script type="text/javascript" src="http://localhost/AutoMarket/assets/js/script.js"></script>
 
 
 
@@ -53,7 +48,9 @@ if(!(isset($errorMessage))){
 			<div class="layer-one">
 				<div class="page-titles">
 					<h1>
+
 						<a href="http://AutoMarket.com">Automarket</a>
+
 					</h1>
 					<?php 
 					
@@ -80,11 +77,14 @@ if(!(isset($errorMessage))){
 				</div>
 
 				<div class="header-buttons">
+
 					<a href="/PostController.php" class="add-an-offer rounded-link-box"> <span class="box-content"> <strong class="plus-sign">+</strong>&nbsp;Add
 							An Offer</span></a>
+
 					<div class="pages-top rounded-link-box">
 						<a href="#" class="box-content">NAV</a>
 						<ul>
+
 
 							<li><a href="http://AutoMarket.com">Home page</a></li>
 
@@ -129,11 +129,53 @@ if(!(isset($errorMessage))){
 						class="box-content"><strong class="plus-sign"></strong>&nbsp;Register
 							</span></a>
 					<div class="pages-top rounded-link-box">
+
 						<a href="/LoginController.php" class="box-content">Login</a>	
 					</div>
 					
+<!-- 					<div class="pages-top rounded-link-box"> -->
+<!-- 						<a href="#" class="box-content">NAV</a> -->
+<!-- 						<ul> -->
+
+<!-- 							<li><a href="http://localhost/AutoMarket/view/index.php">Home page</a></li> -->
+
+<!-- 							<li><a href="http://localhost/AutoMarket/view/add-vehicle.php">Add an offer</a></li> -->
+
+<!-- 							<li><a href="http://localhost/AutoMarket/view/log-in.php">Log in page</a></li> -->
+
+<!-- 							<li><a href="http://localhost/AutoMarket/view/car-list.php">Car list</a> -->
+<!-- 								<ul> -->
+<!-- 									<li><a href="http://localhost/AutoMarket/view/car-details.php">Car details</a> -->
+									
+<!-- 									<li> -->
+								
+<!-- 								</ul></li> -->
+
+<!-- <!-- 							<li><a href="./blog-overview.php">Blog</a> --> 
+<!-- <!-- 								<ul> --> 
+<!-- <!-- 									<li><a href="./blog-post.php">Blog post</a> --> 
+									
+<!-- <!-- 									<li> --> 
+								
+<!-- <!-- 								</ul></li> --> 
+<!-- 							<li><a href="http://localhost/AutoMarket/view/dealer-list.php">Dealer list</a> -->
+<!-- 								<ul> -->
+<!-- 									<li><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer details</a> -->
+									
+<!-- 									<li> -->
+								
+<!-- 								</ul></li> -->
+
+<!-- 							<li><a href="http://localhost/AutoMarket/view/insurance.php">Insurance</a></li> -->
+
+<!-- 							<li><a href="http://localhost/AutoMarket/view/under-construction.php">Under construction</a></li> -->
+
+<!-- 							<li><a href="http://localhost/AutoMarket/view/contact-us.php">Contact</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</div> -->
+
 				</div>
-			</div>
+		
 			<?php 
 					}
 			?>
