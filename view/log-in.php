@@ -56,44 +56,30 @@ require_once 'header.php';
 							</ul>
 							
 						</fieldset>
+							<div class="errorr"><?=$errorMessage?></div>
 					</form>
-					<div class="checkbox-custom submit-field">
-						<a href="/RegisterController.php"><span class="submit"><input
-								type="submit" value="Register" name="submit" id="log-submit" /></span></a>
-					</div>
+				
 					
-					<!-- 				</div> -->
+			</div> 
+			
 				
 				
-<!-- 				<div class="one-half col-539"> -->
-<!-- 					<form id="new-user" class="grey-corner-box"> -->
-<!-- 						<fieldset> -->
-<!-- 							<legend><span class="bold">New</span> user</legend> -->
-<!-- 							<ul> -->
-<!-- 								<li class="select-two"> -->
-<!-- 									<div> -->
-<!-- 										<input type="radio" name="type" value="register" id="register" /> -->
-<!-- 										<label for="register">Register<span class="description">Create an account for dealers</span></label> -->
-<!-- 									</div> -->
-<!-- 									<div> -->
-<!-- 										<input type="radio" name="type" value="add-offer" id="add-offer" /> -->
-<!-- 										<label for="add-offer">Add an offer<span class="description">Submit your personal offer</span></label> -->
-<!-- 									</div> -->
-<!-- 								</li> -->
-<!-- 								<li> -->
-<!-- 									<div class="checkbox-custom submit-field"> -->
-<!-- 										<span class="submit"><input type="submit" value="Register" /></span> -->
-<!-- 									</div> -->
-<!-- 								</li> -->
-							
-							
-<!-- 							</ul> -->
-							
-							
-<!-- 						</fieldset> -->
-						<div class="errorr"><?=$errorMessage?></div>
+			<div class="one-half col-539" id="folatRight"> 
+					<form id="new-user" class="grey-corner-box"> 
+						<fieldset> 
+						<legend><span class="bold">New</span> user</legend> 
+						
+ 								
+ 								
+ 								
+					<a href="/RegisterController.php" class="" id="newUserButon"><span
+						class="box-content"><strong class="plus-sign"></strong>&nbsp;Register
+							</span></a>
 					
-<!-- 					</form> -->
+							
+ 						</fieldset> 
+				
+					</form>
 				</div>
 				
 				

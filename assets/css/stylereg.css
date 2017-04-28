@@ -49,14 +49,22 @@ padding-top:-30px;
 	
 	
 }
+#uniform-country{
+	width:350px !important;
+	
+}
 
-#country{
-	width:350px;
+#uniform-country span{
+	width:350px !important;
+	
+}
+#country option {
+	width:350px !important;
 	height:30px;
 	display:inline-block;
 	boxsizing:border-box;
 	color:#696969;
-	display:block;
+	
 	
 	
 }
@@ -67,6 +75,30 @@ padding-top:-30px;
 
 
 #reg-reg{
+    background: url(../images/subscribe_button_repeat.gif) repeat-x;
+    line-height: 35px;
+    height: 35px;
+    float: left;
+    border: 0;
+    cursor: pointer;
+    font-family: DroidSans, Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-transform: uppercase;
+    padding: 0 15px;
+    color: #fff;
+    border: none;
+}
+
+#float-right{
+	width:550px;
+	
+}
+
+#newUserButon{
     background: url(../images/subscribe_button_repeat.gif) repeat-x;
     line-height: 35px;
     height: 35px;
