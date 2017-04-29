@@ -144,12 +144,12 @@ cilindricsField.onfocus = function() {
 	
 	kilometersField.onblur = function(){
 		
-		if ((isNaN(kilometersfield.value)) ||(kolometersField.value < 0) || (kilometersField.value > 1000000)) {
+		if ((isNaN(kilometersfield.value)) ||(kilometersField.value < 0) || (kilometersField.value > 1000000)) {
 		
 				var container = document.getElementById("kilometersDiv");
 				var errorMessage = document.createElement('span');
 				errorMessage.className = 'errorr';
-				errorMessage.textContent = 'Choose country, pleace!';
+				errorMessage.textContent = 'Kilometers shoud be number >0!';
 				container.appendChild(errorMessage);
 				kilometersError = true;
 			} else {
@@ -196,7 +196,7 @@ descriptField.onblur = function(){
 	};
 	
 document.forms[1].onsubmit = function(event) {
-	if( (hasErrors) || (priceError) || (cilindricsError) || (hpError) || (kolometersError) || (descriptError) || (fabricError)){
+	if( (hasErrors) || (priceError) || (cilindricsError) || (hpError) || (kilometersError) || (descriptError) || (fabricError)){
 		event.preventDefault();
 	}
 

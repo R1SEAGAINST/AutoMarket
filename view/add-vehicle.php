@@ -353,7 +353,7 @@ require_once 'header.php';
 										<option selected="selected">-</option>
 										<option value="New">New</option>
 										<option value="Used">Used</option>
-										<option value="Damage">Damaged</option>
+										<option value="Damage">Demaged</option>
 										<option value="Pre-registration">Pre-Registration</option>
 									</select>
 								</div>
@@ -442,7 +442,8 @@ require_once 'header.php';
 	
 </div><!--#page-content-->
 
-<script src="../assets/js/postScript.js"></script>
+<script src="http://localhost/AutoMarket/assets/js/postScript.js"></script>
+
 
 <script type="text/javascript">
 	$(function() {

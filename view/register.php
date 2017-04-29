@@ -144,7 +144,7 @@ require_once 'header.php';
 </body>
 </html>
 
-	<script src="../assets/js/regScript.js"></script>
+	<script src="http://localhost/AutoMarket/assets/js/regScript.js"></script>
 
 <?php
 require_once 'footer.php';
