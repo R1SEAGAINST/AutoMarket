@@ -179,14 +179,34 @@ require_once 'header.php';
 							<li><input type="checkbox" value="1" name="checkbox_eds" id="check-eds" /><label for="check-eds">EDS</label></li>
 							<li><input type="checkbox" value="1" name="checkbox_esp" id="check-esp" /><label for="check-esp">ESP</label></li>
 							<li><input type="checkbox" value="1" name="checkbox_air_conditioning" id="check-air-conditioning" /><label for="check-air-conditioning">Air conditioning</label></li>
-							<li><input type="checkbox" value="1" name="checkbox_airbag" id="check-airbag" /><label for="check-airbag">Air conditioning</label></li>
-							<li><input type="checkbox" value="1" name="checkbox_alarm" id="check-alarm" /><label for="check-alarm">Air conditioning</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_airbag" id="check-airbag" /><label for="check-airbag">Air bag</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_alarm" id="check-alarm" /><label for="check-alarm">Alarm</label></li>
 							<li><input type="checkbox" value="1" name="checkbox_panoramic_roof" id="check-panoramic-roof" /><label for="check-panoramic-roof">Panoramic roof</label></li>
 							<li><input type="checkbox" value="1" name="checkbox_protection_framework" id="check-protection-framework" /><label for="check-protection-framework">Protection framework</label></li>
 							<li><input type="checkbox" value="1" name="checkbox_tow" id="checkbox-tow" /><label for="checkbox-tow">Tow</label></li>
 							<li><input type="checkbox" value="1" name="checkbox_traction_control" id="checkbox-traction-control" /><label for="checkbox-traction-control">Traction control</label></li>
 							<li><input type="checkbox" value="1" name="checkbox_board_computer" id="checkbox-board-computer" /><label for="checkbox-board-computer">Board computer</label></li>
 							<li><input type="checkbox" value="1" name="checkbox_steering_wheel" id="checkbox-steering-wheel" /><label for="checkbox-steering-wheel">Steering wheel controls</label></li>
+<!-- 								new -->
+							<li><input type="checkbox" value="1" name="checkbox_gps" id="check-gps" /><label for="check-abs">GPS tracking system</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_adaptive_lights" id="check-adaptive-lights" /><label for="check-eds">Adaptive Lights</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_smart_tire" id="check-smart-tire" /><label for="check-esp">Smart Tire</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_aps" id="check-aps" /><label for="check-aps">APS</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_distronic" id="check-distronic" /><label for="check-distronic">Distronic</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_ass" id="check-ass" /><label for="check-ass">ASS</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_dvd" id="check-dvd" /><label for="check-dvd">DVD</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_airmatic" id="check-airmatic" /><label for="check-eds">Airmatic</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_keylessgo" id="check-keylessgo" /><label for="check-keylessgo">Keyless Go</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_adjustable_wheel" id="check-adjustable-wheel" /><label for="check-adjustable-wheel">Adjustable wheel</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_four_wheel" id="check-four-wheel" /><label for="check-four-wheel">Four Wheel Drive</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_seven_seats" id="check-seven-seats" /><label for="seven-seats">Seven Seats</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_leather_seats" id="check-leather-seats" /><label for="check-leather-seats">Leather seats</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_velour_seats" id="check-velour-seats" /><label for="check-velour-seats">Velour Seats/label></li>
+							<li><input type="checkbox" value="1" name="checkbox_service_history" id="check-service-history" /><label for="check-service-history">Service History</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_led_lights" id="check-led-lights" /><label for="check-led-lights">LED lights</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_dsa" id="check-dsa" /><label for="check-dsa">DSA</label></li>
+							<li><input type="checkbox" value="1" name="checkbox_traction_control" id="check-traction-control" /><label for="seven-traction-control">Traction control</label></li>
+<!-- 								/new  -->
 						</ul>
 					
 					</fieldset>
@@ -356,7 +376,7 @@ require_once 'header.php';
 								</div>
 								<div>
 									<br/>
-									<p>EUR</p>				
+									<p style="font-family:Verdana;" >EUR</p>				
 								</div>
 							</li>
 						</ul>

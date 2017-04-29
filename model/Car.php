@@ -30,9 +30,27 @@ class Car extends Vehicle {
 		"checkbox_tow" => 9,
 		"checkbox_traction_control" => 10,
 		"checkbox_board_computer" => 11,
-		"checkbox_steering_wheel" => 12
+		"checkbox_steering_wheel" => 12,
+		"checkbox_gps" => 13,
+		"checkbox_adaptive_lights" => 14,
+		"checkbox_smart_tire" => 15,
+		"checkbox_aps" => 16,
+		"checkbox_distronic" => 17,
+		"checkbox_ass" => 18,
+		"checkbox_dvd" => 19,
+		"checkbox_airmatic" => 20,
+		"checkbox_keylessgo" => 21,
+		"checkbox_adjustable_wheel" => 22,
+		"checkbox_four_wheel" => 23,
+		"checkbox_seven_seats" => 24,
+		"checkbox_leather_seats" => 25,
+		"checkbox_velour_seats" => 26,
+		"checkbox_service_history" => 27,
+		"checkbox_led_lights" => 28,
+		"checkbox_dsa" => 29,
+		"checkbox_traction_control" => 30			
 	);
-	
+
 	public function getExtrasArray() {
 		return self::$extrasArray;
 	}
