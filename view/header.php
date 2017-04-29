@@ -16,7 +16,6 @@ if(!(isset($errorMessage))){
 <title>Automarket</title>
 <meta name="description" content="Automarket">
 
-
 <link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/main.css">
 <link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/uniform.default.css">
 <link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/prettyPhoto.css">
