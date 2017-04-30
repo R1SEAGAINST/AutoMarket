@@ -1,6 +1,6 @@
-<?php 
-require_once 'header.php';
 
+<?php
+require_once 'header.php';
 ?>
 	
 	
@@ -10,18 +10,18 @@ require_once 'header.php';
 		<div class="content-holder">
 			<div class="page-main-heading extra-space">
 				<div class="heading-location">
-					<h2><span class="bold">Sell your vehicle</span></h2>
+					<h2><span class="bold">Find a vehicle</span></h2>
 					<p class="page-location">
 						<a href="http://automarket.com">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
-						<a href="">Add an offer</a>
+						<a href="">Deatailed Search</a>
 					</p>
 				</div>
 			</div>
 			
 			<nav class="default-tabs split-tabs">
 				<ul>
-					<li class="current-item"><a href=""><span> New offer</span></a></li>
+					<li class="current-item"><a href=""><span> Detailed Search</span></a></li>
 <!-- 					<li><a href="#"><span>2. Preview</span></a></li> -->
 <!-- 					<li><a href="#"><span>3. Submit</span></a></li> -->
 				</ul>
@@ -32,20 +32,14 @@ require_once 'header.php';
 		
 	<section id="sell-your-vehicle">
 		<div class="content-holder">
-			<div class="full-width light-grey-corner-box box-text-default">
-				<h3>Sell ​​your car on <strong>AutoMarket </strong>and benefit from more than 1 million potential buyers every month!</h3>
-				<p>Required fields are marked with * </p>
-				<p>If you have difficulties in posting an offer on the website, please <a href="/ContactController.php">contact us.</a></p>
-			</div>
-			
 			<div class="full-width sell-form <!--options-form-->">
-				<form action="/PostController.php" method="post" enctype="multipart/form-data">
+				<form action="/CarListController.php" method="post">
 					<fieldset id="vehicle-data">
-						<legend><span class="bold">Vehicle</span> data</legend>
+						<legend><span class="bold">Choose</span> below</legend>
 						<ul class="field-content">
 							<li class="select-four">
 								<div>
-									<label for="select-manufacturer">Manufacturer: <span class="mandatory">*</span></label>
+									<label for="select-manufacturer">Manufacturer: <span class="mandatory"> </span></label>
 									<select name="manufacturer" id="select-manufacturer">
 										<option selected="selected" disabled="">Select</option>
 										<?php foreach ($brands as $manufacturer) { ?>
@@ -54,15 +48,15 @@ require_once 'header.php';
 									</select>
 								</div>
 								<div>
-									<label for="select-model">Model: <span class="mandatory">*</span></label>
+									<label for="select-model">Model: <span class="mandatory"> </span></label>
 									<select name="model" id="select-model">
 										<option selected="selected">Select</option>
 									</select>
 								</div>
 								<div>
-									<label for="select-euro-type">Euro type:<span class="mandatory">*</span></label>
+									<label for="select-euro-type">Euro type:<span class="mandatory"> </span></label>
 									<select name="euroType" id="select-euro-type">
-										<option selected="selected">-</option>
+										<option selected="selected">Select</option>
 										<option value="Euro1">Euro1</option>
 										<option value="Euro2">Euro2</option>
 										<option value="Euro3">Euro3</option>
@@ -75,9 +69,9 @@ require_once 'header.php';
 								</div>
 								
 								<div>
-									<label for="select-body-type">Body Type: <span class="mandatory">*</span></label>
+									<label for="select-body-type">Body Type: <span class="mandatory"> </span></label>
 									<select name="bodyType" id="select-body-type">
-										<option selected="selected">-</option>
+										<option selected="selected">Select</option>
 										<option value="Cabriolet/Roadster">Cabriolet/Roadster</option>
 										<option value="Small Car">Small Car</option>
 										<option value="Estete Car">Estete Car</option>
@@ -92,9 +86,9 @@ require_once 'header.php';
 							
 							<li class="select-four">
 								<div>
-									<label for="select-fuel-type">Fuel Type: <span class="mandatory">*</span></label>
+									<label for="select-fuel-type">Fuel Type: <span class="mandatory"> </span></label>
 									<select name="fuelType" id="select-fuel-type">
-										<option selected="selected">-</option>
+										<option selected="selected">Select</option>
 										<option value="Diesel">Diesel</option>
 										<option value="Petrol">Petrol</option>
 										<option value="Electric">Electric</option>
@@ -102,18 +96,18 @@ require_once 'header.php';
 									</select>
 								</div>
 								<div>
-									<label for="select-transmission">Transmission: <span class="mandatory">*</span></label>
+									<label for="select-transmission">Transmission: <span class="mandatory"> </span></label>
 									<select name="transmission" id="select-transmission">
-										<option selected="selected">-</option>
+										<option selected="selected">Select</option>
 										<option value="Manual">Manual</option>
 										<option value="Semiautomatic">Semi-automatic</option>
 										<option value="Autotic">automatic transmission</option>
 									</select>
 								</div>
 								<div>
-									<label for="select-doors">Doors: <span class="mandatory">*</span></label>
+									<label for="select-doors">Doors: <span class="mandatory"> </span></label>
 									<select name="doors" id="select-doors">
-										<option selected="selected">-</option>
+										<option selected="selected">Select</option>
 										<option value="2/3">2/3</option>
 										<option value="4/5">4/5</option>
 										
@@ -121,9 +115,9 @@ require_once 'header.php';
 								</div>
 								
 								<div>
-									<label for="select-color">Color: <span class="mandatory">*</span></label>
+									<label for="select-color">Color: <span class="mandatory"> </span></label>
 									<select name="color" id="select-color">
-										<option selected="selected">-</option>
+										<option selected="selected">Select</option>
 										<option value="Silver">Silver</option>
 										<option value="Grey">Grey</option>
 										<option value="Metallic">Metallic</option>
@@ -141,35 +135,6 @@ require_once 'header.php';
 								</div>
 								
 								</li><!-- line #2 -->
-								
-								<li class="select-four">
-									<div id="cilindricsDiv">
-										<label for="select-cilindrics">Cilindrics (in cm³): <span class="mandatory">*</span></label>
-										
-										<input type="text" name="cilindrics" id="input-cilindrics" class="default-input" />
-											
-										</select>
-									</div>
-								
-								
-							
-									<div id ="hpDiv">
-										<label for="select-hp-kw">Hp: <span class="mandatory">*</span></label>
-										
-										<input type="text" name="hp" id="input-hp" class="default-input" />
-									</div>
-									
-									<div id="fabricDiv">
-							
-									<label for="select-fabrication">Fabrication: <span class="mandatory">*</span></label>
-									
-									<input type="text" name="fabrication" id="input-fabrication" class="default-input" />
-									
-								</div>
-									
-									
-								
-							</li><!-- line #3 -->
 						</ul>
 					</fieldset>
 					
@@ -210,16 +175,7 @@ require_once 'header.php';
 <!-- 								/new  -->
 						</ul>
 					
-					</fieldset>
-					
-					<fieldset id="vehicle-description">
-						<legend><span class="bold">Vehicle</span> description</legend>
-						<div class="field-content" id="descriptDiv">
-							<label for="vehicle-description-field">Some text:</label>
-							<textarea id="vehicle-description-field" name="description" class="description"></textarea>
-						</div>
-					</fieldset>
-					
+					</fieldset>	
 					<fieldset id="vehicle-registration">
 						<legend><span class="bold">Vehicle</span> registration</legend>
 						<ul class="field-content">
@@ -227,9 +183,9 @@ require_once 'header.php';
 							
 								<div>
 									<label for="select-country-registration">Country of
-										registration: <span class="mandatory">*</span>
+										registration: <span class="mandatory"> </span>
 									</label> <select name="country" id="select-country-registration">
-										<option selected="selected">-</option>
+										<option selected="selected">Select</option>
 										<option value="AL">Albania</option>
 										<option value="AD">Andorra</option>
 										<option value="AT">Austria</option>
@@ -301,8 +257,8 @@ require_once 'header.php';
 								</div>
 
 								<div>
-									<label for="select-registration-year">&nbsp;</label>
-									<select name="year" id="select-registration-year">
+										<label for="min-year">Min Year:</label>
+										<select name="min-year" id="min-year">
 										<option selected="selected">Year</option>
 										<option value="2017">2017</option>
 										<option value="2016">2016</option>
@@ -338,7 +294,49 @@ require_once 'header.php';
 										<option value="1965">1965</option>
 										<option value="1960">1960</option>
 										<option value="1900">1900</option>
-									</select>
+										</select>
+										
+								</div>
+									<div>
+										<label for="max-year">Max Year:</label>
+										<select name="max-year" id="max-year">
+										<option selected="selected">Year</option>
+										<option value="2017">2017</option>
+										<option value="2016">2016</option>
+										<option value="2015">2015</option>
+										<option value="2014">2014</option>
+										<option value="2013">2013</option>
+										<option value="2012">2012</option>
+										<option value="2011">2011</option>
+										<option value="2010">2010</option>
+										<option value="2009">2009</option>
+										<option value="2008">2008</option>
+										<option value="2007">2007</option>
+										<option value="2006">2006</option>
+										<option value="2005">2005</option>
+										<option value="2004">2004</option>
+										<option value="2003">2003</option>
+										<option value="2002">2002</option>
+										<option value="2001">2001</option>
+										<option value="2000">2000</option>
+										<option value="1999">1999</option>
+										<option value="1998">1998</option>
+										<option value="1997">1997</option>
+										<option value="1996">1996</option>
+										<option value="1995">1995</option>
+										<option value="1994">1994</option>
+										<option value="1993">1993</option>
+										<option value="1992">1992</option>
+										<option value="1991">1991</option>
+										<option value="1985">1985</option>
+										<option value="1980">1980</option>
+										<option value="1975">1975</option>
+										<option value="1970">1970</option>
+										<option value="1965">1965</option>
+										<option value="1960">1960</option>
+										<option value="1900">1900</option>
+										</select>
+										
 								</div>
 							</li>
 						</ul>
@@ -349,9 +347,9 @@ require_once 'header.php';
 						<ul class="field-content">
 							<li class="select-four">
 								<div>
-									<label for="select-technical-condition">Technical condition: <span class="mandatory">*</span></label>
+									<label for="select-technical-condition">Technical condition: <span class="mandatory"> </span></label>
 									<select name="condition" id="select-technical-condition">
-										<option selected="selected">-</option>
+										<option selected="selected">Select</option>
 										<option value="New">New</option>
 										<option value="Used">Used</option>
 										<option value="Damage">Demaged</option>
@@ -359,8 +357,17 @@ require_once 'header.php';
 									</select>
 								</div>
 								<div id="kilometersDiv">
-									<label for="input-kilometers">Kilometers: <span class="mandatory">*</span></label>
-									<input type="text" name="kilometers" id="input-kilometers" class="default-input" />
+										<label for="kilometersDiv">Kilometers:</label>
+										<select name="kilometers" id="kilometers">
+											<option selected="selected">Select</option>
+											<option value="9999">Less than 10000</option>	
+											<?php 
+										for($index=10000; $index <= 150000; $index+=10000){
+											echo "<option value=".$index."> Over ".$index."</option>";
+										}
+										?>
+											
+									</select>
 								</div>
 								
 							</li>
@@ -371,10 +378,28 @@ require_once 'header.php';
 						<legend><span class="bold">Vehicle</span> price</legend>
 						<ul class="field-content">
 							<li class="select-four">
-								<div id="priceDiv">
-									<label for="input-price">Price: <span class="mandatory">*</span></label>
-									<input type="text" name="price" id="input-price" class="default-input" />
-								</div>
+								<div>
+										<label for="min-price">Min Price:</label>
+										<select name="min-price" id="min-price">
+										<option selected="selected">Select</option>
+										<?php 
+										for($index=0; $index <= 20000; $index+=500){
+											echo "<option value=".$index.">".$index."</option>";
+										}
+										?>
+										</select>
+									</div>
+									<div>
+										<label for="max-price">Max Price:</label>
+										<select name="max-price" id="max-price">
+											<option selected="selected">Select</option>
+											<?php 
+										for($index=10000; $index <= 200000; $index+=10000){
+											echo "<option value=".$index.">".$index."</option>";
+										}
+										?>
+										</select>					
+									</div>
 								<div>
 									<br/>
 									<p style="font-family:Verdana;" >EUR</p>				
@@ -383,47 +408,14 @@ require_once 'header.php';
 						</ul>
 					</fieldset>
 					
-					<fieldset id="vehicle-photos">
-						<legend><span class="bold">Vehicle</span> photos</legend>
-						<ul class="field-content">
-							<li class="select-six">
-								<div>
-									<div class="upload-file-container"></div>
-									<input type="file" name="files[]"/>
-								</div>	
-								<div>
-									<div class="upload-file-container"></div>
-									<input type="file" name="files[]"/>
-								</div>	
-								<div>
-									<div class="upload-file-container"></div>
-									<input type="file" name="files[]"/>
-								</div>	
-								<div>
-									<div class="upload-file-container"></div>
-									<input type="file" name="files[]"/>
-								</div>	
-								<div>
-									<div class="upload-file-container"></div>
-									<input type="file" name="files[]"/>
-								</div>	
-								<div>
-									<div class="upload-file-container"></div>
-									<input type="file" name="files[]"/>
-								</div>		
-							</li>
-						</ul>
-					</fieldset>
-					
-					
-					
+			
 					<fieldset id="vehicle-submit" class="checkbox-selection">
 						<div>
 							<div class="agree-checkbox">
-								<input type="checkbox" value="agreed" id="check-agreed" /><label for="check-agreed">I agree to the Terms and Conditions. </label>
+								<input type="checkbox" value="agreed" id="check-agreed" /><label for="check-agreed">Show posts with pictures. </label>
 							</div>
 							<div class="submit-vehicle default-submit">
-								<input name="submit"  type="submit" value="submit" id="add"/>
+								<input name="submit"  type="submit" value="Search" id="add"/>
 							</div>
 						</div>
 							

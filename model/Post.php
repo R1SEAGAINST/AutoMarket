@@ -1,11 +1,11 @@
 <?php
 
 class Post {
-	private $userid;
+	private $user;
 	private $car;
 
-	function __construct($userid, $car) {
-		$this->userid = $userid;
+	function __construct($user, $car) {
+		$this->user = $user;
 		$this->car = $car;
 	}
 }

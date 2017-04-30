@@ -24,7 +24,7 @@
 			$newUser = new User($user['user_email'], 'hahahaha', $user['user_address'],  $user['user_id']);
 			
 			$newUser->setUsername($user['user_name']);
-			$newUser->setPhone($user['user_phone']);
+			$newUser->setUserPhone($user['user_phone']);
 			$newUser->setUserCountry($user['user_country']);
 			
 			return $newUser;

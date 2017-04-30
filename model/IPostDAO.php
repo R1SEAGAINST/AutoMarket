@@ -1,5 +1,5 @@
 <?php
 interface IPostDAO {
-	public function publish($userid, Car $car);
+	public function publish(User $user, Car $car);
 }
 ?>
