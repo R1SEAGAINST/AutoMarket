@@ -149,7 +149,7 @@ require_once 'header.php';
 						</div>
 					</div>
 					
-					<div class="layer-two">
+					<div class="layer-two" id="dealerPage">
 						
 						<div id="dealer-list" class="info-list">
 							<ul class="detail-list">
@@ -160,15 +160,15 @@ require_once 'header.php';
 									</a>
 									<div class="text-content">
 										<div class="layer-one">
-											<h3><a href="/DealerDetailsController.php">Dealer Name Here</a></h3>
+											<h3 id="dealerNameHere"><a href="/DealerDetailsController.php">Dealer Name Here</a></h3>
 											<span class="amount">183 Offers</span>
 										</div>
 										<ul class="item-specs layer-two">
-											<li>314 Columbus Ave, San Francisco, CA 94133</li>
+											<li id="dealerAddressHere">314 Columbus Ave, San Francisco, CA 94133</li>
 										</ul>
 										<div class="layer-three">
 											<a href="#" class="view-on-map">View on map</a>
-											<span class="phone-number">(123) 456-78910</span>
+											<span class="phone-number" id="dealerPhoneHere">(123) 456-78910</span>
 											<a href="/DealerDetailsController.php" class="details-link">View details</a>
 										</div>
 									</div>
@@ -197,9 +197,11 @@ require_once 'header.php';
 	</section><!--#search-list-->
 	
 </div><!--#page-content-->
+
 	
 <?php 
 
 require_once 'footer.php';
 ?>
+<script src="http://localhost/AutoMarket/assets/js/dealers.js"></script>
 	

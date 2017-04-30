@@ -13,3 +13,11 @@ if (isset ( $_SESSION ['user'] )) {
 		echo json_encode ( $models );
 	}
 }
+
+if ($_SERVER ['REQUEST_METHOD'] === 'GET'){
+	$dao = new userDAO;
+	echo json_encode ( $dao->listAllDealers() );
+
+
+
+}
