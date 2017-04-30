@@ -13,7 +13,7 @@ if (isset($_SESSION['user'])) {
 	
 
 	if(isset($_POST['submit'])){
-		
+
 		try {
 			$car = new Car();
 			$extrasArray = $car->getExtrasArray();		
@@ -64,28 +64,53 @@ if (isset($_SESSION['user'])) {
 			$car->setCountryOfRegistration($_POST['country']);
 			$car->setIdModel($_POST['model']);
 			
-
-			$userid = $user->id;
-			
-			
-			$post = new Post($userid, $car);
-			
+				
+			$post = new Post($userid, $car);			
 			$postDao = new PostDAO();
-			
-			
-		
-			$published = $postDao->publish($userid, $car);
+			$postId = $postDao->publish($user, $car);
+	
+				
+			if(isset($_FILES['files']['name'][0])){	
+				$errors=array();
+					foreach($_FILES['files']['tmp_name'] as $key => $tmp_name ){
+						if($_FILES['files']['error'][$key] > 0){
+							continue;
+						}
+						$file_name = $key.$_FILES['files']['name'][$key];
+						$file_size =$_FILES['files']['size'][$key];
+						$file_tmp =$_FILES['files']['tmp_name'][$key];
+						$file_type=$_FILES['files']['type'][$key];
+							if($file_size > 2097152){
+								$errors[]='File size must be less than 2 MB';
+							}
+							if(empty($errors)==true){
+							$extensions = array("jpeg","jpg","png");
+							$name=$_FILES['files']['name'][$key];
+							$file_ext=pathinfo($name, PATHINFO_EXTENSION);
+					
+							
+								if(in_array($file_ext,$extensions ) === true){		
+									$img = $postDao->randomName($file_ext);
+									
+									move_uploaded_file($file_tmp,"../assets/images/postimage/{$img}");
+									$insertImage= $postDao->postImage($img, $postId);			
+									}else{
+										$errors[]="extension not allowed";
+									}
+								}
+							}
+						}
+						
 			
 		} catch (Exception $e) {
 				$errorMessage = $e->getMessage();
-		}
-		var_dump($published);
-		header('Location:/CarDetailsController.php');
+	}
+		 header('Location:/CarDetailsController.php?id='.$postId);
 	}
 	$postDao = new PostDAO();
 	$brands = $postDao->getBrands();
 	include '../view/add-vehicle.php';
 } else{
-	header('Location:/homeController.php', true, 302);
+	 header('Location:/homeController.php', true, 302);
 }
 

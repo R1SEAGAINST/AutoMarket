@@ -22,15 +22,15 @@ require_once 'header.php';
 			
 			<nav class="default-tabs split-tabs">
 				<ul>
-					<li class="current-item"><a href="#">All Cars</a></li>
-					<li><a href="#">New Cars</a></li>
-					<li><a href="#">Used Cars</a></li>
+					<li class="current-item"><a href="">Cars</a></li>
+<!-- 					<li><a href="#">New Cars</a></li> -->
+<!-- 					<li><a href="#">Used Cars</a></li> -->
 				</ul>
 			</nav>
 			
 			<div class="view-select-tabs">
-				<a href="#" id="list-view"><span>List View</span></a>
-				<a href="#" id="grid-view" class="current"><span>Grid View</span></a>
+				<a href="" id="list-view"><span>List View</span></a>
+				<a href="" id="grid-view" class="current"><span>Grid View</span></a>
 			</div>
 		</div>
 	</section><!--#car-pagination -->
@@ -38,138 +38,207 @@ require_once 'header.php';
 	<section id="search-list">
 		<div class="content-holder">
 			<div class="full-width">
-			
 				<div class="one-half col-241 search-area">
-					<form id="search-filters" action="#">
+					<form id="search-filters" name="search-filters" action="/CarListController.php" method="POST">
 						<fieldset class="grey-corner-box">
 							<legend><span class="bold">Search</span> filters</legend>
 							<ul>
-								<li>
-									<label for="manufacturer">Manufacturer:</label>
-									<select id="manufacturer">
-										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
+								<li class="select-four">
+								<div>
+									<label for="select-manufacturer">Manufacturer: <span class="mandatory"></span></label>
+									<select name="manufacturer" id="select-manufacturer">
+										<option selected="selected" disabled="">Select</option>
+										<?php foreach ($brands as $manufacturer) { ?>
+										<option value="<?=$manufacturer['id_brand']?>"><?=$manufacturer['brand_name']?></option>
+										<?php } ?>
 									</select>
-								</li>
-								<li>
-									<label for="model">Model:</label>
-									<select id="model">
+								</div>
+								<div>
+									<label for="select-model">Model: <span class="mandatory"></span></label>
+									<select name="model" id="select-model">
 										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
 									</select>
-								</li>
+								</div>
 								<li class="select-two">
 									<div>
 										<label for="min-price">Min Price:</label>
-										<select id="min-price">
-											<option selected="selected">Select</option>
-											<option value="option1">Option 1</option>
-											<option value="option2">Option 2</option>
-											<option value="option3">Option 3</option>
+										<select name="min-price" id="min-price">
+										<option selected="selected">Select</option>
+										<?php 
+										for($index=0; $index <= 20000; $index+=500){
+											echo "<option value=".$index.">".$index."</option>";
+										}
+										?>
 										</select>
 									</div>
 									<div>
 										<label for="max-price">Max Price:</label>
-										<select id="max-price">
+										<select name="max-price" id="max-price">
 											<option selected="selected">Select</option>
-											<option value="option1">Option 1</option>
-											<option value="option2">Option 2</option>
-											<option value="option3">Option 3</option>
+											<?php 
+										for($index=10000; $index <= 200000; $index+=10000){
+											echo "<option value=".$index.">".$index."</option>";
+										}
+										?>
 										</select>					
 									</div>
 								</li>
 								<li>
-									<label for="engine">Engine:</label>
-									<select id="engine">
-										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
-									</select>
-								</li>
-								<li>
 									<label for="transmission">Transmission:</label>
-									<select id="transmission">
+									<select name="transmission" id="transmission">
 										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
+										<option value="Manual">Manual</option>
+										<option value="Semiautomatic">Semi-automatic</option>
+										<option value="Autotic">automatic transmission</option>
 									</select>
 								</li>
 								<li>
 									<label for="fuel-type">Fuel type:</label>
-									<select id="fuel-type">
-										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
+									<select name="fuel-type" id="fuel-type">
+											<option selected="selected">Select</option>
+										<option value="Diesel">Diesel</option>
+										<option value="Petrol">Petrol</option>
+										<option value="Electric">Electric</option>
+										<option value="Hybrid">Hybrid</option>
 									</select>
 								</li>
 								<li>
 									<label for="body-type">Body type:</label>
-									<select id="body-type">
+									<select name="body-type" id="body-type">
 										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
+										<option value="Cabriolet/Roadster">Cabriolet/Roadster</option>
+										<option value="Small Car">Small Car</option>
+										<option value="Estete Car">Estete Car</option>
+										<option value="Pickup">Off-road vehicle/Pickup</option>
+										<option value="Saloon">Saloon</option>
+										<option value="Van/Minibus">Van/Minibus</option>
+										<option value="Sports Csar">Sports Car</option>
+										<option value="Other">Other</option>
 									</select>
 								</li>
 								<li>
 									<label for="color">Color:</label>
-									<select id="color">
+									<select name="color" id="color">
 										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
-									</select>
-								</li>
-								<li>
-									<label for="kilometers-one">Kilometers:</label>
-									<select id="kilometers-one">
-										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
+										<option value="Silver">Silver</option>
+										<option value="Grey">Grey</option>
+										<option value="Metallic">Metallic</option>
+										<option value="Blue">Blue</option>
+										<option value="Brown">Brown</option>
+										<option value="Orange">Orange</option>
+										<option value="White">White</option>
+										<option value="Red">Red</option>
+										<option value="Black">Black</option>
+										<option value="Green">Green</option>
+										<option value="Gold">Gold</option>
+										<option value="Yellow">Yellow</option>
+										<option value="Beage">Beage</option>
 									</select>
 								</li>
 								<li class="select-two">
 									<div>
 										<label for="min-year">Min Year:</label>
-										<select id="min-year">
-											<option selected="selected">Select</option>
-											<option value="option1">Option 1</option>
-											<option value="option2">Option 2</option>
-											<option value="option3">Option 3</option>
+										<select name="min-year" id="min-year">
+										<option selected="selected">Year</option>
+										<option value="2017">2017</option>
+										<option value="2016">2016</option>
+										<option value="2015">2015</option>
+										<option value="2014">2014</option>
+										<option value="2013">2013</option>
+										<option value="2012">2012</option>
+										<option value="2011">2011</option>
+										<option value="2010">2010</option>
+										<option value="2009">2009</option>
+										<option value="2008">2008</option>
+										<option value="2007">2007</option>
+										<option value="2006">2006</option>
+										<option value="2005">2005</option>
+										<option value="2004">2004</option>
+										<option value="2003">2003</option>
+										<option value="2002">2002</option>
+										<option value="2001">2001</option>
+										<option value="2000">2000</option>
+										<option value="1999">1999</option>
+										<option value="1998">1998</option>
+										<option value="1997">1997</option>
+										<option value="1996">1996</option>
+										<option value="1995">1995</option>
+										<option value="1994">1994</option>
+										<option value="1993">1993</option>
+										<option value="1992">1992</option>
+										<option value="1991">1991</option>
+										<option value="1985">1985</option>
+										<option value="1980">1980</option>
+										<option value="1975">1975</option>
+										<option value="1970">1970</option>
+										<option value="1965">1965</option>
+										<option value="1960">1960</option>
+										<option value="1900">1900</option>
 										</select>
 									</div>
 									<div>
 										<label for="max-year">Max Year:</label>
-										<select id="max-year">
-											<option selected="selected">Select</option>
-											<option value="option1">Option 1</option>
-											<option value="option2">Option 2</option>
-											<option value="option3">Option 3</option>
+										<select name="max-year" id="max-year">
+											<option selected="selected">Year</option>
+										<option value="2017">2017</option>
+										<option value="2016">2016</option>
+										<option value="2015">2015</option>
+										<option value="2014">2014</option>
+										<option value="2013">2013</option>
+										<option value="2012">2012</option>
+										<option value="2011">2011</option>
+										<option value="2010">2010</option>
+										<option value="2009">2009</option>
+										<option value="2008">2008</option>
+										<option value="2007">2007</option>
+										<option value="2006">2006</option>
+										<option value="2005">2005</option>
+										<option value="2004">2004</option>
+										<option value="2003">2003</option>
+										<option value="2002">2002</option>
+										<option value="2001">2001</option>
+										<option value="2000">2000</option>
+										<option value="1999">1999</option>
+										<option value="1998">1998</option>
+										<option value="1997">1997</option>
+										<option value="1996">1996</option>
+										<option value="1995">1995</option>
+										<option value="1994">1994</option>
+										<option value="1993">1993</option>
+										<option value="1992">1992</option>
+										<option value="1991">1991</option>
+										<option value="1985">1985</option>
+										<option value="1980">1980</option>
+										<option value="1975">1975</option>
+										<option value="1970">1970</option>
+										<option value="1965">1965</option>
+										<option value="1960">1960</option>
+										<option value="1900">1900</option>
 										</select>					
 									</div>
 								</li>
 								<li>
-									<label for="kilometers-two">Kilometers:</label>
-									<select id="kilometers-two">
-										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option2">Option 2</option>
-										<option value="option3">Option 3</option>
+									<label for="kilometers">Kilometers:</label>
+										<select name="kilometers" id="kilometers">
+											<option selected="selected">Select</option>
+											<?php 
+										for($index=10000; $index <= 150000; $index+=10000){
+											echo "<option value=".$index."> Max ".$index."</option>";
+										}
+										?>
+										<option value="160000">Over 160000</option>		
 									</select>
 								</li>
 								<li>
 									<!-- add this to general styles -->
 									<div class="search-button">
-										<input type="submit" value="Search" />
+										<input type="submit" value="Search" /> 
+										
+										
 									</div>
+									<a href="/detailedSearchController.php" style="font-family:DroidSans, Arial, Verdana, sans-serif; font-size: 16px; display:block; margin-top: 15px; color:#009ada;" >Detailed Search >> </a>
+									
+									
 								</li>
 							</ul>
 						</fieldset>
@@ -330,6 +399,30 @@ require_once 'header.php';
 	</section><!--#search-list-->
 	
 </div><!--#page-content-->
+
+<script type="text/javascript">
+	$(function() {
+		$('#select-manufacturer').on('change', function() {
+			var brandid = $('#select-manufacturer').val();
+
+			$.getJSON('/ajaxController.php', { brandid: brandid }, function(response) {
+				var modelSelect = $('#select-model');
+
+				$(modelSelect).find('option').remove();
+				$(modelSelect).append('<option selected="selected">Select</option>');
+
+				$(modelSelect).val('Select').change();
+
+				if (response) {
+					$.each(response, function(key, value) {
+						var option = '<option value="'+value.id_model+'">'+value.model_name+'</option>';
+						$(modelSelect).append(option);
+					});
+				}
+			});
+		});
+	});
+</script>
 	
 <?php 
 

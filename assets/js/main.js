@@ -209,12 +209,26 @@ $(document).ready(function() {
 		//alert('The File APIs are not fully supported in this browser.');
 	}
 	
-	// In case a certain action should take place when the file was selected
-	$('.upload-file-container input').change(function(){ handleFileSelect(); });
+	$('.upload-file-container').on('click', function(){ 
+		var input = $(this).parent().find('input')[0];
+		$(input).trigger('click');
+	});
+
+	$('input:file').on('change', function() {
+		var input = $(this)[0];
+		var container = $(this).parent().find('div')[0];
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+
+			reader.onload = function (e) {
+				$(container).css('background-image', 'url('+e.target.result+')');
+				$(container).css('background-size', '100% 100%');
+			}
+
+			reader.readAsDataURL(input.files[0]);
+		}
+	});
 	
-	function handleFileSelect(evt) {
-		// action when file input changes
-	}
 	
 	
 	function addCountdown() {

@@ -188,14 +188,14 @@ echo "<h3>".$errorMessage."</h3>";
 					<h3><span class="bold">Popular</span> Articles</h3>
 					<ul class="articles-list">
 						<li>
-							<img src="http://localhost/AutoMarket/assets/images/article_icon.gif" alt="Article Icon" />
-							<p class="preview">Here are many variations of passages of Lorem Ipsum..</p>
-							<a href="###" class="more-link">Read more</a>
+							<img src="https://pbs.twimg.com/profile_images/707520591855816704/9lc9yWsb.jpg" alt="Article Icon" />
+							<p class="preview">Check out our news website.</p>
+							<a href="http://localhost/NewsWebsite/?page=sport" class="more-link">Read more</a>
 						</li>
 						<li>
-							<img src="http://localhost/AutoMarket/assets/images/article_icon.gif" alt="Article Icon" />
-							<p class="preview">Here are many variations of passages of Lorem Ipsum..</p>
-							<a href="###" class="more-link">Read more</a>
+							<img src="https://pbs.twimg.com/profile_images/707520591855816704/9lc9yWsb.jpg" alt="Article Icon" />
+							<p class="preview">Check out our news website.</p>
+							<a href="http://localhost/NewsWebsite/?page=technology" class="more-link">Read more</a>
 						</li>
 					</ul>
 				</div><!--.popular-articles-->

@@ -2763,7 +2763,7 @@
 		cursor: pointer;
 		background: url("../images/upload_a_photo.gif") no-repeat;
 		float: left;
-		margin: 0 20px 0 0;
+		margin: 0px 15px 0 0;
 	}
 
 	.sell-form fieldset .upload-file-container:nth-child(6){
@@ -4628,4 +4628,8 @@
 
 	footer.under-construction .contact-button .email-button span:hover{
 		background: none;
+	}
+	
+	input[type=file]{
+	display:none;
 	}
