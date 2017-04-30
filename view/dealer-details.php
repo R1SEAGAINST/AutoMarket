@@ -10,7 +10,7 @@ require_once 'header.php';
 		<div class="content-holder">
 			<div class="page-main-heading extra-space">
 				<div class="heading-location">
-					<h2><span class="bold">Dealer</span> name here</h2>
+					<h2><span class="bold"></span><?= $dealer->username?></h2>
 					<p class="page-location">
 						<a href="http://automarket.com">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
@@ -41,9 +41,9 @@ require_once 'header.php';
 						<br />
 						<h3><span class="bold">Contact</span> details</h3>
 						<ul class="icon-list">
-							<li class="phone"><span>0040 742 016 756<br />0040 742 756 016</span></li>
-							<li class="address"><span>Berlin, Germany, nr. 250330</span></li>
-							<li class="e-mail"><span><a href="#">office@automarket.com</a></span></li>
+							<li class="phone"><span><?= $dealer->phone?></span></li>
+							<li class="address"><span><?=$dealer->country." ".$dealer->address?></span></li>
+							<li class="e-mail"><span><a href="#"><?= $dealer->email ?></a></span></li>
 							<li class="website"><span><a href="#"> http://www.automarket.com</a></span></li>
 						</ul>
 						<h3><span class="bold">Schedule</span></h3>
@@ -65,12 +65,12 @@ require_once 'header.php';
 				
 				<div class="one-half col-701 results-list">
 					<div id="best-offer">
-						<a href="/CarDetailsController.php">
-							<span class="best-offer-tag"><span class="bold">Best</span> offer</span>
+						<a href="/CarDetailsController.php?id="<?=$lastPost->postId?> >
+							<span class="best-offer-tag"><span class="bold">Last</span> offer</span>
 							<img src="http://localhost/AutoMarket/assets/images/best_offer.jpg" alt="Best Offer" />							
 							<div class="slide-info">
-								<h3>Vehicle Name</h3>
-								<span class="price-tag">51 990 Euro</span>								
+								<h3><?=$lastPost->car->brandname?> <?= $lastPost->car->modelname?></h3>
+								<span class="price-tag"><?=$lastPost->car->price?> Euro</span>								
 							</div>
 						
 						</a>					
@@ -80,7 +80,7 @@ require_once 'header.php';
 					<div class="layer-one">
 					
 						<div class="offers-info">
-							<span class="label">Offers:</span><span class="offer-count">24</span>
+							<span class="label">Offers:</span><span class="offer-count"><?=$dealer->countUsersPosts ?></span>
 						</div>
 						
 						
@@ -90,37 +90,39 @@ require_once 'header.php';
 					</div>
 					
 					<div class="layer-two">
-						
-						<div id="cars-list" class="info-list">
-							<ul class="detail-list">
+					<?php 
+						for ($index=1; $index < count($carArr); $index++){
+						echo "<div id='cars-list' class='info-list'>
+							<ul class='detail-list'>
 								<li>
-									<a href="/CarDetailsController.php" class="item-link">
-										<span class="overlay">Overlay</span>
-										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="Picture" />
-										<span class="v-sign">V</span>
+									<a href='/CarDetailsController.php?id='".$carArr[$index]->postId." class='item-link'>
+										<span class='overlay'>Overlay</span>
+										<img src='http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg' alt='Picture' />
+										<span class='v-sign'>V</span>
 									</a>
-									<div class="text-content">
-										<div class="layer-one">
-											<h3><a href="/CarDetailsController.php" class="car-title">Vehicle Name</a></h3>
-											<span class="price-tag">4980 Euro</span>
+									<div class='text-content'>
+										<div class='layer-one'>
+											<h3><a href='/CarDetailsController.php' class='car-title'>".$carArr[$index]->car->brandname." ".$carArr[$index]->car->modelname."</a></h3>
+											<span class='price-tag'>".$carArr[$index]->car->price."</span>
 										</div>
-										<ul class="item-specs layer-two">
-											<li>Registration: 2002</li>
-											<li>3.0 Diesel</li>
-											<li>230 HP</li>
-											<li>Body: Coupe</li>
-											<li>120.000</li>											
+										<ul class=;item-specs layer-two'>
+											<li>".$carArr[$index]->car->regyear."</li>
+											<li>".$carArr[$index]->car->fueltype."</li>
+											<li>".$carArr[$index]->car->hp." HP</li>
+											<li>".$carArr[$index]->car->bodytype."</li>
+											<li>".$carArr[$index]->car->kilometers."</li>											
 										</ul>
-										<div class="layer-three">
-											<span class="location-car">Location: Berlin, Germany</span>
-											<a href="/CarDetailsController.php" class="details-link">View details</a>
+										<div class='layer-three'>
+											<span class='location-car'>Location:". $dealer->country."</span>
+											<a href='/CarDetailsController.php' class='details-link'>View details</a>
 										</div>
 									</div>
 								</li>
 							</ul>
 							
-						</div>
-					
+						</div>";
+						}
+					?>
 					</div><!--.layer-two-->
 				
 					<div class="layer-three">
@@ -141,8 +143,16 @@ require_once 'header.php';
 	</section><!--#search-list-->
 	
 </div><!--#page-content-->
+
+	
+	
+	
 	
 <?php 
 require_once 'footer.php';
+
 ?>
+
+<script src="http://localhost/AutoMarket/assets/js/dealerPosts.js"></script>
+	
 	

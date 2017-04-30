@@ -120,7 +120,7 @@ cilindricsField.onfocus = function() {
 
 	priceField.onblur = function(){
 		
-		if ((isNaN(pricefield.value)) ||(priceField.value < 0) || (priceField.value > 1000000)) {
+		if ((isNaN(priceField.value)) ||(priceField.value < 0) || (priceField.value > 1000000)) {
 		
 				var container = document.getElementById("priceDiv");
 				var errorMessage = document.createElement('span');

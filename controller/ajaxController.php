@@ -14,10 +14,6 @@ if (isset ( $_SESSION ['user'] )) {
 	}
 }
 
-if ($_SERVER ['REQUEST_METHOD'] === 'GET'){
-	$dao = new userDAO;
-	echo json_encode ( $dao->listAllDealers() );
 
 
-
-}
+   ?>

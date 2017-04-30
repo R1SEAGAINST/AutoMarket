@@ -13,6 +13,9 @@
 //
 function createDealerDiv(dealer) {
 	
+	var countUsers = document.getElementById('countUsers');
+	countUsers.innerHTML = dealer.countAllUsers+" Results";
+	
 	
 	var dealerDivSecond = document.createElement('div');
 	dealerDivSecond.className = "info-list";
@@ -54,12 +57,12 @@ function createDealerDiv(dealer) {
 	dealerDivForth.appendChild(dealerH3);
 	
 	var dealerAinner = document.createElement('a');
-	dealerAinner.href = "/DealerDetailsController.php";
+	dealerAinner.href = '/DealerDetailsController.php?id='+dealer.id
 	dealerH3.appendChild(dealerAinner);
 	
 	var dealerSpanCount = document.createElement('span');
 	dealerSpanCount.className = "amount";
-	dealerSpanCount.innerHTML = "Dealer Count Offer";
+	dealerSpanCount.innerHTML = dealer.countUsersPosts;
 	dealerDivForth.appendChild(dealerSpanCount);
 	
 	var dealerUlAdd = document.createElement('ul');
@@ -87,7 +90,8 @@ function createDealerDiv(dealer) {
 	
 	var dealerALast = document.createElement('a');
 	dealerALast.className = "details-link";
-	dealerALast.href = "/DealerDetailsController.php";
+	dealerALast.href = '/DealerDetailsController.php?id='+dealer.id;
+	dealerALast.innerHTML = "View details";
 	dealerDivFifth.appendChild(dealerALast);
 	
 	var dealerDivFirst = document.getElementById('dealerPage');
@@ -160,7 +164,7 @@ function listDealers() {
 	
 	
 	var xhr = new XMLHttpRequest();
-	xhr.open('GET','./ajaxController.php', true);
+	xhr.open('GET','./ajaxControllerDealerList.php', true);
 
 	xhr.onload = function() {
 		if (xhr.status == 200) {
@@ -173,10 +177,7 @@ function listDealers() {
 				
 				createDealerDiv(data[i]);
 
-//				
-//				dealerName.innerHTML = data[i].username;
-//				dealerPhone.innerHTML = data[i].phone;
-//				dealerAddress.innerHTML = data[i].address;
+
 			}
 
 			

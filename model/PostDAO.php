@@ -9,6 +9,28 @@ class PostDAO implements IPostDAO {
 	const SELECT_MODELS_SQL = "SELECT id_model, model_name FROM models WHERE id_brand = ? ORDER BY model_name";
 	const SELECT_POST_IMAGES_SQL = "SELECT * FROM images WHERE post_id= ?";
 
+	const GET_ALL_POSTS_OF_USER_SQL = "SELECT p.id_post , p.id_model, m.model_name, b.brand_name, p.reg_year, p.body_type,
+							 p.country_of_registration, p.kilometers, p.price, p.fuel_type, p.hp, p.id_user
+				
+							 FROM posts p Join models m
+							 on p.id_model = m.id_model JOIN brands b
+							 ON m.id_brand = b.id_brand JOIN users u
+							 ON p.id_user = u.user_id
+							 WHERE u.user_id = ?
+							 ORDER BY p.id_post DESC";
+	
+	
+	const GET_ALL_POSTS_BY_NAME_SQL = "SELECT p.id_post , p.id_model, m.model_name, b.brand_name, p.reg_year, p.body_type,
+							 p.country_of_registration, p.kilometers, p.price, p.fuel_type, p.hp, p.id_user
+				
+							 FROM posts p Join models m
+							 on p.id_model = m.id_model JOIN brands b
+							 ON m.id_brand = b.id_brand JOIN users u
+							 ON p.id_user = u.user_id
+							 WHERE u.user_name LIKE ?
+							 ORDER BY p.id_post DESC";
+	
+	
 	public function publish($userid, Car $car) {
 		$db = DBConnection::getDb();
 		
@@ -59,4 +81,89 @@ class PostDAO implements IPostDAO {
 			
 		return $pstmt->fetchAll(PDO::FETCH_ASSOC);
 	}
+	
+	public function listDealersPosts($id){
+	
+		$db = DBConnection::getDb();
+		
+		
+			
+		$pstmt = $db->prepare(self::GET_ALL_POSTS_OF_USER_SQL);
+		$pstmt->execute(array($id));
+	
+		$result=array();
+	
+			
+		$posts = $pstmt->fetchAll(PDO::FETCH_ASSOC);
+	
+	
+	
+		foreach ($posts as $post){
+	
+			$carForList = new Car;
+			$carForList->setKilometers($post['kilometers']);
+			$carForList->setHp($post['hp']);
+			$carForList->setCountryOfRegistration($post['country_of_registration']);
+			$carForList->setPrice($post['price']);
+			$carForList->setRegYear($post['reg_year']);
+			$carForList->setBodyType($post['body_type']);
+			$carForList->setFuelType($post['fuel_type']);
+			$carForList->setIdModel($post['id_model']);
+			$carForList->setModelName($post['model_name']);
+			$carForList->setBrandName($post['brand_name']);
+			$postForList= new Post($id, $carForList);
+			$postForList->setPostId($post['id_post']);
+	
+	
+	
+			$result[] = $postForList;
+	
+		}
+	
+		return $result;
+	}
+	
+	
+	public function listDealersPostsByName($dealerName){
+	
+		$db = DBConnection::getDb();
+	
+	
+			
+		$pstmt = $db->prepare(self::GET_ALL_POSTS_BY_NAME_SQL);
+		$pstmt->execute(array($dealerName));
+	
+		$result=array();
+	
+			
+		$posts = $pstmt->fetchAll(PDO::FETCH_ASSOC);
+	
+	
+	
+		foreach ($posts as $post){
+	
+			$carForList = new Car;
+			$carForList->setKilometers($post['kilometers']);
+			$carForList->setHp($post['hp']);
+			$carForList->setCountryOfRegistration($post['country_of_registration']);
+			$carForList->setPrice($post['price']);
+			$carForList->setRegYear($post['reg_year']);
+			$carForList->setBodyType($post['body_type']);
+			$carForList->setFuelType($post['fuel_type']);
+			$carForList->setIdModel($post['id_model']);
+			$carForList->setModelName($post['model_name']);
+			$carForList->setBrandName($post['brand_name']);
+			$postForList= new Post($post['id_user'], $carForList);
+			$postForList->setPostId($post['id_post']);
+	
+	
+	
+			$result[] = $postForList;
+	
+		}
+	
+		return $result;
+	}
+	
+	
 }

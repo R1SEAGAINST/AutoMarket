@@ -8,8 +8,39 @@ class UserDAO implements IUserDAO {
 	const REGISTER_USER_SQL = "INSERT INTO users (user_name, user_email, user_password, user_phone, user_country, user_address)
 													VALUES (?, ?, ?, ?, ?, ?)";
 	
-	const GET_ALL_DEALERS_SQL = "SELECT  user_id, user_name, user_email, user_phone, user_address, user_country FROM users";
+	const GET_ALL_DEALERS_SQL = "SELECT  u.user_id, u.user_email, u.user_name, u.user_phone, u.user_address, u.user_country,
+						 COUNT(p.id_post) as 'countUsersPosts'
+						FROM users u JOIN posts p
+						ON u.user_id = p.id_user
+						GROUP BY u.user_id";
 
+	const GET_COUNT_ALL_USERS_SQL = "SELECT  COUNT(DISTINCT(id_user)) FROM posts";
+	
+	const INFO_DEALER_SQL = "SELECT  u.user_id, u.user_email, u.user_name, u.user_phone, u.user_address, u.user_country, u.user_image,
+						 COUNT(p.id_post) as 'countUsersPosts'
+						FROM users u JOIN posts p
+						ON u.user_id = p.id_user
+						WHERE u.user_id = ?";
+	
+	
+	
+// 	const GET_ALL_POSTS_OF_USER_SQL = "SELECT p.id_post , p.id_model, m.model_name, b.brand_name, p.reg_year, p.body_type,
+// 							 p.country_of_registration, p.kilometers, p.price, p.fuel_type, p.hp, p.id_user 
+							
+// 							 FROM posts p Join models m
+// 							 on p.id_model = m.id_model JOIN brands b
+// 							 ON m.id_brand = b.id_brand JOIN users u
+// 							 ON p.id_user = u.user_id
+// 							 WHERE u.user_id = ?
+// 							 ORDER BY p.id_post DESC";
+	
+	const SEARCH_DEALER_BY_NAME_SQL = " SELECT  u.user_id, u.user_email, u.user_name, u.user_phone, u.user_address, u.user_country, u.user_image,
+						 COUNT(p.id_post) as 'countUsersPosts'
+						FROM users u JOIN posts p
+						ON u.user_id = p.id_user
+						WHERE u.user_name LIKE ?";
+											
+	
 	public function loginUser(User $user) {
 		$db = DBConnection::getDb();
 			
@@ -62,6 +93,15 @@ class UserDAO implements IUserDAO {
 	public function listAllDealers() {
 		
 		$db = DBConnection::getDb();
+		
+		$sql = $db->prepare( self::GET_COUNT_ALL_USERS_SQL );
+		
+		
+		if ($sql->execute()) {
+			$count = $sql->fetchColumn();
+					
+		}
+		
 		$sql = $db->prepare( self::GET_ALL_DEALERS_SQL );
 		
 		
@@ -77,6 +117,8 @@ class UserDAO implements IUserDAO {
 				$userForList->setUsername($dealer['user_name']);
 				$userForList->setPhone($dealer['user_phone']);
 				$userForList->setUserCountry($dealer['user_country']);
+				$userForList->setCountAllUsers($count);
+				$userForList->setCountUsersPosts($dealer['countUsersPosts']);
 				
 				
 				
@@ -84,13 +126,71 @@ class UserDAO implements IUserDAO {
 				
 			}
 			return $result;
-				
+							
+		}		
+	}
+	
+	
+	
+	public function infoDealer($id){
+		
+		$db = DBConnection::getDb();
 			
+		$pstmt = $db->prepare(self::INFO_DEALER_SQL);
+		$pstmt->execute(array($id));
+			
+		$posts = $pstmt->fetchAll(PDO::FETCH_ASSOC);
+		
+				
+		foreach ($posts as $post){
+						
+			$thisUser = new User($post['user_email'], 'hahahaha', $post['user_address'], $post['user_id']);
+		
+			$thisUser->setUsername($post['user_name']);
+			$thisUser->setPhone($post['user_phone']);
+			$thisUser->setUserCountry($post['user_country']);
+			$thisUser->setImage($post['user_image']);
+			$thisUser->setCountUsersPosts($post['countUsersPosts']);
+			
+		
+			$result = $thisUser;		
 		}
 		
+		return $result;
 		
 	}
+	
 
+	
+	
+	
+	public function searchDealerByName($dealerName){
+	
+		$db = DBConnection::getDb();
+			
+		$pstmt = $db->prepare(self::SEARCH_DEALER_BY_NAME_SQL);
+		$pstmt->execute(array($dealerName));
+			
+		
+		$posts = $pstmt->fetchAll(PDO::FETCH_ASSOC);
+		
+		
+		foreach ($posts as $post){
+		
+			$thisUser = new User($post['user_email'], 'hahahaha', $post['user_address'], $post['user_id']);
+		
+			$thisUser->setUsername($post['user_name']);
+			$thisUser->setPhone($post['user_phone']);
+			$thisUser->setUserCountry($post['user_country']);
+			$thisUser->setImage($post['user_image']);
+			$thisUser->setCountUsersPosts($post['countUsersPosts']);
+				
+		
+			$result = $thisUser;
+		}
+		
+		return $result;
+	}
 }
 
 ?>

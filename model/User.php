@@ -8,6 +8,54 @@ class User implements JsonSerializable {
 	private $phone;
 	private $country;
 	private $address;
+	private $countAllUsers;
+	private $countUsersPosts;
+	private $car;
+	private $post;
+	private  $image;
+	
+	public function setImage($image){
+		$this->image = $image;
+	
+	}
+	
+	
+
+	public function setPostOfUser(Post $post){
+		$this->post = $post;
+	
+	}
+	
+	public function setCarOfUser(Car $car){
+		$this->car = $car;
+		
+	}
+	
+	
+	public function setCountUsersPosts($count){
+		$count+=0;
+	
+		if(!(is_int($count))){
+			throw new Exception ( 'Count must be only integer!');
+	
+		}else{
+	
+			$this->countUsersPosts = $count;
+		}
+	}
+	
+	public function setCountAllUsers($count){
+		$count+=0;
+	
+		if(!(is_int($count))){
+			throw new Exception ( 'Count must be only integer!');
+				
+		}else{
+	
+			$this->countAllUsers = $count;
+		}
+	}
+	
 	
 	
 

@@ -1,5 +1,5 @@
 <?php
-class Car extends Vehicle {
+class Car extends Vehicle implements JsonSerializable {
 	private $fabrication;
 	private $bodytype;
 	private $fueltype;
@@ -17,6 +17,9 @@ class Car extends Vehicle {
 	private $price;
 	private $countryofregistration;
 	private $idmodel;
+	
+	private $modelname;
+	private $brandname;
 	
 	private static $extrasArray = array(
 		"checkbox_abs" => 1,
@@ -202,4 +205,21 @@ public function __get($property) {
 		return $this->$property;
 	}
 }
+
+
+
+public function setModelName($modelName){
+	$this->modelname= $modelName;
+}
+	
+	public function setBrandName($brandName){
+		$this->brandname= $brandName;
+}
+public function jsonSerialize() {
+	$result = get_object_vars($this);
+	
+
+	return $result;
+}
+
 }

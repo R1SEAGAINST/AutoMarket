@@ -7,14 +7,14 @@ require_once 'header.php';
 		<div class="content-holder">
 			<div class="page-main-heading extra-space">
 				<div class="heading-location">
-					<h2><span class="bold">Dealers</span> ( 2.100 results )</h2>
+					<h2 id="countUsers"><span class="bold" >Dealers</span></h2>
 					<p class="page-location">
 						<a href="http://automarket.com">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="">Dealers</a>
 					</p>
 				</div>
-			
+		
 			</div>
 			
 			<nav class="default-tabs split-tabs">
@@ -30,7 +30,7 @@ require_once 'header.php';
 			<div class="full-width">
 			
 				<div class="one-half col-241 search-area">
-					<form id="search-filters">
+					<form id="search-filters" action="/SearchDealerController.php" method="get">
 						<fieldset class="grey-corner-box">
 							<legend><span class="bold">Search</span> filters</legend>
 							<ul>
@@ -40,8 +40,9 @@ require_once 'header.php';
 								</li>
 								<li>
 									<div class="search-button">
-										<input type="submit" value="Search" />
+									<span class="submit">	<input name="searchDealer" type="submit" value="Search" /></span>
 									</div>
+									<input type="submit" value="sea">
 								</li>
 							</ul>
 							
