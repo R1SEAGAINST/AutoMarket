@@ -62,10 +62,10 @@ require_once 'header.php';
 					</div>
 					
 				</div>
-				
+				<h2><?=$lastPost->postId?></h2>
 				<div class="one-half col-701 results-list">
 					<div id="best-offer">
-						<a href="/CarDetailsController.php?id="<?=$lastPost->postId?> >
+						<a href="/CarDetailsController.php?postid="<?=$lastPost->postId?> >
 							<span class="best-offer-tag"><span class="bold">Last</span> offer</span>
 							<img src="http://localhost/AutoMarket/assets/images/best_offer.jpg" alt="Best Offer" />							
 							<div class="slide-info">
@@ -110,7 +110,7 @@ require_once 'header.php';
 											<li>".$carArr[$index]->car->fueltype."</li>
 											<li>".$carArr[$index]->car->hp." HP</li>
 											<li>".$carArr[$index]->car->bodytype."</li>
-											<li>".$carArr[$index]->car->kilometers."</li>											
+																				
 										</ul>
 										<div class='layer-three'>
 											<span class='location-car'>Location:". $dealer->country."</span>

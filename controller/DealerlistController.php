@@ -12,6 +12,7 @@ if (isset($_SESSION['user'])) {
 }
 
 
+
 include '../view/dealer-list.php';
 
 
