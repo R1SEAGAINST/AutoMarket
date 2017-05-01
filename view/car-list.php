@@ -39,7 +39,7 @@ require_once 'header.php';
 		<div class="content-holder">
 			<div class="full-width">
 				<div class="one-half col-241 search-area">
-					<form id="search-filters" name="search-filters" action="/CarListController.php" method="POST">
+					<form id="search-filter" name="search-filter" action="/CarListController.php" method="POST">
 						<fieldset class="grey-corner-box">
 							<legend><span class="bold">Search</span> filters</legend>
 							<ul>
@@ -232,9 +232,7 @@ require_once 'header.php';
 								<li>
 									<!-- add this to general styles -->
 									<div class="search-button">
-										<input type="submit" value="Search" /> 
-										
-										
+										<input type="submit" name="submit" value="Search" /> 
 									</div>
 									<a href="/detailedSearchController.php" style="font-family:DroidSans, Arial, Verdana, sans-serif; font-size: 16px; display:block; margin-top: 15px; color:#009ada;" >Detailed Search >> </a>
 									

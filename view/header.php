@@ -16,27 +16,23 @@ if(!(isset($errorMessage))){
 <title>Automarket</title>
 <meta name="description" content="Automarket">
 
-<link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/main.css">
-<link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/uniform.default.css">
-<link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/prettyPhoto.css">
-<link rel="stylesheet" href="http://localhost/AutoMarket/assets/css/stylereg.css">
-<script src="http://localhost/AutoMarket/assets/js/vendor/modernizr-2.6.2.min.js"></script>
-<script src="http://localhost/AutoMarket/assets/js/vendor/jquery-1.8.2.min.js"></script>
-<script src="http://localhost/AutoMarket/assets/js/vendor/selectivizr.js"></script>
-<script src="http://localhost/AutoMarket/assets/js/vendor/PIE.js"></script>
-<script src="http://localhost/AutoMarket/assets/js/plugins/jquery.placeholder.min.js"></script>
-<script src="http://localhost/AutoMarket/assets/js/plugins/jquery.uniform.min.js"></script>
-<script src="http://localhost/AutoMarket/assets/js/plugins/jquery.flexslider-min.js"></script>
-<script src="http://localhost/AutoMarket/assets/js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script src="http://localhost/AutoMarket/assets/js/plugins/jquery.prettyPhoto.js"></script>
-<script src="http://localhost/AutoMarket/assets/js/plugins/jquery.countdown.js"></script>
-
-
-
-
-<script src="http://localhost/AutoMarket/assets/js/plugins.js"></script>
-<script src="http://localhost/AutoMarket/assets/js/main.js"></script>
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/uniform.default.css">
+<link rel="stylesheet" href="/assets/css/prettyPhoto.css">
+<link rel="stylesheet" href="/assets/css/stylereg.css">
+<script src="/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="/assets/js/vendor/jquery-1.8.2.min.js"></script>
+<script src="/assets/js/vendor/selectivizr.js"></script>
+<script src="/assets/js/vendor/PIE.js"></script>
+<script src="/assets/js/plugins/jquery.placeholder.min.js"></script>
+<script src="/assets/js/plugins/jquery.uniform.min.js"></script>
+<script src="/assets/js/plugins/jquery.flexslider-min.js"></script>
+<script src="/assets/js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
+<script src="/assets/js/plugins/jquery.prettyPhoto.js"></script>
+<script src="/assets/js/plugins/jquery.countdown.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDhAC5R4qBoH73-wlg4XHrDOBqCRMb6rPg"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/main.js"></script>
 </head>
 <body>
 	<!--[if lt IE 7]>
@@ -71,7 +67,7 @@ if(!(isset($errorMessage))){
 					
 				
 						?>
-					<a href="/DealerDetailsControler.php" class="dealer-name"><?=$user->username?></a>
+					<a href="/DealerDetailsController.php" class="dealer-name"><?=$user->username?></a>
 					<a href="/LogoutController.php" class="sign-out">Sign Out</a>
 				</div>
 
@@ -137,15 +133,15 @@ if(!(isset($errorMessage))){
 <!-- 						<a href="#" class="box-content">NAV</a> -->
 <!-- 						<ul> -->
 
-<!-- 							<li><a href="http://localhost/AutoMarket/view/index.php">Home page</a></li> -->
+<!-- 							<li><a href="/view/index.php">Home page</a></li> -->
 
-<!-- 							<li><a href="http://localhost/AutoMarket/view/add-vehicle.php">Add an offer</a></li> -->
+<!-- 							<li><a href="/view/add-vehicle.php">Add an offer</a></li> -->
 
-<!-- 							<li><a href="http://localhost/AutoMarket/view/log-in.php">Log in page</a></li> -->
+<!-- 							<li><a href="/view/log-in.php">Log in page</a></li> -->
 
-<!-- 							<li><a href="http://localhost/AutoMarket/view/car-list.php">Car list</a> -->
+<!-- 							<li><a href="/view/car-list.php">Car list</a> -->
 <!-- 								<ul> -->
-<!-- 									<li><a href="http://localhost/AutoMarket/view/car-details.php">Car details</a> -->
+<!-- 									<li><a href="/view/car-details.php">Car details</a> -->
 									
 <!-- 									<li> -->
 								
@@ -158,19 +154,19 @@ if(!(isset($errorMessage))){
 <!-- <!-- 									<li> --> 
 								
 <!-- <!-- 								</ul></li> --> 
-<!-- 							<li><a href="http://localhost/AutoMarket/view/dealer-list.php">Dealer list</a> -->
+<!-- 							<li><a href="/view/dealer-list.php">Dealer list</a> -->
 <!-- 								<ul> -->
-<!-- 									<li><a href="http://localhost/AutoMarket/view/dealer-details.php">Dealer details</a> -->
+<!-- 									<li><a href="/view/dealer-details.php">Dealer details</a> -->
 									
 <!-- 									<li> -->
 								
 <!-- 								</ul></li> -->
 
-<!-- 							<li><a href="http://localhost/AutoMarket/view/insurance.php">Insurance</a></li> -->
+<!-- 							<li><a href="/view/insurance.php">Insurance</a></li> -->
 
-<!-- 							<li><a href="http://localhost/AutoMarket/view/under-construction.php">Under construction</a></li> -->
+<!-- 							<li><a href="/view/under-construction.php">Under construction</a></li> -->
 
-<!-- 							<li><a href="http://localhost/AutoMarket/view/contact-us.php">Contact</a></li> -->
+<!-- 							<li><a href="/view/contact-us.php">Contact</a></li> -->
 <!-- 						</ul> -->
 <!-- 					</div> -->
 
@@ -189,7 +185,7 @@ if(!(isset($errorMessage))){
 				<nav>
 					<ul>
 						<li class="nav-cars current-item"><a href="/CarListController.php">Cars</a></li>
-						<li class="nav-bike"><a href="#">Bikes</a></li>
+						<li class="nav-bike"><a href="/underconstructionController.php">Bikes</a></li>
 					</ul>
 				</nav>
 

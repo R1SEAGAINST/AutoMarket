@@ -23,7 +23,7 @@ class PostDAO implements IPostDAO {
 								JOIN models m ON m.id_model = p.id_model
 								JOIN brands b ON b.id_brand = m.id_brand
 								JOIN users u ON u.user_id = p.id_user
-                                JOIN images i ON i.fk_post = p.id_post
+                                LEFT JOIN images i ON i.fk_post = p.id_post
 								WHERE {{WHERE}}
 								GROUP BY p.id_post
 								ORDER BY p.id_post DESC
@@ -235,7 +235,7 @@ class PostDAO implements IPostDAO {
 		
 		$user = new User($thepost['user_email']);
 		$user->setUserId($thepost['user_id']);
-		$user->setUserPhone($thepost['user_phone']);
+		$user->setPhone($thepost['user_phone']);
 		$user->setUserCountry($thepost['user_country']);
 		$user->setUserAddress($thepost['user_address']);
 		
@@ -330,11 +330,20 @@ class PostDAO implements IPostDAO {
 				
 			}
 		}
-		
+		if(is_numeric($input['min-price'])){
 		$minprice = max(0, (int) $input['min-price']);
-		$maxprice = min((int) $input['max-price'], 200000);
-		$where[]="p.price BETWEEN " . $minprice . " AND " . $maxprice;
+		}else{
+			$minprice = 0;
+		}
 		
+		if(is_numeric($input['max-price'])){
+		$maxprice = min((int) $input['max-price'], 200000);
+		}else{
+			$maxprice= 200000;
+		}
+			if(!is_numeric($input['min-price']) && !is_numeric($input['max-price'])){
+			$where[]="p.price BETWEEN " . $minprice . " AND " . $maxprice;
+		}
 		
 		
 		$car = new Car();
