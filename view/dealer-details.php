@@ -35,10 +35,10 @@ require_once 'header.php';
 			
 				<div class="one-half col-241">
 					<div id="dealer-about" class="grey-corner-box standard-text-content">
-						<h3><span class="bold">About</span> us</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum, nisi id vulputate ullamcorper, tellus libero venenatis neque, 
-						in egestas enim lorem ut felis. Suspendisse potenti. Donec nec sapien mauris, vitae aliquam quam. Donec aliquam tortor felis. Sed acsapien</p>
-						<br />
+<!-- 						<h3><span class="bold">About</span> us</h3> -->
+<!-- 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum, nisi id vulputate ullamcorper, tellus libero venenatis neque,  -->
+<!-- 						in egestas enim lorem ut felis. Suspendisse potenti. Donec nec sapien mauris, vitae aliquam quam. Donec aliquam tortor felis. Sed acsapien</p> -->
+<!-- 						<br /> -->
 						<h3><span class="bold">Contact</span> details</h3>
 						<ul class="icon-list">
 							<li class="phone"><span><?= $dealer->phone?></span></li>
@@ -46,6 +46,16 @@ require_once 'header.php';
 							<li class="e-mail"><span><a href="#"><?= $dealer->email ?></a></span></li>
 							<li class="website"><span><a href="#"> http://www.automarket.com</a></span></li>
 						</ul>
+							<?php if($myProfile){
+							
+							
+							echo "<div class='pagination'>
+							<a href='/UpdateUserCotroller.php' class='last-button'>Update My Profile</a>
+						</div>";
+						}
+						
+						?>
+						
 						<h3><span class="bold">Schedule</span></h3>
 						<ul class="schedule-list">
 							<li><span class="day">Monday</span><span class="hours">09:00-18:00</span></li>
@@ -59,13 +69,14 @@ require_once 'header.php';
 						</ul>
 						
 					
+					
 					</div>
 					
 				</div>
-				<h2><?=$lastPost->postId?></h2>
+				
 				<div class="one-half col-701 results-list">
 					<div id="best-offer">
-						<a href="/CarDetailsController.php?postid="<?=$lastPost->postId?> >
+						<a href='"/CarDetailsController.php?postid=<?=$lastPost->postId?> '>
 							<span class="best-offer-tag"><span class="bold">Last</span> offer</span>
 							<img src="http://localhost/AutoMarket/assets/images/best_offer.jpg" alt="Best Offer" />							
 							<div class="slide-info">
@@ -95,14 +106,14 @@ require_once 'header.php';
 						echo "<div id='cars-list' class='info-list'>
 							<ul class='detail-list'>
 								<li>
-									<a href='/CarDetailsController.php?id='".$carArr[$index]->postId." class='item-link'>
+									<a href='/CarDetailsController.php?postid=".$carArr[$index]->postId."' class='item-link'>
 										<span class='overlay'>Overlay</span>
 										<img src='http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg' alt='Picture' />
 										<span class='v-sign'>V</span>
 									</a>
 									<div class='text-content'>
 										<div class='layer-one'>
-											<h3><a href='/CarDetailsController.php' class='car-title'>".$carArr[$index]->car->brandname." ".$carArr[$index]->car->modelname."</a></h3>
+											<h3><a href='/CarDetailsController.php?postid=".$carArr[$index]->postId."' class='car-title'>".$carArr[$index]->car->brandname." ".$carArr[$index]->car->modelname."</a></h3>
 											<span class='price-tag'>".$carArr[$index]->car->price."</span>
 										</div>
 										<ul class=;item-specs layer-two'>

@@ -144,7 +144,7 @@ cilindricsField.onfocus = function() {
 	
 	kilometersField.onblur = function(){
 		
-		if ((isNaN(kilometersfield.value)) ||(kilometersField.value < 0) || (kilometersField.value > 1000000)) {
+		if ((isNaN(kilometersField.value)) ||(kilometersField.value < 0) || (kilometersField.value > 1000000)) {
 		
 				var container = document.getElementById("kilometersDiv");
 				var errorMessage = document.createElement('span');

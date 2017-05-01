@@ -41,13 +41,22 @@ padding-top:-30px;
 	
 }
 
-.regfield input,select{
+.regfield input{
 	width:350px;
 	height:25px;
 	display:inline-block;
 	boxsizing:border-box;
 	
 	
+}
+
+.grey-corner-box fieldset .upload-file-container {
+    width: 140px;
+    height: 105px;
+    cursor: pointer;
+    background: url(../images/upload_a_photo.gif) no-repeat;
+    float: left;
+    margin: 0px 15px 0 0;
 }
 #uniform-country{
 	width:350px !important;
@@ -75,6 +84,24 @@ padding-top:-30px;
 
 
 #reg-reg{
+    background: url(../images/subscribe_button_repeat.gif) repeat-x;
+    line-height: 35px;
+    height: 35px;
+    float: left;
+    border: 0;
+    cursor: pointer;
+    font-family: DroidSans, Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    text-transform: uppercase;
+    padding: 0 15px;
+    color: #fff;
+    border: none;
+}
+#update{
     background: url(../images/subscribe_button_repeat.gif) repeat-x;
     line-height: 35px;
     height: 35px;
