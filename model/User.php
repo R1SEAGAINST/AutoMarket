@@ -84,7 +84,7 @@ class User implements JsonSerializable {
 	}
 	
 	
-	public function setUserPhone($phone){
+	public function setPhone($phone){
 		
 		//$pattern = '/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/';
 		
