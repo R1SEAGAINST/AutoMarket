@@ -68,7 +68,7 @@ class UserDAO implements IUserDAO {
 			$newUser = new User($user['user_email'], 'hahahaha', $user['user_address'], $user['user_image'],  $user['user_id']);
 				 
 			$newUser->setUsername($user['user_name']);
-			$newUser->setUserPhone($user['user_phone']);
+			$newUser->setPhone($user['user_phone']);
 			$newUser->setUserCountry($user['user_country']);
 				
 			return $newUser;

@@ -9,7 +9,7 @@ if (isset($_SESSION['user'])) {
 	$user = json_decode($_SESSION['user']);
 }
 
-if(isset($_GET['dealer_name']) && empty(!($_GET['dealer_name']))){
+if(isset($_GET['dealer_name']) && !empty($_GET['dealer_name'])){
 	$dealerName = $_GET['dealer_name'];
 	
 	

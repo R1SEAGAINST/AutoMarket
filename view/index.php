@@ -11,24 +11,19 @@ echo "<h3>".$errorMessage."</h3>";
 					<h2><span class="bold">Best</span> Offer</h2>
 					<div id="slides">
 						<ul class="slides">
+						<?php foreach($topposts as $post){
+							?>
 							<li>
-								<a href="/CarDetailsController.php">
-									<img src="http://localhost/AutoMarket/assets/images/mercedes_picture.jpg" alt="Slide" />
+								<a href="/CarDetailsController.php?id=<?= $post->id_post ?>">
+								
+									<img src="/assets/images/postimage/<?= $post->image_name ?>" alt="Slide" />
 									<div class="slide-info">
-										<h3>Mercedes-Benz CLS 320</h3>
-										<span class="price-tag">54980 Euro</span>								
+										<h3><?= $post->brand_name?> <?= $post->model_name ?></h3>
+										<span class="price-tag"><?= number_format($post->price)?></span>								
 									</div>
 								</a>
 							</li>
-							<li>
-								<a href="/CarDetailsController.php">
-									<img src=".http://localhost/AutoMarket/assets/images/mercedes_picture.jpg" alt="Slide" />
-									<div class="slide-info">
-										<h3>Mercedes-Benz CLS 630</h3>
-										<span class="price-tag">54980 Euro</span>								
-									</div>
-								</a>
-							</li>
+							<?php } ?>
 						</ul>
 					</div>
 				</div>
@@ -40,30 +35,30 @@ echo "<h3>".$errorMessage."</h3>";
 					<a href="#" class="scroll-up scroll-icon"><span>Up</span></a>
 					<a href="#" class="scroll-down scroll-icon"><span>Down</span></a>
 				</div>
-				
+				<?php foreach($latestposts as $post){?>
 				<ul class="offer-list offer-small list-content">
 					<li>
-						<a href="/CarDetailsController.php">
-							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="/CarDetailsController.php?id=<?= $post->id_post ?>">
+							<img src="/assets/images/postimage/<?= $post->image_name ?>" alt="offer car" />
 							<div class="entry-label">
-								<h4>Mercedes-Benz 1</h4>
-								<span class="price-tag">54980 Euro</span>
+								<h4><?= $post->brand_name?> <?= $post->model_name ?></h4>
+								<span class="price-tag"><?= number_format($post->price)?></span>
 							</div>
 						
 							<div class="entry-overlay">
 								<ul class="car-list-details">
-									<li>Registration 2002</li>
-									<li>3.0 Diesel</li>
-									<li>230 HP</li>
-									<li>Body Coupe</li>
-									<li>120.000 KM</li>							
+									<li>Registration <?= $post->reg_year ?></li>
+									<li><?= $post->cilindrics ?>cm<sup>3</sup> <?= $post->fuel_type ?></li>
+									<li><?= $post->hp ?></li>
+									<li><?= $post->body_type ?></li>
+									<li><?= $post->kilometers ?></li>							
 								</ul>
 							</div>
 							<span class="v-sign">V</span>
 							<span class='dealer-data'>Vehicle Dealer</span>
 						</a>
 					</li><!--/end of item 1-->
-						
+					<?php } ?>	
 					<li>
 						<a href="/CarDetailsController.php">
 							<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />

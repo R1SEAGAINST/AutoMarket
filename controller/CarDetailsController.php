@@ -14,8 +14,7 @@ if(isset($_GET['id'])){
 	if(!$post){
 		header('Location: /');
 	}else{
-		echo "<pre>";
-		print_r($post);
+		
 		include '../view/car-details.php';
 	}
 
