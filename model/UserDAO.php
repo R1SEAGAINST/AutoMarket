@@ -115,7 +115,7 @@ class UserDAO implements IUserDAO {
 				$userForList = new User ($dealer['user_email'], 'hahahahah', $dealer['user_address'] , $dealer['user_id']);
 				
 				$userForList->setUsername($dealer['user_name']);
-				$userForList->setPhone($dealer['user_phone']);
+				$userForList->setUserPhone($dealer['user_phone']);
 				$userForList->setUserCountry($dealer['user_country']);
 				$userForList->setCountAllUsers($count);
 				$userForList->setCountUsersPosts($dealer['countUsersPosts']);
@@ -147,7 +147,7 @@ class UserDAO implements IUserDAO {
 			$thisUser = new User($post['user_email'], 'hahahaha', $post['user_address'], $post['user_id']);
 		
 			$thisUser->setUsername($post['user_name']);
-			$thisUser->setPhone($post['user_phone']);
+			$thisUser->setUserPhone($post['user_phone']);
 			$thisUser->setUserCountry($post['user_country']);
 			$thisUser->setImage($post['user_image']);
 			$thisUser->setCountUsersPosts($post['countUsersPosts']);
@@ -180,7 +180,7 @@ class UserDAO implements IUserDAO {
 			$thisUser = new User($post['user_email'], 'hahahaha', $post['user_address'], $post['user_id']);
 		
 			$thisUser->setUsername($post['user_name']);
-			$thisUser->setPhone($post['user_phone']);
+			$thisUser->setUserPhone($post['user_phone']);
 			$thisUser->setUserCountry($post['user_country']);
 			$thisUser->setImage($post['user_image']);
 			$thisUser->setCountUsersPosts($post['countUsersPosts']);

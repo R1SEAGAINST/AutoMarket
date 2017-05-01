@@ -30,16 +30,16 @@ class PostDAO implements IPostDAO {
 								LIMIT 3";
 	
 
-// <<<<<<< HEAD
-// 	const GET_ALL_POSTS_OF_USER_SQL = "SELECT p.id_post , p.id_model, m.model_name, b.brand_name, p.reg_year, p.body_type,
-// 							 p.country_of_registration, p.kilometers, p.price, p.fuel_type, p.hp, p.id_user
+
+	const GET_ALL_POSTS_OF_USER_SQL = "SELECT p.id_post , p.id_model, m.model_name, b.brand_name, p.reg_year, p.body_type,
+							 p.country_of_registration, p.kilometers, p.price, p.fuel_type, p.hp, p.id_user
 				
-// 							 FROM posts p Join models m
-// 							 on p.id_model = m.id_model JOIN brands b
-// 							 ON m.id_brand = b.id_brand JOIN users u
-// 							 ON p.id_user = u.user_id
-// 							 WHERE u.user_id = ?
-// 							 ORDER BY p.id_post DESC";
+							 FROM posts p Join models m
+							 on p.id_model = m.id_model JOIN brands b
+							 ON m.id_brand = b.id_brand JOIN users u
+							 ON p.id_user = u.user_id
+							 WHERE u.user_id = ?
+							 ORDER BY p.id_post DESC";
 	
 	
 	const GET_ALL_POSTS_BY_NAME_SQL = "SELECT p.id_post , p.id_model, m.model_name, b.brand_name, p.reg_year, p.body_type,
@@ -121,7 +121,7 @@ class PostDAO implements IPostDAO {
 			
 		return $pstmt->fetchAll(PDO::FETCH_ASSOC);
 	}
-// <<<<<<< HEAD
+
 	
 	public function listDealersPosts($id){
 	

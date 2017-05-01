@@ -398,7 +398,9 @@ require_once 'header.php';
 								<div>
 									<div class="upload-file-container"></div>
 									<input type="file" name="files[]"/>
-								</div>	
+<!-- 								</div>	 -->
+<!-- 							</li> -->
+<!-- 							<li class="select-six"> -->
 								<div>
 									<div class="upload-file-container"></div>
 									<input type="file" name="files[]"/>

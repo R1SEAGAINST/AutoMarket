@@ -1,16 +1,4 @@
-//function createRow(dealer) {
-//	var content = "<tr>";
-//	content += "<td>" + dealer.name + "<input style='display:none' value="+contact.name+"></input></td>";
-//	content += "<td>" + dealer.phone + "</td>";
-//	content += "<td>" + dealer.email + "</td>";
-//	content += "<td style='cursor:pointer' onclick='deleteContact("+contact.id+")'><img width='50' height='auto' src='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSnv0X-HRkHyQeDwpMGNQdocCp0dJ8t1gs-SnBQlP7wmXujshYz6w'></td>";
-//	content += "<td style='cursor:pointer' onclick=\"editContact("+contact.id+",'"+contact.name + "','"+ contact.phone + "','"+ contact.email+"')\"><img width='50' height='auto' src='https://coloringgames.com/uploads/38/happy-pencil-coloring-page-hd.png'></td>";
-//	content += "</tr>";
-//	
-//	return content;
-//}
-//
-//
+
 function createDealerDiv(dealer) {
 	
 	var countUsers = document.getElementById('countUsers');
@@ -31,7 +19,7 @@ function createDealerDiv(dealer) {
 	
 	var dealerA = document.createElement('a');
 	dealerA.className = "item-link";
-	dealerA.href = "/DealerDetailsController.php";
+	dealerA.href = "/DealerDetailsController.php?id="+dealer.id;
 	dealerLi.appendChild(dealerA);
 	
 	var dealerSpan = document.createElement('span');
@@ -98,67 +86,7 @@ function createDealerDiv(dealer) {
 	dealerDivFirst.appendChild(dealerDivSecond);
 	
 }
-//var editMode = false;
-//var editcontactId;
-//
-//function editContact(id, name, phone, email) {
-//	document.getElementById('name').value = name;
-//	document.getElementById('phone').value  = phone;
-//	document.getElementById('mail').value  = email;
-//	
-//	document.getElementById('editOrSave').value = 'Update Contact';
-//	editMode = true;
-//	editcontactId = id;
-//}
-//
-//function deleteContact(id) {
-//	var xhr = new XMLHttpRequest();
-//	xhr.open('DELETE', '../controller/ContactsController.php', true);
-//	xhr.send('id='+id);
-//	
-//	xhr.onload =  function() {
-//		if (xhr.status == 200) {
-//			reloadTable();
-//		}
-//	}
-//}
-//
-//function addNewContact() {
-//	var name = document.getElementById('name').value;
-//	var phone = document.getElementById('phone').value;
-//	var email = document.getElementById('mail').value;
-//
-//	// .... validation ...
-//
-//	var newContact = {
-//		name: name,
-//		phone: phone,
-//		email: email
-//	};
-//	
-//	if (editMode) {
-//		newContact.id = editcontactId;
-//	}
-//	
-//	var xhr = new XMLHttpRequest();
-//	xhr.open('POST', '../controller/ContactsController.php', true);
-//	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-//	xhr.send('data='+JSON.stringify(newContact));
-//	
-//	xhr.onload =  function() {
-//		if (xhr.status == 200) {
-//			if (!editMode)
-//				document.getElementById('table').innerHTML += createRow(newContact);
-//			
-//			document.getElementById('result').innerHTML = xhr.responseText;
-//			reloadTable();
-//		}
-//	}
-//}
 
-//var dealerName =  document.getElementById('dealerNameHere');
-//var dealerPhone =  document.getElementById('dealerPhoneHere');
-//var dealerAddress =  document.getElementById('dealerAddressHere');
 
 function listDealers() {
 	
