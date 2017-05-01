@@ -12,8 +12,11 @@ if (isset ( $_SESSION ['user'] )) {
 		
 		echo json_encode ( $models );
 	}
+	if(isset($_GET['deleteid'])){
+		$user=json_decode($_SESSION['user']);
+		$postDao=new PostDAO();
+		$result = $postDao->deletePost($_GET['deleteid'],$user->id);
+		echo (int)$result;
+	}
 }
-
-
-
    ?>

@@ -54,6 +54,51 @@ class Car extends Vehicle implements JsonSerializable {
 		"checkbox_traction_control" => 30			
 	);
 
+	private static $extrasArrayPretty = array(
+			1 => "ABS",
+			2 => "EDS",
+			3 => "ESP",
+			4 => "Air conditioning",
+			5 => "Air bag",
+			6 => "Alarm",
+			7 => "Panoramic roof",
+			8 => "Protection framework",
+			9 => "Tow",
+			10 => "Traction control",
+			11 => "Board computer",
+			12 => "Steering wheel controls",
+			13 => "GPS tracking system",
+			14 => "Adaptive Lights",
+			15 => "Smart Tire",
+			16 => "APS",
+			17 => "Distronic",
+			18 => "ASS",
+			19 => "DVD",
+			20 => "Airmatic",
+			21 => "Keyless Go",
+			22 => "Adjustable wheel",
+			23 => "Four Wheel Drive",
+			24 => "Seven Seats",
+			25 => "Leather seats",
+			26 => "Velour seats",
+			27 => "Service History",
+			28 => "LED lights",
+			29 => "DSA",
+			30 => "Traction Control"
+	);
+	
+	public static function getExtrasPretty($number){
+		$extras=array();
+		foreach (self::$extrasArrayPretty as $bit => $key) {
+				$binary = pow(2, $bit);
+				if(($binary & $number) === $binary){
+					$extras[]=$key;
+				}
+				
+		}
+		return $extras;
+	}
+	
 	public function getExtrasArray() {
 		return self::$extrasArray;
 	}

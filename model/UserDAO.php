@@ -158,7 +158,7 @@ class UserDAO implements IUserDAO {
 			$thisUser = new User($post['user_email'], 'hahahaha', $post['user_address'], $post['user_image'], $post['user_id']);
 		
 			$thisUser->setUsername($post['user_name']);
-			$thisUser->setUserPhone($post['user_phone']);
+			$thisUser->setPhone($post['user_phone']);
 			$thisUser->setUserCountry($post['user_country']);
 // 			/$thisUser->setImage($post['user_image']);
 			$thisUser->setCountUsersPosts($post['countUsersPosts']);
@@ -191,7 +191,7 @@ class UserDAO implements IUserDAO {
 			$thisUser = new User($post['user_email'], 'hahahaha', $post['user_address'],$post['user_image'], $post['user_id']);
 		
 			$thisUser->setUsername($post['user_name']);
-			$thisUser->setUserPhone($post['user_phone']);
+			$thisUser->setPhone($post['user_phone']);
 			$thisUser->setUserCountry($post['user_country']);
 			$thisUser->setImage($post['user_image']);
 			$thisUser->setCountUsersPosts($post['countUsersPosts']);
