@@ -52,6 +52,9 @@ class PostDAO implements IPostDAO {
 							 WHERE u.user_name LIKE ?
 							 ORDER BY p.id_post DESC";
 	
+	const DELETE_POST_SQL="DELETE FROM posts WHERE id_post=? AND id_user=? LIMIT 1";
+	const DELETE_PICTURE_SQL="DELETE FROM images WHERE fk_post=?";
+	
 	
 
 	public function publish(User $user, Car $car) {
@@ -119,6 +122,23 @@ class PostDAO implements IPostDAO {
 		$pstmt->execute(array($brandid));
 			
 		return $pstmt->fetchAll(PDO::FETCH_ASSOC);
+	}
+	
+	public function deletePost($postId,$userId){
+		$db= DBConnection::getDb();
+		
+		$images=$this->getPostImages($postId);
+		foreach($images as $image){
+			unlink('../assets/images/postimage/'.$image);
+		}
+		$pstmt = $db->prepare(self::DELETE_POST_SQL);
+		$pstmt->execute(array($postId,$userId));
+		$result= $pstmt->rowCount();
+		if($result>0){
+			$del=$db->prepare(self::DELETE_PICTURE_SQL);
+			$del->execute(array($postId));
+		}
+		return $result;
 	}
 
 	
@@ -256,6 +276,7 @@ class PostDAO implements IPostDAO {
 		$car->setCountryOfRegistration($thepost['country_of_registration']);
 		$car->brand=$thepost['brand_name'];
 		$car->model=$thepost['model_name'];
+		$car->postExtras=Car::getExtrasPretty($thepost['extras']);
 		
 		$post=new Post($user,$car);
 		$post->pictures= $this->getPostImages($postId);

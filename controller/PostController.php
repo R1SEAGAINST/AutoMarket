@@ -16,6 +16,8 @@ if (isset($_SESSION['user'])) {
 
 		try {
 			$car = new Car();
+			$postUser= new User($user->email);
+			$postUser->setUserId($user->id);
 			$extrasArray = $car->getExtrasArray();		
 			
 			$extras = 0;
@@ -65,9 +67,9 @@ if (isset($_SESSION['user'])) {
 			$car->setIdModel($_POST['model']);
 			
 				
-			$post = new Post($userid, $car);			
+			$post = new Post($postUser, $car);			
 			$postDao = new PostDAO();
-			$postId = $postDao->publish($user, $car);
+			$postId = $postDao->publish($postUser, $car);
 	
 				
 			if(isset($_FILES['files']['name'][0])){	

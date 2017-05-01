@@ -328,52 +328,28 @@ require_once 'header.php';
 								
                                 
                                 <!-- Car post -->
+                                <?php foreach ($posts as $post) {?>
                                 <li>
-									<a href="/CarDetailsController.php" class="item-link">
-										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
+									<a href="/CarDetailsController.php?id=<?= $post->id_post ?>" class="item-link">
+										<img src="/assets/images/postimage/<?= $post->image_name ?>" alt="offer car" />
 										<div class="entry-label">
-											<h4 class="car-title">Mercedes-Benz CLS</h4>
-											<span class="price-tag">54980 Euro</span>
-											<span class="location-car">Location: Berlin, Germany</span>
+											<h4 class="car-title"><?= $post->brand_name ?> <?= $post->model_name ?></h4>
+											<span class="price-tag"><?= $post->price ?></span>
 										</div>
 									
 										<div class="entry-overlay">
 											<ul class="car-list-details item-specs">
-												<li>Registration 2002</li>
-												<li>3.0 Diesel</li>
-												<li>230 HP</li>
-												<li>Body Coupe</li>
-												<li>120.000 KM</li>
+												<li>Registration <?= $post->reg_year ?></li>
+												<li><?= $post->cilindrics ?> <?= $post->fuel_type ?></li>
+												<li><?= $post->hp ?> HP</li>
+												<li><?= $post->body_type ?></li>
+												<li><?= $post->kilometers ?></li>
 											</ul>
 										</div>
 									</a>
 								</li>
-                                <!--/Car post -->
-                                
-                                <!-- Best deal car post -->
-								<li>
-									<a href="/CarDetailsController.php" class="item-link">
-										<img src="http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
-										<div class="entry-label">
-											<h4 class="car-title">Mercedes-Benz CLS</h4>
-											<span class="price-tag">54980 Euro</span>
-											<span class="location-car">Location: Berlin, Germany</span>
-										</div>
-									
-										<div class="entry-overlay">
-											<ul class="car-list-details item-specs">
-												<li>Registration 2002</li>
-												<li>3.0 Diesel</li>
-												<li>230 HP</li>
-												<li>Body Coupe</li>
-												<li>120.000 KM</li>
-											</ul>
-										</div>
-										<span class="v-sign">V</span>
-										<span class='dealer-data'>Vehicle Dealer</span>
-									</a>
-								</li>
-								<!--/Best deal car post -->
+								<?php } ?>
+							
 							</ul>					
 						</div>
 					

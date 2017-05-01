@@ -9,18 +9,16 @@ require_once 'header.php';
 		<div class="content-holder">
 			<div class="page-main-heading extra-space">
 				<div class="heading-location">
-					<h2><span class="bold">Mercedes-Benz</span> CLS 320</h2>
+					<h2><span class="bold"><?= $post->car->brand ?> </span> <?= $post->car->model ?> </h2>
 					<p class="page-location">
 						<a href="http://automarket.com">Home </a>
 						<span class="greater-than">&gt;&gt;</span>
 						<a href="/CarListController.php">Cars</a>
 						<span class="greater-than">&gt;&gt;</span>
-						<a>Ime na tekushta</a>
 					</p>
 				</div>
 				
 				<div class="extra-info">
-					<span>Offer ID C24021482</span>
 					<p>The offer had 1944 Views</p>
 				</div>
 			</div>
@@ -42,7 +40,10 @@ require_once 'header.php';
 	</section><!--#car-pagination -->
 		
 	<section id="car-details">
-	
+				<?php if(isset($user) && $user->id == $post->user->id) {?>
+					<li id="deletepost" onclick="deletePost(<?= $_GET['id'] ?>); return false;"><a href=""><span>DELETE THIS POST</span></a></li>
+<!-- 					<li id="vehicle-location"><a href="#"><span>Vehicle location</span></a></li> -->
+					<?php } ?>
 		<div class="social-icons-round">
 			<p>Share to:</p>
 			<ul>
@@ -61,63 +62,65 @@ require_once 'header.php';
 				<div class="car-full-image one-half col-480">
 					<div class="main-image">
 						<a href="#">
-							<img src="../images/mercedes_full.jpg" alt="Full Picture" />
+							<img src="/assets/images/postimage/<?=$post->pictures[0]?>" alt="Full Picture" />
 							<span class="magnifying-glass">Magnifying Glass</span>
 						</a>
 					</div>
 					<ul class="images-navigation">
-						<li><a href="http://localhost/AutoMarket/asets/images/mercedes_full.jpg"><img src="../images/mercedes_thumb_list_item.jpg" alt="Thumb Car" /></a></li>
-						<li><a href="http://localhost/AutoMarket/assets/images/mercedes_full1.jpg"><img src="../images/mercedes_thumb_list_item1.jpg" alt="Thumb Car" /></a></li>
-						<li><a href="http://localhost/AutoMarket/assets/images/mercedes_full2.jpg"><img src="../images/mercedes_thumb_list_item2.jpg" alt="Thumb Car" /></a></li>
-                        <li><a href="http://localhost/AutoMarket/assets/images/mercedes_full3.jpg"><img src="../images/mercedes_thumb_list_item3.jpg" alt="Thumb Car" /></a></li>
-                        <li><a href="http://localhost/AutoMarket/assets/images/mercedes_full4.jpg"><img src="../images/mercedes_thumb_list_item4.jpg" alt="Thumb Car" /></a></li>
+					<?php foreach ($post->pictures as $picture) { ?>
+						<li><a href="/assets/images/postimage/<?=$picture?>"><img src="/assets/images/postimage/<?=$picture?>" alt="Thumb Car" /></a></li>
+					<?php } ?>
 					</ul>
 					<div id="preloader"></div>
 				</div>
 				
 				<div class="car-full-specs one-half col-460">
 					<div class="price-car">
-						<span class="price-tag">54.980 EURO</span>
+						<span class="price-tag"><?= $post->car->price ?></span>
 						<span class="small-note">* Price negotiable</span>
 					</div>
 					<ul class="car-specs-list">
 						<li>
 							<span class="label">Model, Body type:</span>
-							<span class="value">Mercedes-Benz CLS 320, Coupe</span>
+							<span class="value"><?= $post->car->brand ?> <?= $post->car->model ?> , <?= $post->car->bodytype ?></span>
 						</li>
 						<li>
 							<span class="label">Fabrication:</span>
-							<span class="value">2010</span>
+							<span class="value"><?= $post->car->regyear ?></span>
 						</li>
 						<li>
 							<span class="label">Fuel:</span>
-							<span class="value">Diesel</span>
+							<span class="value"><?= $post->car->fueltype ?></span>
 						</li>
 						<li>
 							<span class="label">Engine:</span>
-							<span class="value">3200 cm³ (373 kW / 507 CP)</span>
+							<span class="value"><?= $post->car->cilindrics ?> cm³ </span>
 						</li>
 						<li>
 							<span class="label">Transmision:</span>
-							<span class="value">Automatic</span>
+							<span class="value"><?= $post->car->transmissiontype ?></span>
 						</li>
 						<li>
 							<span class="label">Color:</span>
-							<span class="value">Black</span>
+							<span class="value"><?= $post->car->color ?></span>
 						</li>
 						<li>
 							<span class="label">Doors:</span>
-							<span class="value">4/5</span>
+							<span class="value"><?= $post->car->doors ?></span>
 						</li>
 						<li>
 							<span class="label">CO2-Emissions combined:</span>
-							<span class="value">ca 423 g/km</span>
+							<span class="value">ca <?= rand(200,500) ?> g/km</span>
 						</li>
 					</ul>
 					
 					<div class="sell-similar-car">
 						<span class="label">You want to sell a similar car?</span>
+					<?php 	if(isset($_SESSION['user'])) { ?>
 						<a href="/PostController.php" class="value">+ Add an offer</a>
+					<?php }else{ ?>
+					 	<a href="/LoginController.php" class="value">+ Add an offer</a> 
+					<?php } ?>
 					</div>
 				</div>
 			</div>
@@ -127,36 +130,27 @@ require_once 'header.php';
 				
 					<h3><span class="bold">Vehicle</span> information</h3>
 					<ul>
-						<li><strong>Features: </strong>alloy wheels, xenon headlights, fog lights, tinted glass</li>
-						<li><strong>Other parameters: </strong>service book</li>
-						<li><strong>Safety: </strong>ABS, traction control, alarm, airbags, immobilizer, anti-theft, ESP, EDS, protection framework</li>
-						<li><strong>Comfort: </strong>electric windows, electric mirrors, air conditioning, leather upholstery, navigation system, central locking, radio / CD, power steering, 
-						onboard computer, cruise control, heated seats, rain sensor, steering wheel controls, parking sensors</li>
+						<p><strong>Features:</strong> 
+						
+						<?= implode("</br> ", $post->car->postExtras) ?></p>
+						
+						
 					</ul>
 				
 					<hr />
 
 					<h3><span class="bold">More</span> info</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet fringilla metus, a ultricies ligula consequat at. 
-					Maecenas eget massa at eros ornare rhoncus. In sit amet enim risus, in mattis felis. Donec lorem arcu, tempor quis fermentum et, viverra in turpis. 
-					Nam non nunc vitae justo tincidunt lobortis eu sit amet dui. Nam ut dui aliquet nisl fermentum mollis sit amet eget lectus. 
-					Vivamus iaculis massa sit amet velit convallis aliquam. Vestibulum dolor erat, congue nec viverra eget, aliquet sit amet nunc. Donec vitae arcu orci.</p>
-					<!--<br />
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet fringilla metus, a ultricies ligula consequat at. 
-					Maecenas eget massa at eros ornare rhoncus. In sit amet enim risus, in mattis felis. Donec lorem arcu, tempor quis fermentum et, viverra in turpis. 
-					Nam non nunc vitae justo tincidunt lobortis eu sit amet dui. Nam ut dui aliquet nisl fermentum mollis sit amet eget lectus. 
-					Vivamus iaculis massa sit amet velit convallis aliquam. Vestibulum dolor erat, congue nec viverra eget, aliquet sit amet nunc. Donec vitae arcu orci.</p>-->
-					
+					<p><?= $post->car->description ?></p>
 					<hr />
 					
 					<h3><span class="bold">Contact</span> details</h3>
 					<p class="heading-note">AutoMarket does not store additional information about the seller except for those contained in the announcement.</p>
 					<br />
 					<ul class="icon-list">
-						<li class="phone">0040 742 016 756</li>
-						<li class="address">Berlin, Germany, nr. 250330, main street</li>
-						<li class="e-mail"><a href="#">Contact vendor via e-mail</a>
-						<li class="website"><a href="#"> http://www.dealer.automarket.com</a>
+						<li class="phone"><?= $post->user->phone?></li>
+						<li class="address"><?= $post->user->address ?></li>
+						<li class="e-mail"><a href="#"><?= $post->user->email?></a>
+						<li class="website"><a href=""> http://www.dealer.automarket.com</a>
 					</ul>
 				</div>
 				
@@ -213,7 +207,7 @@ require_once 'header.php';
 					</form>
 					
 					<div class="grey-corner-box">
-						<a href="#"><img src="images/image_ads_here.gif" alt="Advertisement" /></a>
+						
 					</div>
 				
 				</div>
@@ -224,24 +218,27 @@ require_once 'header.php';
 				<h3><span class="bold">Similar</span> offers</h3>
 			
 				<ul class="offer-small list-content">
+				<?php foreach ($topposts as $post) { ?>
 					<li>
-						<a href="/CarDetailsController.php">
-							<img src=".http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg" alt="offer car" />
+						<a href="/CarDetailsController.php?id=<?= $post->id_post ?>">
+							<img src="/assets/images/postimage/<?= $post->image_name ?>" alt="offer car" />
 							<div class="entry-label">
-								<h4>Mercedes-Benz CLS</h4>
-								<span class="price-tag">54980 Euro</span>
+								<h4><?= $post->brand_name?> <?= $post->model_name ?></h4>
+								<span class="price-tag"><?= $post->price ?></span>
 							</div>
 							<div class="entry-overlay">
 								<ul class="car-list-details">
-									<li>Registration 2002</li>
-									<li>3.0 Diesel</li>
-									<li>230 HP</li>
-									<li>Body Coupe</li>
-									<li>120.000 KM</li>							
+							
+									<li>Registration <?= $post->reg_year ?></li>
+									<li><?= $post->reg_year ?> <?= $post->fuel_type ?></li>
+									<li><?= $post->hp ?> HP</li>
+									<li><?= $post->body_type ?></li>
+									<li><?= $post->kilometers ?></li>							
 								</ul>
 							</div>
 						</a>
 					</li>
+					<?php } ?>
 				</ul>
 			</div>
 			
@@ -250,6 +247,23 @@ require_once 'header.php';
 	</section><!--#search-list-->
 	
 </div><!--#page-content-->
+<script>
+	function deletePost(postId){
+		if(confirm("Are you sure you want to delete this post?")){
+			$.get("/ajaxController.php", {deleteid: postId}, function(result){
+					if(result>0){
+						alert("Successful!");
+						location.href="/";
+				}else{
+						alert("Try again later");
+				}
+			}
+			);
+		}
+		
+	};
+
+</script>
 	
 <?php 
 
