@@ -130,7 +130,9 @@
 	}
 
 	.content-holder .one-half:nth-child(2){
+		
 		float: right;
+	
 	}
 
 	.content-holder .col-61{
@@ -1827,7 +1829,7 @@
 	}
 
 	#log-in .one-half:nth-child(2) form.grey-corner-box{
-		width: 378px;
+		width: 350px;
 	}
 
 	#log-in .one-half:nth-child(1) form ul li{
@@ -1889,7 +1891,7 @@
 	}
 
 	#log-in .one-half:nth-child(2) form ul li{
-		width: 378px;
+		width: 350px;
 		float: left;
 	}
 

@@ -121,7 +121,9 @@ padding-top:-30px;
 }
 
 #float-right{
-	width:550px;
+	width:430px;
+	height:250px !important;
+	display:inline-block !important;
 	
 }
 

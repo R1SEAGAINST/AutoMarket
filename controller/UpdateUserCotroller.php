@@ -14,7 +14,7 @@ $id=$user->id;
 $dao = new UserDAO;
 $userForUpdate = $dao->userForUpdate($id);
 
-//var_dump($user);
+//var_dump($userForUpdate);
 
 include '../view/update-profile.php';
 

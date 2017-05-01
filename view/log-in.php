@@ -64,18 +64,18 @@ require_once 'header.php';
 			
 				
 				
-			<div class="one-half col-539" id="folatRight"> 
+			<div class="one-half col-539" id="float-right"> 
 					<form id="new-user" class="grey-corner-box"> 
 						<fieldset> 
 						<legend><span class="bold">New</span> user</legend> 
 						
- 								
+ 						<div></div>		
  								
  								
 					<a href="/RegisterController.php" class="" id="newUserButon"><span
 						class="box-content"><strong class="plus-sign"></strong>&nbsp;Register
 							</span></a>
-					
+					<div> </div>
 							
  						</fieldset> 
 				

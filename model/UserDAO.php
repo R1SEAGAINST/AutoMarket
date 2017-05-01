@@ -38,7 +38,7 @@ class UserDAO implements IUserDAO {
 						 COUNT(p.id_post) as 'countUsersPosts'
 						FROM users u JOIN posts p
 						ON u.user_id = p.id_user
-						WHERE u.user_name LIKE ?";
+						WHERE u.user_name LIKE CONCAT( ?,'%')";
 	
 	
 	
@@ -68,7 +68,7 @@ class UserDAO implements IUserDAO {
 			$newUser = new User($user['user_email'], 'hahahaha', $user['user_address'], $user['user_image'],  $user['user_id']);
 				 
 			$newUser->setUsername($user['user_name']);
-			$newUser->setPhone($user['user_phone']);
+			$newUser->setUserPhone($user['user_phone']);
 			$newUser->setUserCountry($user['user_country']);
 				
 			return $newUser;

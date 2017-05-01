@@ -161,9 +161,6 @@ require_once 'header.php';
 	
 
 
-</body>
-</html>
-
 	<script src="http://localhost/AutoMarket/assets/js/regScript.js"></script>
 
 <?php

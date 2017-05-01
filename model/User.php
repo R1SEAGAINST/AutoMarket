@@ -84,7 +84,7 @@ class User implements JsonSerializable {
 	}
 	
 	
-	public function setPhone($phone){
+	public function setUserPhone($phone){
 		
 		//$pattern = '/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/';
 		
@@ -128,6 +128,7 @@ class User implements JsonSerializable {
 		$this->password = $password;
 		$this->id = $id;
 		$this->image = $image;
+		$this->setUserAddress($address);
 	}
 
 
