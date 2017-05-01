@@ -13,7 +13,7 @@ if (isset($_POST['btn-save'])) {
 				htmlentities(trim($_POST['user_address']))
 				);
 		$user->setUsername(htmlentities(trim($_POST['user_name'])));
-		$user->setUserPhone(htmlentities(trim($_POST['user_phone'])));
+		$user->setPhone(htmlentities(trim($_POST['user_phone'])));
 		$user->setUserCountry(htmlentities(trim($_POST['user_country'])));
 		
 		
