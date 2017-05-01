@@ -33,6 +33,7 @@ if (isset($_GET['id']) && isset($user->id)){
 	$dealer = $dao->infoDealer($id);
 
 	$carArr = $posts->listDealersPosts($id);
+	
 	if(count($carArr) >0){
 		$lastPost = $carArr[0];
 // 	 	var_dump($carArr)."<br/>";
@@ -48,7 +49,7 @@ if (isset($_GET['id']) && isset($user->id)){
 			header('Location:/');
 		}
 
-		//include '../view/dealer-details.php';
+		include '../view/dealer-details.php';
 
 
 

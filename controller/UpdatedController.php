@@ -68,7 +68,7 @@ if (isset($_POST['update'])) {
 	}
 	catch (Exception $e) {
 		$errorMessage = $e->getMessage();
-		include '../view/udate-profile.php';
+		include '../view/update-profile.php';
 	}
 }
 //include '../view/.php';

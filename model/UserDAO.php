@@ -253,9 +253,14 @@ class UserDAO implements IUserDAO {
 			
 			
 			$sql = $db->prepare(self::REGISTER_USER_SQL);
+			try{
 			$sql->execute(array($user->username, $user->email, sha1($user->password), $user->phone, $user->country,
 					$user->address, $user->image));
-	
+			}catch(exception $e){
+				
+			}
+			
+			
 
 			
 			//$user->setUserId($userId);
