@@ -1,5 +1,4 @@
 <?php
-
 function __autoload($className) {
 	require_once "../model/" . $className . '.php';
 
@@ -10,18 +9,14 @@ session_start();
 if (isset($_SESSION['user'])) {
 	$user = json_decode($_SESSION['user']);
 }
-// if ($_SERVER ['REQUEST_METHOD'] === 'GET'){
-// 	$dao = new userDAO;
-// 	echo json_encode ($dao->listAllDealers());
+$id=$user->id;
 
+$dao = new UserDAO;
+$userForUpdate = $dao->userForUpdate($id);
 
+//var_dump($user);
 
-// }
-
-
-include '../view/dealer-list.php';
+include '../view/update-profile.php';
 
 
 ?>
-
-

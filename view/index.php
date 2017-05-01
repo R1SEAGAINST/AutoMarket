@@ -203,7 +203,7 @@ echo "<h3>".$errorMessage."</h3>";
 					
 					<ul class="dealer-list">
 						<li>
-							<a href="/DealerDetailsController.php" class="dealer-name">Dealer name</a>
+							<a href="/DealerDetailsController.php?id=1" class="dealer-name">Dealer name</a>
 							<span class="amount-offers">162 Offers</span>
 						</li>
 						<li>

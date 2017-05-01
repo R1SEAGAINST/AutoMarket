@@ -71,7 +71,7 @@ function isValidEmail(email) {
 
 function isExistingEmail(email){
 		
-		$.get('http://localhost/AutoMarket/model/checkEmail.php?email=' + emailField.value,
+		$.get('http://AutoMarket/model/checkEmail.php?email='+ emailField.value,
 				function(data){
 					if (data == 'true') {
 						var container = document.getElementById("emailDiv");
@@ -251,7 +251,7 @@ repPassField.onblur = function(){
 	};
 	
 document.forms[1].onsubmit = function(event) {
-	if( (hasErrors) || (nameError) || (emailError) || (passError) || (repPassError) || (coutryError) || (phoneError)){
+	if( (hasErrors) || (nameError) || (emailError) || (passError) || (repPassError) || (countryError) || (phoneError)){
 		event.preventDefault();
 	}
 

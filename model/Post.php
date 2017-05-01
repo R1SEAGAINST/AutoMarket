@@ -5,6 +5,8 @@ class Post {
 	private $car;
 	private $postId;
 
+
+
 	function __construct($user, $car) {
 		$this->user = $user;
 

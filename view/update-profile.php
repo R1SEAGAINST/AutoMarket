@@ -8,28 +8,28 @@ require_once 'header.php';
 			<div class="full-width">
 		<div class="reg-in">
 			
-				<form action="/RegisterController.php" method='post' enctype="multipart/form-data" class="grey-corner-box">
+				<form action="/UpdatedController.php" method='post' enctype="multipart/form-data" class="grey-corner-box">
 				
 				
 						<fieldset id="regform">
-							<legend id="new-user"><span class="bold">New</span> user</legend>
+							<legend id="new-user"><span class="bold">Update</span> user</legend>
 				
 				
 					<div id="nameDiv" class="regfield">
-						 <input id="name" type="text" placeholder="Your Name" name="user_name" class="regfields"/>
+						 <input id="name" type="text" placeholder="Your Name" name="user_name" class="regfields" value = '<?=$userForUpdate->username?>'/>
 					</div>
 					
 					
 					
 					
 					<div id="emailDiv" class="regfield">
-						  <input id="email" type="email"  placeholder="Email" name="user_email" class="regfields"/>
+						  <input id="email" type="email"  placeholder="Email" name="user_email" class="regfields" value = '<?=$userForUpdate->email?>'/>
 					</div>
 					
 						
 					<div id="phoneDiv" class="regfield">
 						
-						 <input id="phone" type="text" placeholder="Your Phone"  name="user_phone" class="regfields"/> 
+						 <input id="phone" type="text" placeholder="Your Phone"  name="user_phone" class="regfields" value = '<?=$userForUpdate->phone?>'/> 
 					</div>
 					
 					
@@ -51,9 +51,9 @@ require_once 'header.php';
 					
 					
 					<div id="countryDiv" class="regfield">
-					 <select id="country" name="user_country"  class="regfields">
+					 <select id="country" name="user_country"  class="regfields" value = '<?=$userForUpdate->country?>'>
 										
-										<option selected="selected">Select Country</option>
+										<option selected="selected"><?=$userForUpdate->country?></option>
 									
 										<option value="Albaia">Albania</option>
 										<option value="Andorra">Andorra</option>
@@ -129,14 +129,14 @@ require_once 'header.php';
 						
 				<div id="addressDiv" class="regfield">
 					
-					 <input id="address" type="text"  placeholder="Your Address" name="user_address" class="regfields"/> 
+					 <input id="address" type="text"  placeholder="Your Address" name="user_address" class="regfields" value = '<?=$userForUpdate->address?>'/> 
 				</div>
 					
 					
 					
 				<div id="passDiv" class="regfield">
 					
-					 <input id="password" type="password"  placeholder="Enter Password" name="password" class="regfields"/> 
+					 <input id="password" type="password"  placeholder="Enter Password" name="password" class="regfields" value = '<?=$userForUpdate->password?>'/> 
 				</div>
 				<div id="repeatDiv" class="regfield" >
 				
@@ -146,7 +146,7 @@ require_once 'header.php';
 				</div>
 				<div class="checkbox-custom submit-field" id="mysubmit">
 										<span class="submit">
-						<input type="submit" value="Create Account" id="reg-reg" name="btn-save" /></span>
+						<input type="submit" value="Update Account" id="update" name="update" /></span>
 				</div>
 				<br/>
 			<div class="errorr"><?=$errorMessage?></div>
@@ -161,8 +161,7 @@ require_once 'header.php';
 	
 
 
-</body>
-</html>
+
 
 	<script src="http://localhost/AutoMarket/assets/js/regScript.js"></script>
 

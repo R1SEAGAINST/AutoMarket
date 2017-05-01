@@ -27,7 +27,7 @@ function createDealerDiv(dealer) {
 	dealerA.appendChild(dealerSpan);
 	
 	var dealerImg = document.createElement('img');
-	dealerImg.src = ".http://localhost/AutoMarket/assets/images/default_thumb_140_105.jpg";
+	dealerImg.src = ".http://localhost/AutoMarket/assets/images/userimage/"+dealer.image;
 	dealerImg.alt = "Picture";
 	dealerA.appendChild(dealerImg);
 	

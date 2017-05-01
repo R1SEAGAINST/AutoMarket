@@ -66,6 +66,7 @@ if (isset($_SESSION['user'])) {
 			$car->setCountryOfRegistration($_POST['country']);
 			$car->setIdModel($_POST['model']);
 			
+			$userid = $user->id;
 				
 			$post = new Post($postUser, $car);			
 			$postDao = new PostDAO();

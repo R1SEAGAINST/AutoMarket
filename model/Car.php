@@ -191,7 +191,7 @@ public function setDescription($description){
 
 public function setCountryOfRegistration($countryofregistration){
 	$countryofregistration= htmlentities(trim($countryofregistration));
-	if(strlen($countryofregistration) > 0 && strlen($countryofregistration < 4)){
+	if(strlen($countryofregistration) > 2 && strlen($countryofregistration < 20)){
 		$this->countryofregistration= $countryofregistration;
 	}
 }

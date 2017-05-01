@@ -1,6 +1,7 @@
 <?php 
 if(!(isset($errorMessage))){
 	$errorMessage="";
+	echo  "<h2>".$errorMessage."</h2>";
 	
 }
 ?>
@@ -67,7 +68,9 @@ if(!(isset($errorMessage))){
 					
 				
 						?>
-					<a href="/DealerDetailsController.php?id=<?= $user->id ?>" class="dealer-name"><?=$user->username?></a>
+
+					<a href='DealerDetailsController.php?id=<?=$user->id?>' class="dealer-name"><?=$user->username?></a>
+
 					<a href="/LogoutController.php" class="sign-out">Sign Out</a>
 				</div>
 

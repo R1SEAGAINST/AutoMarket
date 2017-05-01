@@ -2,10 +2,14 @@
 function __autoload($className) {
 	require_once "../model/" . $className . '.php';
 }
+session_start();
+if (isset($_SESSION['user'])) {
+	$oldUser = json_decode($_SESSION['user']);
+}
 
-if (isset($_POST['btn-save'])) {
-	
-	
+if (isset($_POST['update'])) {
+
+
 	try {
 		$user = new User(
 				htmlentities(trim($_POST['user_email'])),
@@ -15,9 +19,9 @@ if (isset($_POST['btn-save'])) {
 		$user->setUsername(htmlentities(trim($_POST['user_name'])));
 		$user->setUserPhone(htmlentities(trim($_POST['user_phone'])));
 		$user->setUserCountry(htmlentities(trim($_POST['user_country'])));
-		
-		
-		
+		$user->setUserId($oldUser->id);
+
+
 		if(isset($_FILES['files']['name'][0])){
 			$errors=array();
 			foreach($_FILES['files']['tmp_name'] as $key => $tmp_name ){
@@ -35,10 +39,10 @@ if (isset($_POST['btn-save'])) {
 					$extensions = array("jpeg","jpg","png");
 					$name=$_FILES['files']['name'][$key];
 					$file_ext=pathinfo($name, PATHINFO_EXTENSION);
-		
-		
+
+
 					if(in_array($file_ext,$extensions ) === true){
-						
+
 						$img =  (new UserDAO)->randomName($file_ext);
 						//$img->randomName($file_ext);
 							
@@ -50,26 +54,22 @@ if (isset($_POST['btn-save'])) {
 				}
 			}
 		}
-		
-		
-		
+
+	var_dump($user);
+
 		$userData = new UserDAO();
-		
-		$registeredUser = $userData->registerUser($user);
-		
-		session_start();
-		$_SESSION['user'] = json_encode($registeredUser);
-		
-		header('Location:/homeController.php', true, 302);	
+
+		$updatedUser = $userData->updateUser($user);
+
+		$updatedUser->setUserId($oldUser->id);
+		$_SESSION['user'] = json_encode($updatedUser);
+
+		header('Location:/homeController.php', true, 302);
 	}
 	catch (Exception $e) {
 		$errorMessage = $e->getMessage();
 		include '../view/register.php';
 	}
 }
-include '../view/register.php';
+//include '../view/.php';
 
-
-
-
-?>
