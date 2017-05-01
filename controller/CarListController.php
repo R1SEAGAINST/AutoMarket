@@ -8,8 +8,7 @@ if (isset($_SESSION['user'])) {
 	$user = json_decode($_SESSION['user']);
 }
 $postDao = new PostDAO();
-if(isset($_POST['submit'])){
-			
+if(isset($_POST['submit'])){			
 	echo "<pre>";
 	print_r($_POST);
 	// za obqvi na konkreten user, ot GET mi trea userid
@@ -17,10 +16,6 @@ if(isset($_POST['submit'])){
 	$posts=$postDao->search($_POST);
 	
 	print_r($posts);
-	
-	
-	
-	
 }
 
 $brands = $postDao->getBrands();

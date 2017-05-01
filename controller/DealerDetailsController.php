@@ -8,8 +8,6 @@ session_start();
 if (isset($_SESSION['user'])) {
 	$user = json_decode($_SESSION['user']);
 }
-
-	
  if (isset($_GET['id'])) {
  	
 	$id = $_GET['id'];
@@ -21,14 +19,13 @@ if (isset($_SESSION['user'])) {
 
 	$dao = new UserDAO;
   	$dealer = $dao->infoDealer($id);
-//  	var_dump($dealer);
-	
+  //	var_dump($dealer);
+  	include '../view/dealer-details.php';
 	//echo json_encode($dao->listAllPostsOfUser($id));
-	
-  
-
+}else{
+	header('Location:/');
 }
-include '../view/dealer-details.php';
+
 
 
  ?>

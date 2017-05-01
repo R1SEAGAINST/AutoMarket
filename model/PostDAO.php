@@ -8,7 +8,7 @@ class PostDAO implements IPostDAO {
 	const SELECT_BRANDS_SQL = "SELECT id_brand, brand_name FROM brands ORDER BY brand_name";
 	const SELECT_MODELS_SQL = "SELECT id_model, model_name FROM models WHERE id_brand = ? ORDER BY model_name";
 	const SELECT_POST_IMAGES_SQL = "SELECT image_name FROM images WHERE fk_post= ?";
-	const SELECT_POST_SQL = "SELECT b.brand_name,m.model_name,u.user_email,p.reg_year,p.cilindrics,p.hp,p.body_type,p.kilometers,p.price FROM posts p	
+	const SELECT_POST_SQL = "SELECT p.*, m.model_name, b.brand_name, u.user_id, u.user_name, u.user_email, u.user_phone, u.user_country, u.user_address FROM posts p	
 								JOIN models m ON m.id_model = p.id_model
 								JOIN brands b ON b.id_brand = m.id_brand
 								JOIN users u ON u.user_id = p.id_user
@@ -17,8 +17,8 @@ class PostDAO implements IPostDAO {
 	
 	
 	
-	const SELECT_LIST_IMAGE_SQL ="SELECT";
-	const SELECT_LIST_POSTS_SQL = "SELECT i.image_name,p.id_post,b.brand_name,m.model_name,u.user_email,p.reg_year,p.cilindrics,p.hp,p.body_type,p.kilometers,p.price FROM posts p
+	
+	const SELECT_LIST_POSTS_SQL = "SELECT p.fuel_type,i.image_name,p.id_post,b.brand_name,m.model_name,u.user_email,p.reg_year,p.cilindrics,p.hp,p.body_type,p.kilometers,p.price FROM posts p
 								
 								JOIN models m ON m.id_model = p.id_model
 								JOIN brands b ON b.id_brand = m.id_brand
@@ -26,8 +26,8 @@ class PostDAO implements IPostDAO {
                                 LEFT JOIN images i ON i.fk_post = p.id_post
 								WHERE {{WHERE}}
 								GROUP BY p.id_post
-								ORDER BY p.id_post DESC
-								LIMIT 3";
+								ORDER BY {{ORDER}} 
+								LIMIT {{LIMIT}}";
 	
 
 
@@ -53,10 +53,9 @@ class PostDAO implements IPostDAO {
 							 ORDER BY p.id_post DESC";
 	
 	
-// 	public function publish($userid, Car $car) {
-// =======
+
 	public function publish(User $user, Car $car) {
-// >>>>>>> 5bd8fcb3b0652f3fa386e6824948739046be7abb
+
 		$db = DBConnection::getDb();
 		
 
@@ -206,8 +205,7 @@ class PostDAO implements IPostDAO {
 	}
 	
 	
-//}
-// =======
+
 
 
 	private function getPostInfo($postId){
@@ -268,8 +266,18 @@ class PostDAO implements IPostDAO {
 	
 	public function search($input){
 		$where = array(1);
+		$limit= 20;
+		$order ='p.id_post DESC';
 		$default = array("-","Select");
 		$db = DBConnection::getDb();
+		
+		if(isset($input['limit']) && is_numeric($input['limit'])) {
+			$limit = $input['limit'];
+		}
+		
+		if(isset($input['order'])){
+			$order = $input['order'];
+		}
 		
 		
 		if(isset($input['manufacturer']) && (!in_array($input['manufacturer'], $default))){
@@ -307,8 +315,9 @@ class PostDAO implements IPostDAO {
 		if(isset($input['country']) && (!in_array($input['country'], $default))){
 			$where[]="p.country_of_registration=" . $db->quote($input['country']);
 		}
-		
+		if(isset($input['max-year']) && isset($input['min-year'])){
 		$min = max(1900, (int) $input['min-year']);
+		
 		if($input['max-year'] != "Year"){
 			
 		
@@ -317,6 +326,7 @@ class PostDAO implements IPostDAO {
 			$max= date("Y");
 		}
 		$where[]="p.reg_year BETWEEN " . $min . " AND " . $max;
+		}
 		
 		if(isset($input['condition']) && (!in_array($input['condition'], $default))){
 			$where[]="p.technical_condition=" . $db->quote($input['condition']);
@@ -330,21 +340,24 @@ class PostDAO implements IPostDAO {
 				
 			}
 		}
-		if(is_numeric($input['min-price'])){
+		if(isset($input['min-price']) && is_numeric($input['min-price'])){
 		$minprice = max(0, (int) $input['min-price']);
 		}else{
 			$minprice = 0;
 		}
 		
-		if(is_numeric($input['max-price'])){
+		if(isset($input['max-price']) && is_numeric($input['max-price'])){
 		$maxprice = min((int) $input['max-price'], 200000);
 		}else{
 			$maxprice= 200000;
 		}
-			if(!is_numeric($input['min-price']) && !is_numeric($input['max-price'])){
+		if(isset($input['min-price']) && isset($input['max-price']) &&!is_numeric($input['min-price']) && !is_numeric($input['max-price'])){
 			$where[]="p.price BETWEEN " . $minprice . " AND " . $maxprice;
 		}
 		
+		if(isset($input['haspicture'])){
+			$where[]="i.image_name IS NOT NULL";
+		}
 		
 		$car = new Car();
 		$extrasArray = $car->getExtrasArray();
@@ -365,16 +378,14 @@ class PostDAO implements IPostDAO {
 			$where[]= "p.id_user=" . (int) $input['userid'];
 		}
 		
-		print_r($where);
-		
 		$sql=str_replace("{{WHERE}}",implode(" AND ",$where), self::SELECT_LIST_POSTS_SQL);
-		print_r($sql);
+		$sql=str_replace("{{LIMIT}}", $limit, $sql);
+		$sql=str_replace("{{ORDER}}", $order, $sql);
 		$stmt=$db->query($sql);
-		return $stmt->fetchAll(PDO::FETCH_OBJ);
+		return $stmt->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Post", array('SAMO', 'CSKA'));
 		
 	}
 }
 
 
 
-// >>>>>>> 5bd8fcb3b0652f3fa386e6824948739046be7abb
