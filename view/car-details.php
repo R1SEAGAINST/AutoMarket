@@ -41,9 +41,12 @@ require_once 'header.php';
 		
 	<section id="car-details">
 				<?php if(isset($user) && $user->id == $post->user->id) {?>
+				<div class="pagination" style="margin-left:190px; margin-bottom: 20px;">
+				<a href="/updatePostController.php?updatepostid=<?=$_GET['id'] ?>" class= "pagination style ="margin-left:190px; margin-bottom: 20px;" > UPDATE YOUR OFFER </a>
 					<li id="deletepost" onclick="deletePost(<?= $_GET['id'] ?>); return false;"><a href=""><span>DELETE THIS POST</span></a></li>
 <!-- 					<li id="vehicle-location"><a href="#"><span>Vehicle location</span></a></li> -->
 					<?php } ?>
+				</div>
 		<div class="social-icons-round">
 			<p>Share to:</p>
 			<ul>

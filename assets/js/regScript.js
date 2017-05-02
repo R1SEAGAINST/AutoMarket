@@ -71,7 +71,7 @@ function isValidEmail(email) {
 
 function isExistingEmail(email){
 		
-		$.get('http://AutoMarket/model/checkEmail.php?email='+ emailField.value,
+		$.get('http://localhost/AutoMarket/model/checkEmail.php?email='+ emailField.value,
 				function(data){
 					if (data == 'true') {
 						var container = document.getElementById("emailDiv");

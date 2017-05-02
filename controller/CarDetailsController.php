@@ -24,10 +24,10 @@ if(isset($_GET['id'])){
 		
 		$postDao = new PostDAO();
 		$topposts=$postDao->search($top);	
-	echo "<pre>";
-		//print_r($post);
-	//	print_r($topposts);
-		echo "</pre>";
+// 	echo "<pre>";
+// 		print_r($post);
+// 		print_r($topposts);
+// 		echo "</pre>";
 		include '../view/car-details.php';
 	}
 

@@ -40,9 +40,9 @@ require_once 'header.php';
 								</li>
 								<li>
 									<div class="search-button">
-									<span class="submit">	<input name="searchDealer" type="submit" value="Search" /></span>
+										<input type="submit" name="submit" value="Search" /> 
 									</div>
-									<input type="submit" value="sea">
+									<input type="submit" value="">
 								</li>
 							</ul>
 							
