@@ -152,6 +152,7 @@ require_once 'header.php';
 					
 					<div class="layer-two" id="dealerPage">
 						
+
 <!-- 						<div id="dealer-list" class="info-list"> -->
 <!-- 							<ul class="detail-list"> -->
 <!-- 								<li> -->
@@ -175,6 +176,12 @@ require_once 'header.php';
 <!-- 									</div> -->
 <!-- 								</li> -->
 <!-- 							</ul> -->
+
+						<div id="dealer-list" class="info-list">
+							<ul class="detail-list">
+								
+							</ul>
+
 							
 <!-- 						</div> -->
 					
