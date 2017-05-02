@@ -71,7 +71,7 @@ function isValidEmail(email) {
 
 function isExistingEmail(email){
 		
-		$.get('http://AutoMarket/model/checkEmail.php?email='+ emailField.value,
+		$.get('checkEmail.php?email='+ emailField.value,
 				function(data){
 					if (data == 'true') {
 						var container = document.getElementById("emailDiv");
@@ -113,7 +113,7 @@ emailField.onblur = function(){
 				} else {
 					
 					emailError = false;
-					
+					console.log(emailField.value)
 					isExistingEmail(emailField.value);
 									
 				}

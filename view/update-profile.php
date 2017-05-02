@@ -12,24 +12,24 @@ require_once 'header.php';
 				
 				
 						<fieldset id="regform">
-							<legend id="new-user"><span class="bold">Update</span> user</legend>
+							<legend id="update-user"><span class="bold">Update</span> user</legend>
 				
 				
-					<div id="nameDiv" class="regfield">
-						 <input id="name" type="text" placeholder="Your Name" name="user_name" class="regfields" value = '<?=$userForUpdate->username?>'/>
+					<div id="upnameDiv" class="regfield">
+						 <input id="upname" type="text" placeholder="Your Name" name="user_name" class="regfields" value = '<?=$userForUpdate->username?>'/>
 					</div>
 					
 					
 					
 					
-					<div id="emailDiv" class="regfield">
-						  <input id="email" type="email"  placeholder="Email" name="user_email" class="regfields" value = '<?=$userForUpdate->email?>'/>
+					<div id="upemailDiv" class="regfield">
+						  <input id="upemail" type="email"  placeholder="Email" name="user_email" class="regfields" value = '<?=$userForUpdate->email?>'/>
 					</div>
 					
 						
-					<div id="phoneDiv" class="regfield">
+					<div id="upphoneDiv" class="regfield">
 						
-						 <input id="phone" type="text" placeholder="Your Phone"  name="user_phone" class="regfields" value = '<?=$userForUpdate->phone?>'/> 
+						 <input id="upphone" type="text" placeholder="Your Phone"  name="user_phone" class="regfields" value = '<?=$userForUpdate->phone?>'/> 
 					</div>
 					
 					
@@ -50,8 +50,8 @@ require_once 'header.php';
 					
 					
 					
-					<div id="countryDiv" class="regfield">
-					 <select id="country" name="user_country"  class="regfields" value = '<?=$userForUpdate->country?>'>
+					<div id="upcountryDiv" class="regfield">
+					 <select id="upcountry" name="user_country"  class="regfields" value = '<?=$userForUpdate->country?>'>
 										
 										<option selected="selected"><?=$userForUpdate->country?></option>
 									
@@ -127,22 +127,22 @@ require_once 'header.php';
 						
 							
 						
-				<div id="addressDiv" class="regfield">
+				<div id="upaddressDiv" class="regfield">
 					
-					 <input id="address" type="text"  placeholder="Your Address" name="user_address" class="regfields" value = '<?=$userForUpdate->address?>'/> 
+					 <input id="upaddress" type="text"  placeholder="Your Address" name="user_address" class="regfields" value = '<?=$userForUpdate->address?>'/> 
 				</div>
 					
 					
 					
-				<div id="passDiv" class="regfield">
+				<div id="uppassDiv" class="regfield">
 					
-					 <input id="password" type="password"  placeholder="Enter Password" name="password" class="regfields" value = '<?=$userForUpdate->password?>'/> 
+					 <input id="uppassword" type="password"  placeholder="Enter Password" name="password" class="regfields" value = '<?=$userForUpdate->password?>'/> 
 				</div>
 				<div id="repeatDiv" class="regfield" >
 				
 						
 			
-						<input id="repeatPass" type="password" placeholder="Repeat Password" class="regfields" /> <span id="CheckPasswordMatch"></span>
+						<input id="uprepeatPass" type="password" placeholder="Repeat Password" class="regfields" /> <span id="CheckPasswordMatch"></span>
 				</div>
 				<div class="checkbox-custom submit-field" id="mysubmit">
 										<span class="submit">

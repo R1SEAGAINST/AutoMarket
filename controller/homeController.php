@@ -20,6 +20,10 @@ session_start();
 			"haspicture"=> 1
 	);
 	
+	$fivedealers = new UserDAO;
+	$getFive = $fivedealers->getfiveDealers();
+// 	var_dump($getFive);
+	
 	$postDao = new PostDAO();
 	$latestposts=$postDao->search($latest);
 	$topposts=$postDao->search($top);	
