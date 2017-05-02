@@ -19,7 +19,8 @@
 		}
 		catch (Exception $e) {
 			$errorMessage = $e->getMessage();
-			include '../view/log-in.php';
+ 			header('Location:/LoginController.php');
+			//include '../view/log-in.php';
 		}
 	}
 	

@@ -36,14 +36,15 @@ if (isset($_GET['id']) && isset($user->id)){
 	
 	if(count($carArr) >0){
 		$lastPost = $carArr[0];
-// 	 	var_dump($carArr)."<br/>";
+ 	 //var_dump($carArr)."<br/>";
+ 	 	include '../view/dealer-details.php';
 	
 
-	}else{
+// 	}else{
 
-		$noPosts= "You dont have any post yet";
-	  	include '../view/dealer-details.php';
-	}
+// 		$noPosts= "You dont have any post yet";
+// 	  	include '../view/dealer-details.php';
+ 	}
 
 		}else{
 			header('Location:/');
@@ -54,4 +55,8 @@ if (isset($_GET['id']) && isset($user->id)){
 
 
 
+
+ 
+
+ 
  ?>

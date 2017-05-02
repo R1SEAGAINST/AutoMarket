@@ -202,22 +202,17 @@ echo "<h3>".$errorMessage."</h3>";
 					</div>
 					
 					<ul class="dealer-list">
-						<li>
-							<a href="/DealerDetailsController.php?id=1" class="dealer-name">Dealer name</a>
-							<span class="amount-offers">162 Offers</span>
-						</li>
-						<li>
-							<a href="/DealerDetailsController.php" class="dealer-name">Dealer name</a>
-							<span class="amount-offers">162 Offers</span>
-						</li>
-						<li>
-							<a href="/DealerDetailsController.php" class="dealer-name">Dealer name</a>
-							<span class="amount-offers">162 Offers</span>
-						</li>
-						<li>
-							<a href="/DealerDetailsController.php" class="dealer-name">Dealer name</a>
-							<span class="amount-offers">162 Offers</span>
-						</li>
+					<?php 
+					for($i=0; $i<count($getFive); $i++){
+						echo  "<li>".$getFive[$i]->username.
+		
+						
+							"<a href='/DealerDetailsController.php?id=".$getFive[$i]->id."' class='dealer-name>".$getFive[$i]->username."</a>
+							<span class='amount-offers'>"." ".$getFive[$i]->countUsersPosts." Offers</span>
+
+						</li>";
+						}
+						?>
 					</ul>
 				</div><!--.car-dealers-->
 					

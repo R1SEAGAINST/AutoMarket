@@ -152,12 +152,38 @@ require_once 'header.php';
 					
 					<div class="layer-two" id="dealerPage">
 						
+
+<!-- 						<div id="dealer-list" class="info-list"> -->
+<!-- 							<ul class="detail-list"> -->
+<!-- 								<li> -->
+<!-- 									<a href="/DealerDetailsController.php" class="item-link"> -->
+<!-- 										<span class="overlay">Overlay</span> -->
+<!-- 										<img src=".http://localhost/AutoMarket/assets/images/userimage/301992feb115140581c02990f6a21731a169e8f1.jpg" alt="Picture" /> -->
+<!-- 									</a> -->
+<!-- 									<div class="text-content"> -->
+<!-- 										<div class="layer-one"> -->
+<!-- 											<h3 id="dealerNameHere"><a href="/DealerDetailsController.php">Dealer Name Here</a></h3> -->
+<!-- 											<span class="amount">183 Offers</span> -->
+<!-- 										</div> -->
+<!-- 										<ul class="item-specs layer-two"> -->
+<!-- 											<li id="dealerAddressHere">314 Columbus Ave, San Francisco, CA 94133</li> -->
+<!-- 										</ul> -->
+<!-- 										<div class="layer-three"> -->
+<!-- 											<a href="#" class="view-on-map">View on map</a> -->
+<!-- 											<span class="phone-number" id="dealerPhoneHere">(123) 456-78910</span> -->
+<!-- 											<a href="/DealerDetailsController.php" class="details-link">View details</a> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+<!-- 							</ul> -->
+
 						<div id="dealer-list" class="info-list">
 							<ul class="detail-list">
 								
 							</ul>
+
 							
-						</div>
+<!-- 						</div> -->
 					
 					</div><!--.layer-two-->
 				

@@ -2,8 +2,7 @@
 class UserDAO implements IUserDAO {
 
 	const GET_AND_CHECK_USER_SQL = "SELECT * FROM users WHERE user_email= ? AND user_password = sha1(?)";
-	//const CHECK_USER_SQL = "SELECT * FROM users WHERE user_name = ".$db->quote($user->username)."";
-
+	
 
 	const REGISTER_USER_SQL = "INSERT INTO users (user_name, user_email, user_password, user_phone, user_country, user_address, user_image)
 													VALUES (?, ?, ?, ?, ?, ?, ? )";
@@ -23,16 +22,7 @@ class UserDAO implements IUserDAO {
 						WHERE u.user_id = ?";
 	
 	
-	
-// 	const GET_ALL_POSTS_OF_USER_SQL = "SELECT p.id_post , p.id_model, m.model_name, b.brand_name, p.reg_year, p.body_type,
-// 							 p.country_of_registration, p.kilometers, p.price, p.fuel_type, p.hp, p.id_user 
-							
-// 							 FROM posts p Join models m
-// 							 on p.id_model = m.id_model JOIN brands b
-// 							 ON m.id_brand = b.id_brand JOIN users u
-// 							 ON p.id_user = u.user_id
-// 							 WHERE u.user_id = ?
-// 							 ORDER BY p.id_post DESC";
+
 	
 	const SEARCH_DEALER_BY_NAME_SQL = " SELECT  u.user_id, u.user_email, u.user_name, u.user_phone, u.user_address, u.user_country, u.user_image,
 						 COUNT(p.id_post) as 'countUsersPosts'
@@ -50,7 +40,13 @@ class UserDAO implements IUserDAO {
 									user_country=?, user_address=?, user_image=?
 						 			WHERE user_id=?";
 	
-	
+	const GET_FIVE_DEALERS_SQL = "SELECT u.user_id, u.user_name, u.user_email, count(p.id_post) as 'countUsersPosts'
+								 FROM users u JOIN posts p
+								 ON u.user_id=p.id_user
+								 GROUP BY u.user_name
+								 ORDER BY count(p.id_post) DESC
+								 LIMIT 5";
+									
 	
 	public function loginUser(User $user) {
 		$db = DBConnection::getDb();
@@ -268,6 +264,33 @@ class UserDAO implements IUserDAO {
 				
 		}
 	
+		public function getFiveDealers(){
+			$db = DBConnection::getDb();
+			
+			$sql = $db->prepare(self::GET_FIVE_DEALERS_SQL);
+			$sql->execute();
+			$dealers = $sql->fetchAll ( PDO::FETCH_ASSOC );
+			
+			$result = array ();
+			
+			foreach ( $dealers as $dealer ) {
+				$dealerList = new User ($dealer['user_email'], 'hahahahah', "null" ,"null",$dealer['user_id']);
+			
+				$dealerList->setUsername($dealer['user_name']);
+				
+				$dealerList->setCountUsersPosts($dealer['countUsersPosts']);
+			
+			
+			
+				$result[] = $dealerList;
+			
+			}
+			return $result;
+			
+					
+			
+			
+		}
 	
 	
 	
