@@ -30,6 +30,6 @@ if(isset($_GET['id'])){
 // 		echo "</pre>";
 		include '../view/car-details.php';
 	}
-
+//	include '../view/car-details.php';
 }
 ?>

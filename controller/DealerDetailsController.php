@@ -36,7 +36,6 @@ if (isset($_GET['id']) && isset($user->id)){
 	
 	if(count($carArr) >0){
 		$lastPost = $carArr[0];
- 	 //var_dump($carArr)."<br/>";
  	 	include '../view/dealer-details.php';
 	
 

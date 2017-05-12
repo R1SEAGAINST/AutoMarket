@@ -76,9 +76,9 @@ require_once 'header.php';
 				
 				<div class="one-half col-701 results-list">
 					<div id="best-offer">
-						<a href='"/CarDetailsController.php?postid=<?=$lastPost->postId?> '>
+						<a href="/CarDetailsController.php?id=<?=$lastPost->postId?>">
 							<span class="best-offer-tag"><span class="bold">Last</span> offer</span>
-							<img src="http://localhost/AutoMarket/assets/images/best_offer.jpg" alt="Best Offer" />							
+							<img src="../assets/images/postimage/<?=$lastPost->pictures[0] ?>" alt="Best Offer" />							
 							<div class="slide-info">
 								<h3><?=$lastPost->car->brandname?> <?= $lastPost->car->modelname?></h3>
 								<span class="price-tag"><?=$lastPost->car->price?> Euro</span>								
@@ -102,13 +102,13 @@ require_once 'header.php';
 					
 					<div class="layer-two">
 					<?php 
-						for ($index=1; $index < count($carArr); $index++){
+						for ($index=1; $index < count($carArr); $index++){ 
 						echo "<div id='cars-list' class='info-list'>
 							<ul class='detail-list'>
 								<li>
 									<a href='/CarDetailsController.php?postid=".$carArr[$index]->postId."' class='item-link'>
 										<span class='overlay'>Overlay</span>
-										<img src='http://localhost/AutoMarket/assets/images/mercedes-thumb.jpg' alt='Picture' />
+										<img src='http://localhost/AutoMarket/assets/images/postimage/".$carArr[$index]->pictures[0]."' alt='Picture' />
 										<span class='v-sign'>V</span>
 									</a>
 									<div class='text-content'>
@@ -132,8 +132,8 @@ require_once 'header.php';
 							</ul>
 							
 						</div>";
-						}
-					?>
+						} ?>
+					
 					</div><!--.layer-two-->
 				
 					<div class="layer-three">

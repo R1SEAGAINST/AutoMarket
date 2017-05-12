@@ -217,7 +217,7 @@ require_once 'header.php';
 				
 			</div>
 			
-			<div class="full-width standard-text-content">
+			<div class="full-width standard-text-content" style="margin-bottom: 20px; height:250px">
 				<h3><span class="bold">Similar</span> offers</h3>
 			
 				<ul class="offer-small list-content">
@@ -244,6 +244,7 @@ require_once 'header.php';
 					<?php } ?>
 				</ul>
 			</div>
+			
 			
 			
 		</div><!--.content-holder-->
